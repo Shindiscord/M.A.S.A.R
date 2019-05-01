@@ -1,4 +1,4 @@
-/* MAIN Program here */
+/* Main program here*/
 
 public class Masar{
 
