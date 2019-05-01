@@ -1,5 +1,5 @@
 /* MAIN Program here */
 
-public class MASAR{
+public class Masar{
 
 }
