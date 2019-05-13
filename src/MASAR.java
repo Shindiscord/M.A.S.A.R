@@ -1,6 +1,6 @@
 /* Main program here test*/
 
-public class Masar{
+public class MASAR{
 
 
 
