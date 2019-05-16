@@ -32,22 +32,29 @@ class MasarGame implements Game {
     }
 
     public void init(GameContainer gc){
-        this.clickManager = new ClickManager();
-        gc.getInput().addMouseListener(clickManager);
 
         systemList = new LinkedList<>();
         clickables = new LinkedList<>();
 
+        this.clickManager = new ClickManager(gc, clickables);
+        gc.getInput().addMouseListener(clickManager);
+
         systemList.add(new MasarSystem(0,0,0,0));
         systemList.add(new MasarSystem(0,0,0,0));
+        systemList.add(new MasarSystem(0,0,0,0));
+        systemList.add(new MasarSystem(0,0,0,0));
+
         systemList.get(0).setPos(100.0f, 100.0f);
-        systemList.get(1).setPos(200f, 200f);
+        systemList.get(1).setPos(300.0f, 120.0f);
+        systemList.get(2).setPos(100.0f, 300f);
+        systemList.get(3).setPos(500f, 120.0f);
+
 
         clickables.add(new SystemClickable(systemList.get(0), gc));
         clickables.add(new SystemClickable(systemList.get(1), gc));
 
-        clickManager.addClickable(clickables.get(0));
-        clickManager.addClickable(clickables.get(1));
+        clickables.add(new SystemClickable(systemList.get(2), gc));
+        clickables.add(new SystemClickable(systemList.get(3), gc));
     }
 
     public void render(GameContainer gc, Graphics graphics){

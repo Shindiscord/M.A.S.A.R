@@ -1,8 +1,11 @@
 package backend;
 
+import Objects.SystemLink;
 import backend.Clickable;
+import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.MouseListener;
+import org.newdawn.slick.gui.GUIContext;
 
 import java.util.LinkedList;
 import java.util.Set;
@@ -14,11 +17,13 @@ public class ClickManager implements MouseListener {
 
     private boolean mousePressed;
     private Clickable pressedClickable;
+    private GUIContext gc;
 
-    public ClickManager(){
-        registeredClickables = new LinkedList<>();
+    public ClickManager(GUIContext gc, LinkedList<Clickable> l){
+        registeredClickables = l;
         mousePressed = false;
         pressedClickable = null;
+        this.gc = gc;
     }
 
     public void addClickable(Clickable c){
@@ -39,7 +44,6 @@ public class ClickManager implements MouseListener {
 
     @Override
     public void mousePressed(int button, int mx, int my) {
-        System.out.println("hmmmm");
         LinkedList<Clickable> selected;
         mousePressed = true;
         if(button == Input.MOUSE_LEFT_BUTTON){
@@ -73,6 +77,13 @@ public class ClickManager implements MouseListener {
                 if(selected.element() == pressedClickable) {
                     System.out.println("1 object clicked");
                 }else{
+                    if(selected.element() instanceof SystemClickable && pressedClickable instanceof SystemClickable)
+                        registeredClickables.add(
+                                new LinkClickable(
+                                        new SystemLink(((SystemClickable) pressedClickable).getAttachedSystem(), ((SystemClickable) selected.element()).getAttachedSystem()),
+                                        this.gc
+                                )
+                        );
                     System.out.println("Diff objects clicked, create link ?");
                 }
             }else{
