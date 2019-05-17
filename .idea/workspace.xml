@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11f3ee0f-1bce-4a4f-941b-d7f11d1ef76a" name="Default Changelist" comment="">
+    <list default="true" id="11f3ee0f-1bce-4a4f-941b-d7f11d1ef76a" name="Default Changelist" comment="modif seb">
+      <change afterPath="$PROJECT_DIR$/res/img/Buttons/b_quit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/Buttons/b_settings.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Masar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Masar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MenuButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/ClickManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/ClickManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/MasarData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MasarData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/MenuButtonClickable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MenuButtonClickable.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Masar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="54" column="68" lean-forward="true" selection-start-line="54" selection-start-column="68" selection-end-line="54" selection-end-column="68" />
+            <state relative-caret-position="425">
+              <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#568#569#0" expanded="true" />
@@ -35,13 +38,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/backend/ClickManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+            <state relative-caret-position="483">
+              <caret line="102" column="39" selection-start-line="102" selection-start-column="39" selection-end-line="102" selection-end-column="39" />
               <folding>
-                <element signature="e#5058#5059#0" expanded="true" />
+                <element signature="e#5466#5467#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
               <folding>
                 <element signature="e#1019#1020#0" expanded="true" />
                 <element signature="e#1040#1041#0" expanded="true" />
@@ -83,10 +86,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/backend/MenuButtonClickable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+            <state relative-caret-position="551">
+              <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1033#1034#0" expanded="true" />
+                <element signature="e#1066#1067#0" expanded="true" />
                 <element signature="e#1036#1037#0" expanded="true" />
                 <element signature="e#1091#1092#0" expanded="true" />
               </folding>
@@ -97,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/MenuButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            <state relative-caret-position="483">
+              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -162,11 +167,11 @@
         <option value="$PROJECT_DIR$/src/backend/LinkClickable.java" />
         <option value="$PROJECT_DIR$/src/UI/Window.java" />
         <option value="$PROJECT_DIR$/src/backend/SystemClickable.java" />
+        <option value="$PROJECT_DIR$/src/backend/MasarData.java" />
         <option value="$PROJECT_DIR$/src/backend/MenuButtonClickable.java" />
         <option value="$PROJECT_DIR$/src/UI/MenuButton.java" />
-        <option value="$PROJECT_DIR$/src/Masar.java" />
-        <option value="$PROJECT_DIR$/src/backend/MasarData.java" />
         <option value="$PROJECT_DIR$/src/backend/ClickManager.java" />
+        <option value="$PROJECT_DIR$/src/Masar.java" />
       </list>
     </option>
   </component>
@@ -420,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558101701137</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="modif seb">
+      <created>1558103225869</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1558103225869</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -445,7 +457,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32881355" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32881355" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -581,7 +593,7 @@
     <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
           <folding>
             <element signature="e#1019#1020#0" expanded="true" />
             <element signature="e#1040#1041#0" expanded="true" />
@@ -591,33 +603,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Masar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="54" column="68" lean-forward="true" selection-start-line="54" selection-start-column="68" selection-end-line="54" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/MenuButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="483">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/MenuButtonClickable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        <state relative-caret-position="551">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#1066#1067#0" expanded="true" />
             <element signature="e#1036#1037#0" expanded="true" />
             <element signature="e#1091#1092#0" expanded="true" />
           </folding>
@@ -626,10 +626,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/ClickManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        <state relative-caret-position="483">
+          <caret line="102" column="39" selection-start-line="102" selection-start-column="39" selection-end-line="102" selection-end-column="39" />
           <folding>
-            <element signature="e#5058#5059#0" expanded="true" />
+            <element signature="e#5466#5467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Masar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
           </folding>
         </state>
       </provider>

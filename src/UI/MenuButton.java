@@ -5,12 +5,14 @@ public class MenuButton {
     int posx;
     int posy;
     String ImagePath;
+    String name;
 
 
-    public MenuButton(int x, int y, String IP) {
+    public MenuButton(int x, int y, String IP, String nom) {
         this.posx = x;
         this.posy = y;
         this.ImagePath = IP;
+        this.name = nom;
     }
 
     public int getPosx() {
@@ -22,5 +24,7 @@ public class MenuButton {
     }
 
     public String getImagePath() {return this.ImagePath;}
+
+    public String getName() {return this.name;}
 
 }

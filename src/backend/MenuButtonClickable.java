@@ -32,6 +32,10 @@ public class MenuButtonClickable implements Clickable {
         mouseOverArea.setLocation(x, y);
     }
 
+    public String getButtonName() {
+        return attachedMenuButton.getName();
+    }
+
     @Override
     public boolean isMouseOver() {
         return this.mouseOverArea.isMouseOver();

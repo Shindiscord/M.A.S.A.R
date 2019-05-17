@@ -96,7 +96,12 @@ public class ClickManager implements MouseListener {
                 System.out.println("Object Clicked");
                 pressedClickable = selected.element();
                 if(pressedClickable instanceof MenuButtonClickable) {
-                    this.gameData.setDisplayMode(3);
+                    if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chapters") {
+                        this.gameData.setDisplayMode(3);
+                    }
+                    if (((MenuButtonClickable) pressedClickable).getButtonName() == "Quit") {
+                        System.exit(0);
+                    }
                 }
             }else{
                 System.out.println("Several object clicked, manage conflicts");

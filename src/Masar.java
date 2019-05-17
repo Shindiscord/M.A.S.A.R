@@ -57,7 +57,9 @@ class MasarGame implements Game {
         this.gameData.getSystemList().get(2).setPos(100.0f, 300f);
         this.gameData.getSystemList().get(3).setPos(500f, 120.0f);
 
-        this.gameData.getButtonList().add(new MenuButton(300, 300, "./res/img/Buttons/b_chapters.png"));
+        this.gameData.getButtonList().add(new MenuButton(484, 250, "./res/img/Buttons/b_chapters.png", "Chapters"));
+        this.gameData.getButtonList().add(new MenuButton(480, 400, "./res/img/Buttons/b_settings.png", "Settings"));
+        this.gameData.getButtonList().add(new MenuButton(540, 550, "./res/img/Buttons/b_quit.png", "Quit"));
 
         this.gameData.getClickManager().init();
     }
