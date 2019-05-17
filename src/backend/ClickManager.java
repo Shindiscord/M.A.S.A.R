@@ -86,6 +86,10 @@ public class ClickManager implements MouseListener {
 
     private void onAddLink(SystemClickable s1, SystemClickable s2){
         SystemLink link = new SystemLink(s1.getAttachedSystem(),s2.getAttachedSystem());
+        for(SystemLink l:this.gameData.getLinkList()){
+            if(l.equals(link)) return;
+        }
+        System.out.println("Lien créé");
         this.gameData.getLinkList().add(link);
         this.registeredClickables.add(new LinkClickable(link, this.gc));
     }

@@ -9,6 +9,12 @@ public class SystemLink {
         this.sys2 = sys2;
     }
 
+    public boolean equals(SystemLink l2){
+        if((sys1 == l2.getSys1() && sys2 == l2.getSys2()) || (sys1 == l2.getSys2() && sys2 == l2.getSys1()))
+            return true;
+        return false;
+    }
+
     public MasarSystem getSys1() {
         return sys1;
     }
