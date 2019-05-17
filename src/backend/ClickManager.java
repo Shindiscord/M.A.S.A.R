@@ -103,13 +103,13 @@ public class ClickManager implements MouseListener {
                 System.out.println("Object Clicked");
                 pressedClickable = selected.element();
                 if(pressedClickable instanceof MenuButtonClickable) {
-                    if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chapters" && this.gameData.getDisplayMode() == 0) {
+                    if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Chapters") && this.gameData.getDisplayMode() == 0) {
                         this.gameData.setDisplayMode(1);
                     }
-                    if (((MenuButtonClickable) pressedClickable).getButtonName() == "Quit" && this.gameData.getDisplayMode() == 0) {
+                    if (((MenuButtonClickable) pressedClickable).getButtonName().equals("Quit") && this.gameData.getDisplayMode() == 0) {
                         System.exit(0);
                     }
-                    if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chap1" && this.gameData.getDisplayMode() == 1) {
+                    if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Chap1") && this.gameData.getDisplayMode() == 1) {
                         this.gameData.setDisplayMode(3);
                     }
                 }
@@ -126,14 +126,14 @@ public class ClickManager implements MouseListener {
                     i++;
                 }
                 pressedClickable = selected.element();
-                if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chapters" && this.gameData.getDisplayMode() == 0) {
+                if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Chapters") && this.gameData.getDisplayMode() == 0) {
                     this.gameData.setDisplayMode(1);
                     return;
                 }
-                if (((MenuButtonClickable) pressedClickable).getButtonName() == "Quit" && this.gameData.getDisplayMode() == 0) {
+                if (((MenuButtonClickable) pressedClickable).getButtonName().equals("Quit") && this.gameData.getDisplayMode() == 0) {
                     System.exit(0);
                 }
-                if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chap1" && this.gameData.getDisplayMode() == 1) {
+                if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Chap1") && this.gameData.getDisplayMode() == 1) {
                     this.gameData.setDisplayMode(3);
                 }
                 //System.out.println("Several object clicked, manage conflicts");
