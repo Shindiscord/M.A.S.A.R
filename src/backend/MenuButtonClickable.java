@@ -12,6 +12,7 @@ public class MenuButtonClickable implements Clickable {
     private MenuButton attachedMenuButton;
     private MouseOverArea mouseOverArea;
 
+
     public MenuButtonClickable(MenuButton attachedMenuButton, GUIContext container) {
         Image img;
         this.attachedMenuButton = attachedMenuButton;
@@ -34,6 +35,10 @@ public class MenuButtonClickable implements Clickable {
 
     public String getButtonName() {
         return attachedMenuButton.getName();
+    }
+
+    public int getButtonType() {
+        return this.attachedMenuButton.getType();
     }
 
     @Override

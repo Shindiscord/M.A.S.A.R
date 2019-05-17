@@ -48,9 +48,13 @@ public class ClickManager implements MouseListener {
 
     public void render(GUIContext gc, Graphics graphics){
         for(Clickable c:registeredClickables) {
-            if(this.gameData.getDisplayMode() == 0 && c instanceof  MenuButtonClickable) {
-                c.render(gc, graphics);
-            } else if (this.gameData.getDisplayMode() == 3 && c instanceof SystemClickable) {
+            if(c instanceof  MenuButtonClickable) {
+                if (this.gameData.getDisplayMode() == 0 && ((MenuButtonClickable) c).getButtonType() == 0) {
+                    c.render(gc, graphics);
+                }
+            }
+
+            if (this.gameData.getDisplayMode() == 3 && c instanceof SystemClickable) {
                 c.render(gc, graphics);
             } else if (this.gameData.getDisplayMode() == 3 && c instanceof  LinkClickable) {
                 c.render(gc, graphics);
