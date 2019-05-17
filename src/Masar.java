@@ -1,7 +1,12 @@
 /* Main program here test*/
 
 import Objects.MasarSystem;
+import UI.MenuButton;
 import backend.ClickManager;
+import backend.Clickable;
+import backend.MenuButtonClickable;
+import backend.SystemClickable;
+import org.lwjgl.input.Cursor;
 import backend.MasarData;
 import org.newdawn.slick.*;
 
@@ -13,7 +18,14 @@ class MasarGame implements Game {
     private MasarData gameData;
 
 
+    /*0 = main menu, 1 = chapters menu, 2 = settings menu, 3 = in-game */
+
+    int DisplayMode;
+
+    Image Background;
+
     public MasarGame(){
+        this.DisplayMode = 0;
         this.gameData = new MasarData();
     }
 
@@ -28,6 +40,12 @@ class MasarGame implements Game {
     }
 
     public void init(GameContainer gc){
+
+        try {
+            this.Background = new Image("./res/img/Background/bg.png");
+        } catch (SlickException e) {
+            e.printStackTrace();
+        }
 
         this.gameData.setClickManager(new ClickManager(gc, this.gameData));
         gc.getInput().addMouseListener(this.gameData.getClickManager());
@@ -47,6 +65,8 @@ class MasarGame implements Game {
 
     public void render(GameContainer gc, Graphics graphics){
         this.gameData.getClickManager().render(gc, graphics);
+        Background.draw(0, 0, gc.getWidth(), gc.getHeight());
+
     }
 
     public void update(GameContainer gc, int delta){
