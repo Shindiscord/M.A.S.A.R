@@ -2,7 +2,6 @@
 
 import Objects.MasarSystem;
 import backend.ClickManager;
-import backend.Clickable;
 import backend.MasarData;
 import org.newdawn.slick.*;
 
