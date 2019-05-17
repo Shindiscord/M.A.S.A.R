@@ -18,6 +18,13 @@ public class MasarSystem {
         this.y_pos = y;
 ;    }
 
+    public float getDistance(MasarSystem s2){
+        float dx = s2.getX() - this.getX();
+        float dy = s2.getY() - this.getY();
+
+        return (float)Math.sqrt(dx*dx + dy*dy);
+    }
+
     public MasarSystem(int clan, int maxPop, int pop, int popSec) {
         this.clan = clan;
         this.maxPop = maxPop;
