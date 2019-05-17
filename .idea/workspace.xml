@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11f3ee0f-1bce-4a4f-941b-d7f11d1ef76a" name="Default Changelist" comment="Clics et créations de liens basiques">
-      <change afterPath="$PROJECT_DIR$/src/backend/MenuButtonClickable.java" afterDir="false" />
+    <list default="true" id="11f3ee0f-1bce-4a4f-941b-d7f11d1ef76a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Masar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Masar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MenuButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/ClickManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/ClickManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/MenuButtonClickable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MenuButtonClickable.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Masar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="530">
+              <caret line="62" column="104" lean-forward="true" selection-start-line="62" selection-start-column="104" selection-end-line="62" selection-end-column="104" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#802#803#0" expanded="true" />
@@ -35,8 +37,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/backend/ClickManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="44" column="62" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="62" />
+            <state relative-caret-position="399">
+              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+              <folding>
+                <element signature="e#4655#4656#0" expanded="true" />
+                <element signature="e#4699#4700#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -62,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/backend/MenuButtonClickable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="336">
+              <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1036#1037#0" expanded="true" />
@@ -73,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/MenuButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="126">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -141,10 +156,11 @@
         <option value="$PROJECT_DIR$/src/backend/LinkClickable.java" />
         <option value="$PROJECT_DIR$/src/UI/Window.java" />
         <option value="$PROJECT_DIR$/src/backend/SystemClickable.java" />
+        <option value="$PROJECT_DIR$/src/backend/MasarData.java" />
+        <option value="$PROJECT_DIR$/src/Masar.java" />
         <option value="$PROJECT_DIR$/src/backend/MenuButtonClickable.java" />
         <option value="$PROJECT_DIR$/src/UI/MenuButton.java" />
         <option value="$PROJECT_DIR$/src/backend/ClickManager.java" />
-        <option value="$PROJECT_DIR$/src/Masar.java" />
       </list>
     </option>
   </component>
@@ -164,6 +180,24 @@
             <path>
               <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
               <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="Buttons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
@@ -331,7 +365,49 @@
       <option name="project" value="LOCAL" />
       <updated>1558100071037</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Clics et créations de liens basiques">
+      <created>1558100081568</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1558100081568</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Clics et créations de liens basiques">
+      <created>1558100157707</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1558100157707</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Clics et créations de liens basiques">
+      <created>1558100230793</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1558100230793</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Clics et créations de liens basiques">
+      <created>1558100241228</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1558100241228</updated>
+    </task>
+    <task id="LOCAL-00015" summary="modif seb">
+      <created>1558100851701</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1558100851701</updated>
+    </task>
+    <task id="LOCAL-00016" summary="modif seb">
+      <created>1558100944610</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1558100944610</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -345,8 +421,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10204082" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10204082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -421,7 +498,8 @@
     <MESSAGE value="Merge avec Master" />
     <MESSAGE value="Gestion basique des clics" />
     <MESSAGE value="Clics et créations de liens basiques" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clics et créations de liens basiques" />
+    <MESSAGE value="modif seb" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif seb" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/MASAR.iml">
@@ -487,29 +565,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/backend/ClickManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="44" column="62" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Masar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/MenuButtonClickable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="336">
+          <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1036#1037#0" expanded="true" />
@@ -520,8 +579,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/MenuButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="126">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/ClickManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding>
+            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4699#4700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Masar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="62" column="104" lean-forward="true" selection-start-line="62" selection-start-column="104" selection-end-line="62" selection-end-column="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

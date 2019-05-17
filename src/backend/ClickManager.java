@@ -40,9 +40,10 @@ public class ClickManager implements MouseListener {
         }
         System.out.println("ClickManager started with " + i + " Systems.");
 
-        MenuButton m = new MenuButton(350, 400);
+        for(MenuButton mb: this.gameData.getButtonList()) {
+            this.registeredClickables.add(new MenuButtonClickable(mb, gc));
+        }
 
-        this.registeredClickables.add(new MenuButtonClickable(m, gc, "./res/img/Buttons/b_chapters.png"));
     }
 
     public void render(GUIContext gc, Graphics graphics){

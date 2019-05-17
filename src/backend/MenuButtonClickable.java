@@ -12,15 +12,15 @@ public class MenuButtonClickable implements Clickable {
     private MenuButton attachedMenuButton;
     private MouseOverArea mouseOverArea;
 
-    public MenuButtonClickable(MenuButton attachedMenuButton, GUIContext container, String ImageFile) {
+    public MenuButtonClickable(MenuButton attachedMenuButton, GUIContext container) {
         Image img;
+        this.attachedMenuButton = attachedMenuButton;
         try{
-            img = new Image(ImageFile);
+            img = new Image(attachedMenuButton.getImagePath());
         } catch (SlickException e) {
             e.printStackTrace();
             return;
         }
-        this.attachedMenuButton = attachedMenuButton;
         this.mouseOverArea = new MouseOverArea(container, img, 0,0);
         this.updateLocation();
     }

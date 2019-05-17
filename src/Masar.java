@@ -42,10 +42,10 @@ class MasarGame implements Game {
     public void init(GameContainer gc){
 
        try {
-            this.Background = new Image("./res/img/Background/bg.png");
-        } catch (SlickException e) {
-            e.printStackTrace();
-        }
+           this.Background = new Image("./res/img/Background/bg.png");
+       } catch (SlickException e) {
+           e.printStackTrace();
+       }
 
         this.gameData.setClickManager(new ClickManager(gc, this.gameData));
         gc.getInput().addMouseListener(this.gameData.getClickManager());
@@ -59,6 +59,8 @@ class MasarGame implements Game {
         this.gameData.getSystemList().get(1).setPos(300.0f, 120.0f);
         this.gameData.getSystemList().get(2).setPos(100.0f, 300f);
         this.gameData.getSystemList().get(3).setPos(500f, 120.0f);
+
+        this.gameData.getButtonList().add(new MenuButton(300, 300, "./res/img/Buttons/b_chapters.png"));
 
         this.gameData.getClickManager().init();
     }
