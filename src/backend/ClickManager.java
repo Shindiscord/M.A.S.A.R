@@ -55,6 +55,9 @@ public class ClickManager implements MouseListener {
                 if(this.gameData.getDisplayMode() == 1 && ((MenuButtonClickable) c).getButtonType() == 1) {
                     c.render(gc, graphics);
                 }
+                if(this.gameData.getDisplayMode() == 2 && ((MenuButtonClickable) c).getButtonType() == 2) {
+                    c.render(gc, graphics);
+                }
             }
 
             if (this.gameData.getDisplayMode() == 3 && c instanceof SystemClickable) {
@@ -106,11 +109,20 @@ public class ClickManager implements MouseListener {
                     if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Chapters") && this.gameData.getDisplayMode() == 0) {
                         this.gameData.setDisplayMode(1);
                     }
-                    if (((MenuButtonClickable) pressedClickable).getButtonName().equals("Quit") && this.gameData.getDisplayMode() == 0) {
+                    if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Quit") && this.gameData.getDisplayMode() == 0) {
                         System.exit(0);
+                    }
+                    if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Settings") && this.gameData.getDisplayMode() == 0) {
+                        this.gameData.setDisplayMode(2);
                     }
                     if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Chap1") && this.gameData.getDisplayMode() == 1) {
                         this.gameData.setDisplayMode(3);
+                    }
+                    if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Back") && this.gameData.getDisplayMode() == 1) {
+                        this.gameData.setDisplayMode(0);
+                    }
+                    if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Done") && this.gameData.getDisplayMode() == 2) {
+                        this.gameData.setDisplayMode(0);
                     }
                 }
             }else{
@@ -135,6 +147,12 @@ public class ClickManager implements MouseListener {
                 }
                 if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Chap1") && this.gameData.getDisplayMode() == 1) {
                     this.gameData.setDisplayMode(3);
+                }
+                if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Back") && this.gameData.getDisplayMode() == 1) {
+                    this.gameData.setDisplayMode(0);
+                }
+                if(((MenuButtonClickable) pressedClickable).getButtonName().equals("Done") && this.gameData.getDisplayMode() == 2) {
+                    this.gameData.setDisplayMode(0);
                 }
                 //System.out.println("Several object clicked, manage conflicts");
             }
