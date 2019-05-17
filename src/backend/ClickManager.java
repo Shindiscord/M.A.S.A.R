@@ -1,5 +1,6 @@
 package backend;
 
+import Objects.MasarSystem;
 import Objects.SystemLink;
 import backend.Clickable;
 import org.newdawn.slick.Graphics;
@@ -14,16 +15,35 @@ public class ClickManager implements MouseListener {
 
 
     private LinkedList<Clickable> registeredClickables;
+    private MasarData gameData;
 
     private boolean mousePressed;
     private Clickable pressedClickable;
     private GUIContext gc;
 
-    public ClickManager(GUIContext gc, LinkedList<Clickable> l){
-        registeredClickables = l;
-        mousePressed = false;
-        pressedClickable = null;
+    public ClickManager(GUIContext gc, MasarData gameData){
+        this.gameData = gameData;
+        this.mousePressed = false;
+        this.registeredClickables = new LinkedList<Clickable>();
+        this.pressedClickable = null;
         this.gc = gc;
+        System.out.println("ClickManagerCreated");
+    }
+
+    public void init(){
+        System.out.println("Creating SystemClickables");
+        int i = 0;
+        for(MasarSystem s: this.gameData.getSystemList()){
+            this.registeredClickables.add(new SystemClickable(s, gc));
+            i++;
+        }
+        System.out.println("ClickManager started with " + i + " Systems.");
+    }
+
+    public void render(GUIContext gc, Graphics graphics){
+        for(Clickable c:registeredClickables){
+            c.render(gc, graphics);
+        }
     }
 
     public void addClickable(Clickable c){
@@ -31,6 +51,7 @@ public class ClickManager implements MouseListener {
             registeredClickables.add(c);
         }
     }
+
 
     private LinkedList<Clickable> selectClickedObjects(){
         LinkedList<Clickable> selected = new LinkedList<>();
@@ -40,6 +61,12 @@ public class ClickManager implements MouseListener {
             }
         }
         return selected;
+    }
+
+    private void onAddLink(SystemClickable s1, SystemClickable s2){
+        SystemLink link = new SystemLink(s1.getAttachedSystem(),s2.getAttachedSystem());
+        this.gameData.getLinkList().add(link);
+        this.registeredClickables.add(new LinkClickable(link, this.gc));
     }
 
     @Override
@@ -68,8 +95,8 @@ public class ClickManager implements MouseListener {
     @Override
     public void mouseReleased(int button, int mx, int my) {
         LinkedList<Clickable> selected;
-        mousePressed = false;
         if(button == Input.MOUSE_LEFT_BUTTON){
+            mousePressed = false;
             selected = selectClickedObjects();
             if(selected.isEmpty()) {
                 System.out.println("Mouse released on empty space");
@@ -78,19 +105,23 @@ public class ClickManager implements MouseListener {
                     System.out.println("1 object clicked");
                 }else{
                     if(selected.element() instanceof SystemClickable && pressedClickable instanceof SystemClickable)
-                        registeredClickables.add(
-                                new LinkClickable(
-                                        new SystemLink(((SystemClickable) pressedClickable).getAttachedSystem(), ((SystemClickable) selected.element()).getAttachedSystem()),
-                                        this.gc
-                                )
-                        );
-                    System.out.println("Diff objects clicked, create link ?");
+                        //2 Systems selected, create link.
+                        onAddLink((SystemClickable) this.pressedClickable, (SystemClickable) selected.element());
                 }
             }else{
                 System.out.println("Several object released, manage conflicts");
             }
+            pressedClickable = null;
+        }else if(button == Input.MOUSE_RIGHT_BUTTON){
+            selected = selectClickedObjects();
+            for(Clickable c:selected) {
+                if(c instanceof LinkClickable){
+                    this.gameData.getLinkList().remove(((LinkClickable) c).getAttachedLink());
+                    this.registeredClickables.remove(c);
+                }
+            }
         }
-        pressedClickable = null;
+
     }
 
     @Override

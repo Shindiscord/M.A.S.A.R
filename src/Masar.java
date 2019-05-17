@@ -3,22 +3,19 @@
 import Objects.MasarSystem;
 import backend.ClickManager;
 import backend.Clickable;
-import backend.SystemClickable;
-import org.lwjgl.input.Cursor;
+import backend.MasarData;
 import org.newdawn.slick.*;
-import org.newdawn.slick.opengl.ImageData;
 
-import java.util.LinkedList;
-import java.util.Set;
+//Classe/Structure de donées échangées entre les différents composants principaux du jeu
+
 
 class MasarGame implements Game {
-    LinkedList<MasarSystem> systemList;
-    LinkedList<Clickable> clickables;
 
-    ClickManager clickManager;
+    private MasarData gameData;
+
 
     public MasarGame(){
-
+        this.gameData = new MasarData();
     }
 
     @Override
@@ -33,34 +30,24 @@ class MasarGame implements Game {
 
     public void init(GameContainer gc){
 
-        systemList = new LinkedList<>();
-        clickables = new LinkedList<>();
+        this.gameData.setClickManager(new ClickManager(gc, this.gameData));
+        gc.getInput().addMouseListener(this.gameData.getClickManager());
 
-        this.clickManager = new ClickManager(gc, clickables);
-        gc.getInput().addMouseListener(clickManager);
+        this.gameData.getSystemList().add(new MasarSystem(0,0,0,0));
+        this.gameData.getSystemList().add(new MasarSystem(0,0,0,0));
+        this.gameData.getSystemList().add(new MasarSystem(0,0,0,0));
+        this.gameData.getSystemList().add(new MasarSystem(0,0,0,0));
 
-        systemList.add(new MasarSystem(0,0,0,0));
-        systemList.add(new MasarSystem(0,0,0,0));
-        systemList.add(new MasarSystem(0,0,0,0));
-        systemList.add(new MasarSystem(0,0,0,0));
+        this.gameData.getSystemList().get(0).setPos(100.0f, 100.0f);
+        this.gameData.getSystemList().get(1).setPos(300.0f, 120.0f);
+        this.gameData.getSystemList().get(2).setPos(100.0f, 300f);
+        this.gameData.getSystemList().get(3).setPos(500f, 120.0f);
 
-        systemList.get(0).setPos(100.0f, 100.0f);
-        systemList.get(1).setPos(300.0f, 120.0f);
-        systemList.get(2).setPos(100.0f, 300f);
-        systemList.get(3).setPos(500f, 120.0f);
-
-
-        clickables.add(new SystemClickable(systemList.get(0), gc));
-        clickables.add(new SystemClickable(systemList.get(1), gc));
-
-        clickables.add(new SystemClickable(systemList.get(2), gc));
-        clickables.add(new SystemClickable(systemList.get(3), gc));
+        this.gameData.getClickManager().init();
     }
 
     public void render(GameContainer gc, Graphics graphics){
-        for (Clickable c: clickables) {
-            c.render(gc, graphics);
-        }
+        this.gameData.getClickManager().render(gc, graphics);
     }
 
     public void update(GameContainer gc, int delta){
