@@ -2,6 +2,7 @@ package backend;
 
 import Objects.MasarSystem;
 import Objects.SystemLink;
+import UI.MenuButton;
 import backend.Clickable;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
@@ -38,6 +39,10 @@ public class ClickManager implements MouseListener {
             i++;
         }
         System.out.println("ClickManager started with " + i + " Systems.");
+
+        MenuButton m = new MenuButton(350, 400);
+
+        this.registeredClickables.add(new MenuButtonClickable(m, gc, "./res/img/Buttons/b_chapters.png"));
     }
 
     public void render(GUIContext gc, Graphics graphics){
