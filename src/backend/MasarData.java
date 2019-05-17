@@ -11,6 +11,7 @@ public class MasarData{
     private LinkedList<MasarSystem> systemList;
     private LinkedList<SystemLink> linkList;
     private LinkedList<MenuButton> buttonList;
+    private int DisplayMode;
 
     private ClickManager clickManager;
 
@@ -25,5 +26,14 @@ public class MasarData{
         this.systemList = new LinkedList<MasarSystem>();
         this.linkList = new LinkedList<SystemLink>();
         this.buttonList = new LinkedList<MenuButton>();
+        this.DisplayMode = 0;
+    }
+
+    public int getDisplayMode() {
+        return this.DisplayMode;
+    }
+
+    public void setDisplayMode(int a) {
+      this.DisplayMode = a;
     }
 }

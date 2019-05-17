@@ -20,12 +20,9 @@ class MasarGame implements Game {
 
     /*0 = main menu, 1 = chapters menu, 2 = settings menu, 3 = in-game */
 
-    int DisplayMode;
-
     Image Background;
 
     public MasarGame(){
-        this.DisplayMode = 0;
         this.gameData = new MasarData();
     }
 

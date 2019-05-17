@@ -47,9 +47,17 @@ public class ClickManager implements MouseListener {
     }
 
     public void render(GUIContext gc, Graphics graphics){
-        for(Clickable c:registeredClickables){
-            c.render(gc, graphics);
+        for(Clickable c:registeredClickables) {
+            if(this.gameData.getDisplayMode() == 0 && c instanceof  MenuButtonClickable) {
+                c.render(gc, graphics);
+            } else if (this.gameData.getDisplayMode() == 3 && c instanceof SystemClickable) {
+                c.render(gc, graphics);
+            } else if (this.gameData.getDisplayMode() == 3 && c instanceof  LinkClickable) {
+                c.render(gc, graphics);
+            }
+
         }
+
     }
 
     public void addClickable(Clickable c){
@@ -87,6 +95,9 @@ public class ClickManager implements MouseListener {
             }else if(selected.size() == 1){
                 System.out.println("Object Clicked");
                 pressedClickable = selected.element();
+                if(pressedClickable instanceof MenuButtonClickable) {
+                    this.gameData.setDisplayMode(3);
+                }
             }else{
                 System.out.println("Several object clicked, manage conflicts");
             }
@@ -110,7 +121,7 @@ public class ClickManager implements MouseListener {
                 if(selected.element() == pressedClickable) {
                     System.out.println("1 object clicked");
                 }else{
-                    if(selected.element() instanceof SystemClickable && pressedClickable instanceof SystemClickable)
+                    if(selected.element() instanceof SystemClickable && pressedClickable instanceof SystemClickable && this.gameData.getDisplayMode() == 3)
                         //2 Systems selected, create link.
                         onAddLink((SystemClickable) this.pressedClickable, (SystemClickable) selected.element());
                 }
