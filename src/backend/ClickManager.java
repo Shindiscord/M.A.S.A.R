@@ -40,15 +40,31 @@ public class ClickManager implements MouseListener {
         }
         System.out.println("ClickManager started with " + i + " Systems.");
 
-        MenuButton m = new MenuButton(350, 400);
+        for(MenuButton mb: this.gameData.getButtonList()) {
+            this.registeredClickables.add(new MenuButtonClickable(mb, gc));
+        }
 
-        this.registeredClickables.add(new MenuButtonClickable(m, gc, "./res/img/Buttons/b_chapters.png"));
     }
 
     public void render(GUIContext gc, Graphics graphics){
-        for(Clickable c:registeredClickables){
-            c.render(gc, graphics);
+        for(Clickable c:registeredClickables) {
+            if(c instanceof  MenuButtonClickable) {
+                if (this.gameData.getDisplayMode() == 0 && ((MenuButtonClickable) c).getButtonType() == 0) {
+                    c.render(gc, graphics);
+                }
+                if(this.gameData.getDisplayMode() == 1 && ((MenuButtonClickable) c).getButtonType() == 1) {
+                    c.render(gc, graphics);
+                }
+            }
+
+            if (this.gameData.getDisplayMode() == 3 && c instanceof SystemClickable) {
+                c.render(gc, graphics);
+            } else if (this.gameData.getDisplayMode() == 3 && c instanceof  LinkClickable) {
+                c.render(gc, graphics);
+            }
+
         }
+
     }
 
     public void addClickable(Clickable c){
@@ -86,8 +102,41 @@ public class ClickManager implements MouseListener {
             }else if(selected.size() == 1){
                 System.out.println("Object Clicked");
                 pressedClickable = selected.element();
+                if(pressedClickable instanceof MenuButtonClickable) {
+                    if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chapters" && this.gameData.getDisplayMode() == 0) {
+                        this.gameData.setDisplayMode(1);
+                    }
+                    if (((MenuButtonClickable) pressedClickable).getButtonName() == "Quit" && this.gameData.getDisplayMode() == 0) {
+                        System.exit(0);
+                    }
+                    if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chap1" && this.gameData.getDisplayMode() == 1) {
+                        this.gameData.setDisplayMode(3);
+                    }
+                }
             }else{
-                System.out.println("Several object clicked, manage conflicts");
+                int i = 0;
+                for(Clickable c: selected) {
+                    pressedClickable = selected.get(i);
+                    if(pressedClickable instanceof MenuButtonClickable && this.gameData.getDisplayMode() != 3) {
+                        if(((MenuButtonClickable) pressedClickable).getButtonType() != this.gameData.getDisplayMode()) {
+                            selected.remove(i);
+                            continue;
+                        }
+                    }
+                    i++;
+                }
+                pressedClickable = selected.element();
+                if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chapters" && this.gameData.getDisplayMode() == 0) {
+                    this.gameData.setDisplayMode(1);
+                    return;
+                }
+                if (((MenuButtonClickable) pressedClickable).getButtonName() == "Quit" && this.gameData.getDisplayMode() == 0) {
+                    System.exit(0);
+                }
+                if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chap1" && this.gameData.getDisplayMode() == 1) {
+                    this.gameData.setDisplayMode(3);
+                }
+                //System.out.println("Several object clicked, manage conflicts");
             }
         }
     }
@@ -109,7 +158,7 @@ public class ClickManager implements MouseListener {
                 if(selected.element() == pressedClickable) {
                     System.out.println("1 object clicked");
                 }else{
-                    if(selected.element() instanceof SystemClickable && pressedClickable instanceof SystemClickable)
+                    if(selected.element() instanceof SystemClickable && pressedClickable instanceof SystemClickable && this.gameData.getDisplayMode() == 3)
                         //2 Systems selected, create link.
                         onAddLink((SystemClickable) this.pressedClickable, (SystemClickable) selected.element());
                 }

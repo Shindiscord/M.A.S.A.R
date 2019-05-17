@@ -20,12 +20,9 @@ class MasarGame implements Game {
 
     /*0 = main menu, 1 = chapters menu, 2 = settings menu, 3 = in-game */
 
-    int DisplayMode;
-
     Image Background;
 
     public MasarGame(){
-        this.DisplayMode = 0;
         this.gameData = new MasarData();
     }
 
@@ -42,10 +39,10 @@ class MasarGame implements Game {
     public void init(GameContainer gc){
 
        try {
-            this.Background = new Image("./res/img/Background/bg.png");
-        } catch (SlickException e) {
-            e.printStackTrace();
-        }
+           this.Background = new Image("./res/img/Background/bg.png");
+       } catch (SlickException e) {
+           e.printStackTrace();
+       }
 
         this.gameData.setClickManager(new ClickManager(gc, this.gameData));
         gc.getInput().addMouseListener(this.gameData.getClickManager());
@@ -59,6 +56,11 @@ class MasarGame implements Game {
         this.gameData.getSystemList().get(1).setPos(300.0f, 120.0f);
         this.gameData.getSystemList().get(2).setPos(100.0f, 300f);
         this.gameData.getSystemList().get(3).setPos(500f, 120.0f);
+
+        this.gameData.getButtonList().add(new MenuButton(484, 250, "./res/img/Buttons/b_chapters.png", "Chapters", 0));
+        this.gameData.getButtonList().add(new MenuButton(480, 400, "./res/img/Buttons/b_settings.png", "Settings", 0));
+        this.gameData.getButtonList().add(new MenuButton(540, 550, "./res/img/Buttons/b_quit.png", "Quit", 0));
+        this.gameData.getButtonList().add(new MenuButton(484, 250, "./res/img/Buttons/b_chapters.png", "Chap1", 1));
 
         this.gameData.getClickManager().init();
     }
