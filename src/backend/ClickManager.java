@@ -52,6 +52,9 @@ public class ClickManager implements MouseListener {
                 if (this.gameData.getDisplayMode() == 0 && ((MenuButtonClickable) c).getButtonType() == 0) {
                     c.render(gc, graphics);
                 }
+                if(this.gameData.getDisplayMode() == 1 && ((MenuButtonClickable) c).getButtonType() == 1) {
+                    c.render(gc, graphics);
+                }
             }
 
             if (this.gameData.getDisplayMode() == 3 && c instanceof SystemClickable) {
@@ -100,15 +103,40 @@ public class ClickManager implements MouseListener {
                 System.out.println("Object Clicked");
                 pressedClickable = selected.element();
                 if(pressedClickable instanceof MenuButtonClickable) {
-                    if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chapters") {
-                        this.gameData.setDisplayMode(3);
+                    if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chapters" && this.gameData.getDisplayMode() == 0) {
+                        this.gameData.setDisplayMode(1);
                     }
-                    if (((MenuButtonClickable) pressedClickable).getButtonName() == "Quit") {
+                    if (((MenuButtonClickable) pressedClickable).getButtonName() == "Quit" && this.gameData.getDisplayMode() == 0) {
                         System.exit(0);
+                    }
+                    if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chap1" && this.gameData.getDisplayMode() == 1) {
+                        this.gameData.setDisplayMode(3);
                     }
                 }
             }else{
-                System.out.println("Several object clicked, manage conflicts");
+                int i = 0;
+                for(Clickable c: selected) {
+                    pressedClickable = selected.get(i);
+                    if(pressedClickable instanceof MenuButtonClickable && this.gameData.getDisplayMode() != 3) {
+                        if(((MenuButtonClickable) pressedClickable).getButtonType() != this.gameData.getDisplayMode()) {
+                            selected.remove(i);
+                            continue;
+                        }
+                    }
+                    i++;
+                }
+                pressedClickable = selected.element();
+                if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chapters" && this.gameData.getDisplayMode() == 0) {
+                    this.gameData.setDisplayMode(1);
+                    return;
+                }
+                if (((MenuButtonClickable) pressedClickable).getButtonName() == "Quit" && this.gameData.getDisplayMode() == 0) {
+                    System.exit(0);
+                }
+                if(((MenuButtonClickable) pressedClickable).getButtonName() == "Chap1" && this.gameData.getDisplayMode() == 1) {
+                    this.gameData.setDisplayMode(3);
+                }
+                //System.out.println("Several object clicked, manage conflicts");
             }
         }
     }
