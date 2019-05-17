@@ -41,7 +41,7 @@ class MasarGame implements Game {
 
     public void init(GameContainer gc){
 
-        try {
+       try {
             this.Background = new Image("./res/img/Background/bg.png");
         } catch (SlickException e) {
             e.printStackTrace();
@@ -64,8 +64,8 @@ class MasarGame implements Game {
     }
 
     public void render(GameContainer gc, Graphics graphics){
-        this.gameData.getClickManager().render(gc, graphics);
         Background.draw(0, 0, gc.getWidth(), gc.getHeight());
+        this.gameData.getClickManager().render(gc, graphics);
 
     }
 
