@@ -41,16 +41,22 @@ class MasarGame implements Game {
        }
 
        gameData.loadImages();
+       gameData.loadCoordinates();
+       for (int i=0 ; i<30 ; i++)
+           System.out.println("x : " + gameData.getCoordinates()[i][0] + " et y : " + gameData.getCoordinates()[i][1] );
 
-        /*this.gameData.getSystemList().add(new MasarSystem(1,0,0,0,1, this.gameData));
+
+        this.gameData.getSystemList().add(new MasarSystem(1,0,0,0,1, this.gameData));
         this.gameData.getSystemList().add(new MasarSystem(0,0,0,0,3, this.gameData));
         this.gameData.getSystemList().add(new MasarSystem(0,0,0,0,1, this.gameData));
         this.gameData.getSystemList().add(new MasarSystem(2,0,0,0,2, this.gameData));
 
-        this.gameData.getSystemList().get(0).setPos(100.0f, 100.0f);
-        this.gameData.getSystemList().get(1).setPos(300.0f, 120.0f);
-        this.gameData.getSystemList().get(2).setPos(100.0f, 200.0f);
-        this.gameData.getSystemList().get(3).setPos(500f, 120.0f);*/
+        for (int i=4 ; i<30 ; i++)
+            this.gameData.getSystemList().add(new MasarSystem(0,0,0,0,1, this.gameData));
+
+        for (int i=0 ; i<30 ; i++)
+            this.gameData.getSystemList().get(i).setPos(gameData.getCoordinates()[i][0], gameData.getCoordinates()[i][1]);
+
 
 
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.MENUROOM, this.gameData));
