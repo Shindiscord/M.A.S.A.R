@@ -43,19 +43,19 @@ class MasarGame implements Game {
 
        gameData.loadImages();
        gameData.loadCoordinates();
-       for (int i=0 ; i<30 ; i++)
+       /*for (int i=0 ; i<24 ; i++)
            System.out.println("x : " + gameData.getCoordinates()[i][0] + " et y : " + gameData.getCoordinates()[i][1] );
-
+        */
 
         this.gameData.getSystemList().add(new MasarSystem(1,0,0,0,1, this.gameData));
         this.gameData.getSystemList().add(new MasarSystem(0,0,0,0,3, this.gameData));
         this.gameData.getSystemList().add(new MasarSystem(0,0,0,0,1, this.gameData));
         this.gameData.getSystemList().add(new MasarSystem(2,0,0,0,2, this.gameData));
 
-        for (int i=4 ; i<30 ; i++)
+        for (int i=4 ; i<24 ; i++)
             this.gameData.getSystemList().add(new MasarSystem(0,0,0,0,1, this.gameData));
 
-        for (int i=0 ; i<30 ; i++)
+        for (int i=0 ; i<24 ; i++)
             this.gameData.getSystemList().get(i).setPos(gameData.getCoordinates()[i][0], gameData.getCoordinates()[i][1]);
 
 
@@ -71,7 +71,7 @@ class MasarGame implements Game {
     }
 
     public void update(GameContainer gc, int delta){
-
+        this.gameData.getCurrentRoom().update(gc, delta);
     }
 }
 

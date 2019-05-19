@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b30a29b-ddad-4874-99d2-053b1771ce6a" name="Default Changelist" comment="Ajout de gameData">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Allied/allied_starsys1_130_105px_1pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Allied/allied_starsys1_130_105px_2pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Allied/allied_starsys1_130_105px_3pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Allied/allied_starsys2_130_105px_1pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Allied/allied_starsys2_130_105px_2pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Allied/allied_starsys2_130_105px_3pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Allied/allied_starsys3_130_105px_1pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Allied/allied_starsys3_130_105px_2pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Allied/allied_starsys3_130_105px_3pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Enemy/en_starsys1_130_105px_1pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Enemy/en_starsys1_130_105px_2pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Enemy/en_starsys1_130_105px_3pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Enemy/en_starsys2_130_105px_1pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Enemy/en_starsys2_130_105px_2pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Enemy/en_starsys2_130_105px_3pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Enemy/en_starsys3_130_105px_1pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Enemy/en_starsys3_130_105px_2pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/System/Enemy/en_starsys3_130_105px_3pl.png" afterDir="false" />
+    <list default="true" id="5b30a29b-ddad-4874-99d2-053b1771ce6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys1_130_105px_1pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys1_130_105px_2pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys1_130_105px_3pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys2_130_105px_1pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys2_130_105px_2pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys2_130_105px_3pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys3_130_105px_1pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys3_130_105px_2pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys3_130_105px_3pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys3_78_63px_1pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys3_78_63px_2pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/System/Neutral/ne_starsys3_78_63px_3pl.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Masar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Masar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/MasarSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/MasarSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/MasarData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MasarData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/MasarRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MasarRoom.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,12 +37,14 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Masar.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-60">
-                  <caret line="55" column="89" selection-start-line="55" selection-start-column="89" selection-end-line="55" selection-end-column="89" />
+                <state relative-caret-position="356">
+                  <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#578#579#0" expanded="true" />
                     <element signature="e#608#609#0" expanded="true" />
+                    <element signature="e#2099#2100#0" expanded="true" />
+                    <element signature="e#2118#2119#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -55,17 +53,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="362">
-                  <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+                <state relative-caret-position="356">
+                  <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="188">
-                  <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+                <state relative-caret-position="238">
+                  <caret line="71" column="50" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -77,7 +75,7 @@
             <entry file="file://$PROJECT_DIR$/src/backend/SystemClickable.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="450">
-                  <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+                  <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -91,11 +89,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/backend/Clickable.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="187">
-                  <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+                  <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -107,7 +105,7 @@
             <entry file="file://$PROJECT_DIR$/src/UI/MasarSprite.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="430">
-                  <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+                  <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -138,8 +136,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Objects/MasarSystem.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
-                  <caret line="51" column="16" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+                <state relative-caret-position="1835">
+                  <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -229,13 +227,13 @@
         <option value="$PROJECT_DIR$/src/MasarData.java" />
         <option value="$PROJECT_DIR$/src/backend/ClickManager.java" />
         <option value="$PROJECT_DIR$/src/Objects/SystemLink.java" />
-        <option value="$PROJECT_DIR$/src/Objects/MasarSystem.java" />
         <option value="$PROJECT_DIR$/src/UI/MasarSprite.java" />
         <option value="$PROJECT_DIR$/src/backend/SystemClickable.java" />
         <option value="$PROJECT_DIR$/src/backend/LinkClickable.java" />
-        <option value="$PROJECT_DIR$/src/backend/MasarRoom.java" />
-        <option value="$PROJECT_DIR$/src/Masar.java" />
         <option value="$PROJECT_DIR$/src/backend/MasarData.java" />
+        <option value="$PROJECT_DIR$/src/Objects/MasarSystem.java" />
+        <option value="$PROJECT_DIR$/src/Masar.java" />
+        <option value="$PROJECT_DIR$/src/backend/MasarRoom.java" />
       </list>
     </option>
   </component>
@@ -274,7 +272,7 @@
               <item name="MasarProject" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="System" type="462c0819:PsiDirectoryNode" />
+              <item name="Link" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
@@ -282,7 +280,6 @@
               <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
               <item name="System" type="462c0819:PsiDirectoryNode" />
-              <item name="Allied" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
@@ -291,6 +288,25 @@
               <item name="img" type="462c0819:PsiDirectoryNode" />
               <item name="System" type="462c0819:PsiDirectoryNode" />
               <item name="Enemy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MasarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="System" type="462c0819:PsiDirectoryNode" />
+              <item name="Neutral" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MasarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MasarProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Masar.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -438,7 +454,21 @@
       <option name="project" value="LOCAL" />
       <updated>1558273888082</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Coordinates premieres">
+      <created>1558281083477</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1558281083477</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Coordonnées et sprite rays">
+      <created>1558283936405</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1558283936405</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -452,10 +482,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18283582" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23614073" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -464,8 +493,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.3347779" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.12026002" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
@@ -561,7 +590,9 @@
     <MESSAGE value="Ajout de la structure GameData a utiliser pour les échanges de donées entre les composants principaux" />
     <MESSAGE value="Ajout de gameData" />
     <MESSAGE value="Sprite system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprite system" />
+    <MESSAGE value="Coordinates premieres" />
+    <MESSAGE value="Coordonnées et sprite rays" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coordonnées et sprite rays" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/MASAR.iml">
@@ -607,20 +638,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/backend/Clickable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/MasarSprite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -630,14 +651,7 @@
     <entry file="file://$PROJECT_DIR$/src/backend/SystemClickable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -651,32 +665,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Masar.java">
+    <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="55" column="89" selection-start-line="55" selection-start-column="89" selection-end-line="55" selection-end-column="89" />
+        <state relative-caret-position="238">
+          <caret line="71" column="50" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Objects/MasarSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="51" column="16" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+        <state relative-caret-position="1835">
+          <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
+    <entry file="file://$PROJECT_DIR$/src/Masar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        <state relative-caret-position="356">
+          <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#2099#2100#0" expanded="true" />
+            <element signature="e#2118#2119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/Clickable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

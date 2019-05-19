@@ -21,9 +21,9 @@ public class MasarData{
     private MasarRoom currentRoom;
     private GameContainer gc;
 
-    private static int NB_SYSTEMS = 30;
-    private static float DIST_SYST = 170;
-    private static float DIST_JOINING_CONFLICT = 146;
+    private static int NB_SYSTEMS = 24;
+    private static float DIST_SYST = 180;
+    private static float DIST_JOINING_CONFLICT = 154;
 
     public LinkedList<MasarSystem> getSystemList(){return this.systemList;}
     public LinkedList<SystemLink> getLinkList(){return this.linkList;}
@@ -65,11 +65,11 @@ public class MasarData{
         int ytab = 0; //nombres de lignes = 5
         for( int i=0 ; i<NB_SYSTEMS ; i++ ){
             if ( ytab%2 == 0 )
-                this.Coordinates[i][0] = 130 + itab*DIST_SYST;
+                this.Coordinates[i][0] = 100 + itab*DIST_SYST;
             else
-                this.Coordinates[i][0] = 130 + 85+ itab*DIST_SYST;
+                this.Coordinates[i][0] = 100 + 90+ itab*DIST_SYST;
 
-            this.Coordinates[i][1] = 32 + 68 + ytab*DIST_JOINING_CONFLICT;
+            this.Coordinates[i][1] = 32 + 123 + ytab*DIST_JOINING_CONFLICT;
             itab = (itab + 1)%6;
             if ( itab == 0 ) ytab++;
         }

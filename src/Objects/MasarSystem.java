@@ -134,7 +134,6 @@ public class MasarSystem implements Renderable{
                     systemsheet = this.gameData.getSystemsImages().get("en_3planet_var3");
             }
         }
-
     }
 
     public void render(GameContainer gc, Graphics g){

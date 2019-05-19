@@ -60,6 +60,11 @@ public class MasarRoom implements Renderable{
         }
     }
 
+    public void update(GameContainer gc, int delta){
+
+
+    }
+
 
     public void setAsRoom(MasarData gameData){
         gameData.getGameContainer().getInput().removeAllMouseListeners();
