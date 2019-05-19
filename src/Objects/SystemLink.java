@@ -14,6 +14,7 @@ public class SystemLink implements Renderable{
         this.sys2 = sys2;
     }
 
+    //verifier si le lien est le meme (un lien/couple de syst max)
     public boolean equals(SystemLink l2){
         if((sys1 == l2.getSys1() && sys2 == l2.getSys2()) || (sys1 == l2.getSys2() && sys2 == l2.getSys1()))
             return true;

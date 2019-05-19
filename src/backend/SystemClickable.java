@@ -63,8 +63,8 @@ public class SystemClickable implements Clickable{
     }
 
     public void updateLocation(){
-        float x = attachedSystem.getX();
-        float y =  attachedSystem.getY();
+        float x = attachedSystem.getX() - (float)this.mouseOverArea.getWidth()/2;
+        float y =  attachedSystem.getY() - (float)this.mouseOverArea.getHeight()/2;
 
         mouseOverArea.setLocation(x, y);
     }

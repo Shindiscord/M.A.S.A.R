@@ -31,7 +31,8 @@ public class LinkClickable implements Clickable{
 
         float midDelX = (l.getSys2().getX() - l.getSys1().getX())/2;
         float midDelY = (l.getSys2().getY() - l.getSys1().getY())/2;
-        mouseOverArea.setLocation(l.getSys1().getX() + 16f + midDelX, l.getSys1().getY() + 16f + midDelY);
+        mouseOverArea.setLocation(l.getSys1().getX() + midDelX - (float)mouseOverArea.getWidth()/2
+                , l.getSys1().getY() + midDelY - (float)mouseOverArea.getHeight()/2);
     }
 
 

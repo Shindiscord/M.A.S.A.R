@@ -41,10 +41,12 @@ class MasarGame implements Game {
            e.printStackTrace();
        }
 
-        this.gameData.getSystemList().add(new MasarSystem(0,0,0,0));
-        this.gameData.getSystemList().add(new MasarSystem(0,0,0,0));
-        this.gameData.getSystemList().add(new MasarSystem(0,0,0,0));
-        this.gameData.getSystemList().add(new MasarSystem(0,0,0,0));
+       gameData.loadImages();
+
+        this.gameData.getSystemList().add(new MasarSystem(1,0,0,0,1, this.gameData));
+        this.gameData.getSystemList().add(new MasarSystem(0,0,0,0,3, this.gameData));
+        this.gameData.getSystemList().add(new MasarSystem(0,0,0,0,1, this.gameData));
+        this.gameData.getSystemList().add(new MasarSystem(2,0,0,0,2, this.gameData));
 
         this.gameData.getSystemList().get(0).setPos(100.0f, 100.0f);
         this.gameData.getSystemList().get(1).setPos(300.0f, 120.0f);
@@ -73,6 +75,8 @@ public class Masar{
         try{
             screen = new AppGameContainer(new MasarGame());
             screen.setDisplayMode(1280, 720, false);
+            screen.setTargetFrameRate(10);
+            screen.setShowFPS(false);
             System.out.println("Starting...");
             screen.start();//debut de init puis boucle update-render
         }catch(SlickException e){

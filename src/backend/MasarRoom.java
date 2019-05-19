@@ -55,7 +55,7 @@ public class MasarRoom implements Renderable{
                 s.render(gc, g);
             }
 
-            this.getClickManager().renderHitboxes(gc, g);
+            //this.getClickManager().renderHitboxes(gc, g);
 
         }
     }
