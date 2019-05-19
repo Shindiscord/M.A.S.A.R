@@ -76,15 +76,19 @@ public class MenuButton implements Clickable, Renderable {
 
     @Override
     public void onMousePressed(int button) {
-        switch (this.getName()) {
-            case "Chapters":
-                this.gameData.setCurrentRoom(this.gameData.getRoomList().get(1));
-                break;
-            case "Settings":
-                break;
-            case "Quit":
-                System.exit(0);
-                break;
+
+        if(this.gameData.getCurrentRoom().getRoomType() == 1) {
+            switch (this.getName()) {
+                case "Chapters":
+                    this.gameData.setRoom(1);
+
+                    break;
+                case "Settings":
+                    break;
+                case "Quit":
+                    System.exit(0);
+                    break;
+            }
         }
     }
 
