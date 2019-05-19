@@ -75,7 +75,7 @@ public class MasarRoom implements Renderable{
 
 
     public void setAsRoom(MasarData gameData){
-        gameData.getGameContainer().getInput().removeAllMouseListeners();
+    gameData.getGameContainer().getInput().removeAllListeners();
 
         if(this.roomType == GAMEROOM){
             for(MasarSystem system: this.gameData.getSystemList()){

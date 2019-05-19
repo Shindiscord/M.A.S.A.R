@@ -39,6 +39,7 @@ public class MasarData{
     public void setRoom(int index){
         if(index < roomList.size() && roomList.get(index) != null){
             this.roomList.get(index).setAsRoom(this);
+            System.out.println("room is now " +  index);
         }else{
             System.out.println("Error, Room number "+ index+ " Can't be found");
         }

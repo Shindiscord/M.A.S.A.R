@@ -29,7 +29,6 @@ public class ClickManager implements MouseListener {
         this.mousePressed = false;
         this.registeredClickables = new LinkedList<>();
         this.pressedClickable = null;
-        System.out.println("ClickManagerCreated");
     }
 
     public void addClickable(Clickable c){
@@ -51,7 +50,6 @@ public class ClickManager implements MouseListener {
     @Override
     public void mousePressed(int button, int mx, int my) {
         LinkedList<Clickable> selected;
-
         selected = selectClickedObjects();
         if(selected.size() == 0){
             System.out.println("Mousse pressed on empty space");
