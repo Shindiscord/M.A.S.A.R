@@ -2,13 +2,14 @@
 package backend;
 
 import UI.MenuButton;
+import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.gui.GUIContext;
 import org.newdawn.slick.gui.MouseOverArea;
 
-public class MenuButtonClickable implements Clickable {
+public class MenuButtonClickable implements Clickable, Renderable {
 
     private MenuButton attachedMenuButton;
     private MouseOverArea mouseOverArea;
@@ -48,8 +49,28 @@ public class MenuButtonClickable implements Clickable {
     }
 
     @Override
+    public void onMousePressed(int button) {
+
+    }
+
+    @Override
+    public void onMouseReleased(int button, Clickable clickablePressed) {
+
+    }
+
+    @Override
+    public void renderHitbox(GUIContext gc, Graphics g) {
+
+    }
+
+    @Override
     public void render(GUIContext guiContext, Graphics g) {
         this.mouseOverArea.render(guiContext, g);
+    }
+
+    @Override
+    public void render(GameContainer gc, Graphics g) {
+
     }
 }
 */

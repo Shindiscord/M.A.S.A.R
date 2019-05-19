@@ -1,6 +1,7 @@
 package backend;
 
 import Objects.MasarSystem;
+import UI.MenuButton;
 import backend.Clickable;
 import backend.Renderable;
 import org.newdawn.slick.GameContainer;
@@ -39,6 +40,11 @@ public class MasarRoom implements Renderable{
         }
     }
 
+    public void addButton(MenuButton button){
+        this.renderables.add(button);
+        this.addClickable(button);
+    }
+
     public void render(GameContainer gc, Graphics g){
 
         for(Renderable r:renderables){
@@ -58,6 +64,8 @@ public class MasarRoom implements Renderable{
             //this.getClickManager().renderHitboxes(gc, g);
 
         }
+
+        //this.getClickManager().renderHitboxes(gc, g);
     }
 
 
@@ -74,5 +82,9 @@ public class MasarRoom implements Renderable{
         }
 
         this.gameData.setCurrentRoom(this);
+    }
+
+    public int getRoomType() {
+        return this.roomType;
     }
 }

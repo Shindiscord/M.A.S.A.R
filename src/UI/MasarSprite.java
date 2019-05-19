@@ -24,9 +24,9 @@ public class MasarSprite{
 
     public void drawButtonImage(float x, float y, boolean mouseIsOver){
         if(mouseIsOver == false)
-            sheet.getSubImage(0, 0).draw(x-(float)this.width/2, y-(float)this.height/2);
+            sheet.getSubImage(1, 0).draw(x-(float)this.width/2, y-(float)this.height/2);
         else
-            sheet.getSubImage(1,0).draw(x-(float)this.width/2, y-(float)this.height/2);
+            sheet.getSubImage(0,0).draw(x-(float)this.width/2, y-(float)this.height/2);
     }
 
     public void drawNextSubimage(float x, float y){
