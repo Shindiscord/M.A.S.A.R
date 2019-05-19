@@ -1,6 +1,14 @@
 package Objects;
 
-public class MasarSystem {
+import backend.Clickable;
+import backend.Renderable;
+import backend.SystemClickable;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+
+import java.awt.*;
+
+public class MasarSystem implements Renderable{
 
     private int clan;
     private int maxPop;
@@ -30,5 +38,9 @@ public class MasarSystem {
         this.maxPop = maxPop;
         this.pop = pop;
         this.popSec = popSec;
+    }
+
+    public void render(GameContainer gc, Graphics g){
+
     }
 }

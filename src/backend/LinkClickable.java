@@ -1,9 +1,7 @@
 package backend;
 
 import Objects.SystemLink;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
+import org.newdawn.slick.*;
 import org.newdawn.slick.gui.GUIContext;
 import org.newdawn.slick.gui.MouseOverArea;
 
@@ -12,10 +10,13 @@ public class LinkClickable implements Clickable{
     private SystemLink attachedLink;
     private MouseOverArea mouseOverArea;
 
+    private MasarData gameData;
+
     public SystemLink getAttachedLink(){return this.attachedLink;}
 
-    public LinkClickable(SystemLink l, GUIContext container){
-        attachedLink = l;
+    public LinkClickable(SystemLink l, MasarData gameData){
+        this.attachedLink = l;
+        this.gameData = gameData;
         if(l == null || l.getSys1() == null || l.getSys2() == null)
             return;
 
@@ -26,14 +27,14 @@ public class LinkClickable implements Clickable{
             System.out.println("Hitbox image file can't be found");
             return;
         }
-        mouseOverArea = new MouseOverArea(container, img, 0, 0);
+        mouseOverArea = new MouseOverArea(this.gameData.getGameContainer(), img, 0, 0);
 
         float midDelX = (l.getSys2().getX() - l.getSys1().getX())/2;
         float midDelY = (l.getSys2().getY() - l.getSys1().getY())/2;
         mouseOverArea.setLocation(l.getSys1().getX() + 16f + midDelX, l.getSys1().getY() + 16f + midDelY);
     }
 
-    @Override
+
     public boolean isMouseOver() {
         if(mouseOverArea.isMouseOver())
             return true;
@@ -41,8 +42,19 @@ public class LinkClickable implements Clickable{
             return false;
     }
 
+    public void onMousePressed(int button){
+        if(button == Input.MOUSE_RIGHT_BUTTON){
+            this.gameData.removeLink(this.getAttachedLink());
+            this.gameData.getCurrentRoom().getClickManager().getRegisteredClickables().remove(this);
+        }
+    }
+
     @Override
-    public void render(GUIContext guiContext, Graphics g) {
-            mouseOverArea.render(guiContext, g);
+    public void onMouseReleased(int button, Clickable clickablePressed) {
+
+    }
+
+    public void renderHitbox(GUIContext gc, Graphics g) {
+        this.mouseOverArea.render(gc, g);
     }
 }

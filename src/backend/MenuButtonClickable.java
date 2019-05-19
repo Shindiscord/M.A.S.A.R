@@ -1,3 +1,4 @@
+/*
 package backend;
 
 import UI.MenuButton;
@@ -51,3 +52,4 @@ public class MenuButtonClickable implements Clickable {
         this.mouseOverArea.render(guiContext, g);
     }
 }
+*/

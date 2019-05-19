@@ -1,8 +1,13 @@
 package Objects;
 
-public class SystemLink {
+import backend.Renderable;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+
+public class SystemLink implements Renderable{
 
     private MasarSystem sys1, sys2;
+
 
     public SystemLink(MasarSystem sys1, MasarSystem sys2) {
         this.sys1 = sys1;
@@ -21,5 +26,10 @@ public class SystemLink {
 
     public MasarSystem getSys2() {
         return sys2;
+    }
+
+    @Override
+    public void render(GameContainer gc, Graphics g) {
+
     }
 }
