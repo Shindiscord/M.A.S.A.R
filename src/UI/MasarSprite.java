@@ -1,5 +1,6 @@
 package UI;
 
+import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 
@@ -31,6 +32,14 @@ public class MasarSprite{
 
     public void drawNextSubimage(float x, float y){
         sheet.getSubImage(this.iteration, 0).draw(x-(float)this.width/2, y-(float)this.height/2);
+        this.iteration = (this.iteration+1)%nb_sprites;
+    }
+
+    public void drawNextSubimageRotated(float x, float y, float angle){
+        Image img = sheet.getSubImage(this.iteration, 0);
+        img.setCenterOfRotation(this.width/2, this.height/2);
+        img.setRotation(angle);
+        img.draw(x-(float)this.width/2, y-(float)this.height/2);
         this.iteration = (this.iteration+1)%nb_sprites;
     }
 }

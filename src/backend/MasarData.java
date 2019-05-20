@@ -17,14 +17,16 @@ public class MasarData{
     private LinkedList<MasarRoom> roomList;
     private Map<String, MasarSprite> systemsImages;
     private Map<String, MasarSprite> buttonsImages;
+    private Map<String, MasarSprite> linkImages;
+
     private float Coordinates[][];
 
     private MasarRoom currentRoom;
     private GameContainer gc;
 
     private static int NB_SYSTEMS = 24;
-    private static float DIST_SYST = 180;
-    private static float DIST_JOINING_CONFLICT = 154;
+    public final static float DIST_SYST = 180;
+    public final static float DIST_JOINING_CONFLICT = 154;
 
     public LinkedList<MasarSystem> getSystemList(){return this.systemList;}
     public LinkedList<SystemLink> getLinkList(){return this.linkList;}
@@ -34,6 +36,7 @@ public class MasarData{
     public void setCurrentRoom(MasarRoom room){this.currentRoom = room;}
     public Map<String, MasarSprite> getSystemsImages() {return this.systemsImages;}
     public Map<String, MasarSprite> getButtonsImages() {return this.buttonsImages;}
+    public Map<String, MasarSprite> getLinkImages(){return this.linkImages;}
     public float[][] getCoordinates(){ return this.Coordinates;}
 
     public void setRoom(int index){
@@ -60,6 +63,7 @@ public class MasarData{
         this.roomList = new LinkedList<MasarRoom>();
         this.systemsImages = new HashMap<String, MasarSprite>();
         this.buttonsImages = new HashMap<>();
+        this.linkImages = new HashMap<>();
         this.Coordinates = new float[NB_SYSTEMS][2];
         this.currentRoom = null;
     }
@@ -113,6 +117,7 @@ public class MasarData{
         this.buttonsImages.put("Quit", new MasarSprite("./res/img/Buttons/sheet_b_quit.png", 200, 104, 2));
 
         this.systemsImages.put("en_3planet_var3", new MasarSprite("res/img/System/Enemy/en_starsys3_130_105px_3pl.png", 130,105,5));
-    }
 
+        this.linkImages.put("player_link_sprite", new MasarSprite("res/img/Link/ray_pl_loop_180px_sheet.png", 170, 11, 19));
+    }
 }

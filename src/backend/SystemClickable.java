@@ -42,14 +42,14 @@ public class SystemClickable implements Clickable{
             //afficher les donées du systeme
         }else if(clickablePressed instanceof SystemClickable){
             //CreateLink
-            SystemLink newLink = new SystemLink(((SystemClickable) clickablePressed).getAttachedSystem(), this.getAttachedSystem());
+            SystemLink newLink = new SystemLink(((SystemClickable) clickablePressed).getAttachedSystem(), this.getAttachedSystem(), this.gameData);
             for(SystemLink link: this.gameData.getLinkList()){
                 if(link.equals(newLink)) {
                     System.out.println("ce lien existe deja");
                     return;
                 }
             }
-            if(this.attachedSystem.getDistance(((SystemClickable) clickablePressed).getAttachedSystem()) < 170f) {
+            if(this.attachedSystem.getDistance(((SystemClickable) clickablePressed).getAttachedSystem()) < MasarData.DIST_SYST + 5f) {
                 this.gameData.getLinkList().add(newLink);
                 this.gameData.getCurrentRoom().addClickable(new LinkClickable(newLink, this.gameData));
             }else{
