@@ -51,11 +51,11 @@ class MasarGame implements Game {
         this.gameData.getSystemList().add(new MasarSystem(0,0,1, this.gameData));
         this.gameData.getSystemList().add(new MasarSystem(0,0,2, this.gameData));
 
-        for (int i=4 ; i<24 ; i++)
-            this.gameData.getSystemList().add(new MasarSystem(0,0,1, this.gameData));
+        /*for (int i=4 ; i<24 ; i++)
+            this.gameData.getSystemList().add(new MasarSystem(0,0,1, this.gameData));*/
 
 
-        for (int i=0 ; i<24 ; i++)
+        for (int i=0 ; i<4 ; i++)
             this.gameData.getSystemList().get(i).setPos(gameData.getCoordinates()[i][0], gameData.getCoordinates()[i][1]);
 
 

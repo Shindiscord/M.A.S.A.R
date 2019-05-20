@@ -21,7 +21,7 @@ public class MasarData{
     private Map<String, MasarSprite> buttonsImages;
     private Map<String, MasarSprite> linkImages;
 
-    private float Coordinates[][];
+    private float[][] Coordinates;
 
     private MasarRoom currentRoom;
     private GameContainer gc;
@@ -57,10 +57,10 @@ public class MasarData{
 
     public MasarData(GameContainer gc){
         this.gc = gc;
-        this.systemList = new LinkedList<MasarSystem>();
-        this.linkList = new LinkedList<SystemLink>();
-        this.roomList = new LinkedList<MasarRoom>();
-        this.systemsImages = new HashMap<String, MasarSprite>();
+        this.systemList = new LinkedList<>();
+        this.linkList = new LinkedList<>();
+        this.roomList = new LinkedList<>();
+        this.systemsImages = new HashMap<>();
         this.buttonsImages = new HashMap<>();
         this.linkImages = new HashMap<>();
         this.Coordinates = new float[NB_SYSTEMS][2];
