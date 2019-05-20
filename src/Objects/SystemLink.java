@@ -81,7 +81,11 @@ public class SystemLink implements Renderable{
 
     @Override
     public void render(GameContainer gc, Graphics g) {
-        MasarSprite sprite = this.gameData.getLinkImages().get("player_link_sprite");
+        MasarSprite sprite;
+        if(this.getSys1().getClan() == MasarSystem.ALLIED)
+            sprite = this.gameData.getLinkImages().get("player_link_sprite");
+        else
+            sprite = this.gameData.getLinkImages().get("enemy_link_sprite");
         sprite.drawNextSubimageRotated(this.centerX, this.centerY, this.angleInDegrees);
     }
 }
