@@ -6,7 +6,10 @@ import backend.Renderable;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.TrueTypeFont;
 import org.newdawn.slick.tests.xml.GameData;
+
+import java.awt.*;
 
 public class SystemLink implements Renderable{
 
@@ -87,5 +90,9 @@ public class SystemLink implements Renderable{
         else
             sprite = this.gameData.getLinkImages().get("enemy_link_sprite");
         sprite.drawNextSubimageRotated(this.centerX, this.centerY, this.angleInDegrees);
+        if(this.conflict != null){
+            TrueTypeFont font = new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 10), false);
+            font.drawString(this.centerX-50, this.centerY+50, this.getSys1().getPop() + " vs " + this.getSys2().getPop());
+        }
     }
 }
