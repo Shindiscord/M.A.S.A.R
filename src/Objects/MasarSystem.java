@@ -78,13 +78,13 @@ public class MasarSystem implements Renderable{
                 else if (this.pop < 10000000) fecondity_rate = 160;
                 else fecondity_rate = 320;
 
-                this.pop += this.pop / fecondity_rate;
+                this.pop += this.pop * fecondity_rate;
                 System.out.println("Normies : " + this.pop);
             }
             if (this.pop > this.maxPop) this.pop = this.maxPop;
 
             // -- RPS / RPS_BOOST CALCULATION
-            this.RPS = (this.maxRPS * this.pop) / this.maxPop;
+            this.RPS = (int)((this.maxRPS/(float)this.maxPop) * this.pop);
             this.RPS_BOOST = 0; // reset si jamais un link est coupé puis recalcul
             for (SystemLink l : this.gameData.getLinkList()) {
                 if (l.getSys2() == this)
