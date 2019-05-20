@@ -17,7 +17,9 @@ public class MasarSystem implements Renderable{
     private int clan;
     private int maxPop;
     private int pop;
-    private int popSec;
+    private int RPS;
+    private int RPS_BOOST;
+    private int maxRPS;
     private int level;
 
     private MasarData gameData;
@@ -30,6 +32,9 @@ public class MasarSystem implements Renderable{
     public static final int NEUTRAL = 0;
     public static final int ALLIED = 1;
     public static final int ENNEMY = 2;
+
+    public int getRPS(){return this.RPS;}
+    public int getRPS_BOOST(){return this.RPS_BOOST;}
 
     public float getX(){return this.x_pos;}
     public float getY(){return this.y_pos;}
@@ -46,15 +51,63 @@ public class MasarSystem implements Renderable{
         return (float)Math.sqrt(dx*dx + dy*dy);
     }
 
-    public MasarSystem(int clan, int maxPop, int pop, int popSec, int level, MasarData g) {
+    public void render(GameContainer gc, Graphics g){
+        if(this.systemsheet == null)
+            System.out.println("hmmm");
+        this.systemsheet.drawNextSubimage(getX(),getY());
+    }
+
+    public void startGrowthPopulace(){ this.pop++; }
+
+    public void update(GameContainer gc){
+
+        // -- POPULATION GROWTH
+        int link_out = 0;
+        int fecondity_rate = 0;
+        for(SystemLink l: this.gameData.getLinkList()){
+            if( l.getSys1() == this )
+                link_out++;
+        }
+        if ( this.clan != NEUTRAL && this.pop != 0){
+            if (link_out == 0 && this.pop != this.maxPop) {
+                if (this.pop < 10) fecondity_rate = 1;
+                else if (this.pop < 1000) fecondity_rate = 10;
+                else if (this.pop < 10000) fecondity_rate = 20;
+                else if (this.pop < 100000) fecondity_rate = 40;
+                else if (this.pop < 1000000) fecondity_rate = 80;
+                else if (this.pop < 10000000) fecondity_rate = 160;
+                else fecondity_rate = 320;
+
+                this.pop += this.pop / fecondity_rate;
+                System.out.println("Normies : " + this.pop);
+            }
+            if (this.pop > this.maxPop) this.pop = this.maxPop;
+
+            // -- RPS / RPS_BOOST CALCULATION
+            this.RPS = (this.maxRPS * this.pop) / this.maxPop;
+            this.RPS_BOOST = 0; // reset si jamais un link est coupé puis recalcul
+            for (SystemLink l : this.gameData.getLinkList()) {
+                if (l.getSys2() == this)
+                    this.RPS_BOOST += l.getSys1().getRPS() / 2;
+            }
+            System.out.println("RPS : " + this.RPS + " RPS_BOOST : " + this.RPS_BOOST);
+        }
+    }
+
+    public MasarSystem(int clan, int pop, int level, MasarData g) {
         this.clan = clan;
-        this.maxPop = maxPop;
-        this.pop = pop;
-        this.popSec = popSec;
         this.level = level;
+        this.maxPop = level * 10000000;
+        this.pop = pop;
+        this.RPS = 0;
+        this.RPS_BOOST = 0;
+        if ( level == 1 ) this.maxRPS = 400;
+        if ( level == 2 ) this.maxRPS = 700;
+        if ( level == 3 ) this.maxRPS = 1000;
         this.gameData = g;
-        int system_variant = 1 + (int) (Math.random() * 3);
-        System.out.println(system_variant);
+        int system_variant = 1 + (int) (Math.random() * 2);
+        //System.out.println(system_variant);
+        //System.out.println("level : " + this.level + " max pop : " + this.maxPop + " maxRPS : " + this.maxRPS);
 
         if( clan == NEUTRAL ){
             if ( level == 1 ){
@@ -134,11 +187,5 @@ public class MasarSystem implements Renderable{
                     systemsheet = this.gameData.getSystemsImages().get("en_3planet_var3");
             }
         }
-    }
-
-    public void render(GameContainer gc, Graphics g){
-        if(this.systemsheet == null)
-            System.out.println("hmmm");
-        this.systemsheet.drawNextSubimage(getX(),getY());
     }
 }
