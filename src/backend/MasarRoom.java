@@ -15,6 +15,8 @@ public class MasarRoom implements Renderable{
     private MasarData gameData;
     private ClickManager clickManager;
 
+    private int deltaSum;
+
     private int roomType;
 
     public static final int  MENUROOM = 1;
@@ -27,6 +29,7 @@ public class MasarRoom implements Renderable{
         this.gameData = gameData;
         this.clickManager = new ClickManager(this.gameData);
         this.roomType = roomType;
+        this.deltaSum = 0;
     }
 
     public void addRenderable(Renderable renderable){
@@ -69,8 +72,14 @@ public class MasarRoom implements Renderable{
     }
 
     public void update(GameContainer gc, int delta){
-
-
+        deltaSum += delta;
+        if(this.gameData.getCurrentRoom().getRoomType() != 2) {
+            if (deltaSum >= 250) {
+                for (MasarSystem s : this.gameData.getSystemList())
+                    s.update(gc);
+                deltaSum = 0;
+            }
+        }
     }
 
 
