@@ -46,8 +46,8 @@ class MasarGame implements Game {
            System.out.println("x : " + gameData.getCoordinates()[i][0] + " et y : " + gameData.getCoordinates()[i][1] );
         */
 
-        this.gameData.getSystemList().add(new MasarSystem(1,1,1, this.gameData));
-        this.gameData.getSystemList().add(new MasarSystem(0,0,3, this.gameData));
+        this.gameData.getSystemList().add(new MasarSystem(1,1000000,3, this.gameData));
+        this.gameData.getSystemList().add(new MasarSystem(2,10000,1, this.gameData));
         this.gameData.getSystemList().add(new MasarSystem(0,0,1, this.gameData));
         this.gameData.getSystemList().add(new MasarSystem(0,0,2, this.gameData));
 

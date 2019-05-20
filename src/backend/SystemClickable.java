@@ -35,7 +35,9 @@ public class SystemClickable implements Clickable{
     public boolean isMouseOver(){
         return this.mouseOverArea.isMouseOver();
     }
-    public void onMousePressed(int button){}
+    public void onMousePressed(int button){
+        System.out.println("Pop : " + this.attachedSystem.getPop() + "/" + this.attachedSystem.getMaxPop());
+    }
 
     public void onMouseReleased(int button, Clickable clickablePressed){
         if(clickablePressed == this){

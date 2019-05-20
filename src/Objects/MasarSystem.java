@@ -21,6 +21,7 @@ public class MasarSystem implements Renderable{
     private int RPS_BOOST;
     private int maxRPS;
     private int level;
+    private int system_variant;
 
     private MasarData gameData;
 
@@ -44,6 +45,23 @@ public class MasarSystem implements Renderable{
         this.y_pos = y;
     }
 
+    public int getPop(){return this.pop;}
+    public int getMaxPop(){return this.maxPop;}
+
+    public void beHit(MasarSystem s2, int value){
+        this.pop = this.pop - value*10;
+        if(this.pop <= 0){
+            this.clan = s2.getClan();
+            this.pop = 1;
+            for(SystemLink l:this.gameData.getLinkList()){
+                if((l.getSys1() == this && l.getSys2().getClan() != this.clan) || (l.getSys2() == this && l.getSys1().getClan() != this.clan))
+                    this.gameData.removeLink(l);
+            }
+        }
+    }
+
+    public int getClan(){return this.clan;}
+
     public float getDistance(MasarSystem s2){
         float dx = s2.getX() - this.getX();
         float dy = s2.getY() - this.getY();
@@ -55,6 +73,84 @@ public class MasarSystem implements Renderable{
         if(this.systemsheet == null)
             System.out.println("hmmm");
         this.systemsheet.drawNextSubimage(getX(),getY());
+        if( clan == NEUTRAL ){
+            if ( level == 1 ){
+                if ( system_variant == 1 )
+                    systemsheet = this.gameData.getSystemsImages().get("ne_1planet_var1");
+                if ( system_variant == 2 )
+                    systemsheet = this.gameData.getSystemsImages().get("ne_1planet_var2");
+                if ( system_variant == 3 )
+                    systemsheet = this.gameData.getSystemsImages().get("ne_1planet_var3");
+            }
+            else if ( level == 2 ){
+                if ( system_variant == 1 )
+                    systemsheet = this.gameData.getSystemsImages().get("ne_2planet_var1");
+                if ( system_variant == 2 )
+                    systemsheet = this.gameData.getSystemsImages().get("ne_2planet_var2");
+                if ( system_variant == 3 )
+                    systemsheet = this.gameData.getSystemsImages().get("ne_2planet_var3");
+            }
+            else if ( level == 3 ){
+                if ( system_variant == 1 )
+                    systemsheet = this.gameData.getSystemsImages().get("ne_3planet_var1");
+                if ( system_variant == 2 )
+                    systemsheet = this.gameData.getSystemsImages().get("ne_3planet_var2");
+                if ( system_variant == 3 )
+                    systemsheet = this.gameData.getSystemsImages().get("ne_3planet_var3");
+            }
+        }
+        if( clan == ALLIED ){
+            if ( level == 1 ){
+                if ( system_variant == 1 )
+                    systemsheet = this.gameData.getSystemsImages().get("allied_1planet_var1");
+                if ( system_variant == 2 )
+                    systemsheet = this.gameData.getSystemsImages().get("allied_1planet_var2");
+                if ( system_variant == 3 )
+                    systemsheet = this.gameData.getSystemsImages().get("allied_1planet_var3");
+            }
+            else if ( level == 2 ){
+                if ( system_variant == 1 )
+                    systemsheet = this.gameData.getSystemsImages().get("allied_2planet_var1");
+                if ( system_variant == 2 )
+                    systemsheet = this.gameData.getSystemsImages().get("allied_2planet_var2");
+                if ( system_variant == 3 )
+                    systemsheet = this.gameData.getSystemsImages().get("allied_2planet_var3");
+            }
+            else if ( level == 3 ){
+                if ( system_variant == 1 )
+                    systemsheet = this.gameData.getSystemsImages().get("allied_3planet_var1");
+                if ( system_variant == 2 )
+                    systemsheet = this.gameData.getSystemsImages().get("allied_3planet_var2");
+                if ( system_variant == 3 )
+                    systemsheet = this.gameData.getSystemsImages().get("allied_3planet_var3");
+            }
+        }
+        if( clan == ENNEMY ){
+            if ( level == 1 ){
+                if ( system_variant == 1 )
+                    systemsheet = this.gameData.getSystemsImages().get("en_1planet_var1");
+                if ( system_variant == 2 )
+                    systemsheet = this.gameData.getSystemsImages().get("en_1planet_var2");
+                if ( system_variant == 3 )
+                    systemsheet = this.gameData.getSystemsImages().get("en_1planet_var3");
+            }
+            else if ( level == 2 ){
+                if ( system_variant == 1 )
+                    systemsheet = this.gameData.getSystemsImages().get("en_2planet_var1");
+                if ( system_variant == 2 )
+                    systemsheet = this.gameData.getSystemsImages().get("en_2planet_var2");
+                if ( system_variant == 3 )
+                    systemsheet = this.gameData.getSystemsImages().get("en_2planet_var3");
+            }
+            else if ( level == 3 ) {
+                if (system_variant == 1)
+                    systemsheet = this.gameData.getSystemsImages().get("en_3planet_var1");
+                if (system_variant == 2)
+                    systemsheet = this.gameData.getSystemsImages().get("en_3planet_var2");
+                if (system_variant == 3)
+                    systemsheet = this.gameData.getSystemsImages().get("en_3planet_var3");
+            }
+        }
     }
 
     public void startGrowthPopulace(){ this.pop++; }
@@ -65,7 +161,7 @@ public class MasarSystem implements Renderable{
         int link_out = 0;
         int fecondity_rate = 0;
         for(SystemLink l: this.gameData.getLinkList()){
-            if( l.getSys1() == this )
+            if( l.getSys1() == this  && l.getSys2().getClan() == this.getClan())
                 link_out++;
         }
         if ( this.clan != NEUTRAL && this.pop != 0){
@@ -79,7 +175,7 @@ public class MasarSystem implements Renderable{
                 else fecondity_rate = 320;
 
                 this.pop += this.pop / fecondity_rate;
-                System.out.println("Normies : " + this.pop);
+                //System.out.println("Normies : " + this.pop);
             }
             if (this.pop > this.maxPop) this.pop = this.maxPop;
 
@@ -90,7 +186,7 @@ public class MasarSystem implements Renderable{
                 if (l.getSys2() == this)
                     this.RPS_BOOST += l.getSys1().getRPS() / 2;
             }
-            System.out.println("RPS : " + this.RPS + " RPS_BOOST : " + this.RPS_BOOST);
+            //System.out.println("RPS : " + this.RPS + " RPS_BOOST : " + this.RPS_BOOST);
         }
     }
 
@@ -106,6 +202,7 @@ public class MasarSystem implements Renderable{
         if ( level == 3 ) this.maxRPS = 1000;
         this.gameData = g;
         int system_variant = 1 + (int) (Math.random() * 3);
+        this.system_variant = system_variant;
         //System.out.println(system_variant);
         //System.out.println("level : " + this.level + " max pop : " + this.maxPop + " maxRPS : " + this.maxRPS);
 

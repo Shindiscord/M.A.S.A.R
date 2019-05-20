@@ -1,6 +1,7 @@
 package backend;
 
 import Objects.MasarSystem;
+import Objects.SystemLink;
 import UI.MenuButton;
 import backend.Clickable;
 import backend.Renderable;
@@ -77,6 +78,8 @@ public class MasarRoom implements Renderable{
             if (deltaSum >= 250) {
                 for (MasarSystem s : this.gameData.getSystemList())
                     s.update(gc);
+                for (SystemLink l : this.gameData.getLinkList())
+                    l.update();
                 deltaSum = 0;
             }
         }

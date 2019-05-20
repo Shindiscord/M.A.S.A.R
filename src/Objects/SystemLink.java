@@ -6,16 +6,20 @@ import backend.Renderable;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.tests.xml.GameData;
 
 public class SystemLink implements Renderable{
 
     private MasarSystem sys1, sys2;
     private MasarData gameData;
+    private LinkConflict conflict;
 
     private float centerX;
     private float centerY;
 
     private float angleInDegrees;
+
+    public boolean isInConflict(){return this.conflict != null;}
 
     private void initValues(){
         //Compute angle between two systems
@@ -41,6 +45,7 @@ public class SystemLink implements Renderable{
         this.sys2 = sys2;
         this.gameData = gameData;
         this.initValues();
+        System.out.println("Lien créé entre clan " + this.getSys1().getClan() + " et " + this.getSys2().getClan());
     }
 
     //verifier si le lien est le meme (un lien/couple de syst max)
@@ -56,6 +61,22 @@ public class SystemLink implements Renderable{
 
     public MasarSystem getSys2() {
         return sys2;
+    }
+
+    public void update(){
+        if(this.getSys1().getClan() == this.getSys2().getClan() && this.conflict != null)
+            this.conflict = null;
+        if(this.getSys1().getClan() != this.getSys2().getClan()){
+            if(this.getSys2().getClan() == MasarSystem.NEUTRAL){
+                //Conquerir le systeme
+            }else if(this.conflict == null && this.getSys1().getClan() != MasarSystem.NEUTRAL){
+                System.out.println("new conflict !");
+                this.conflict = new LinkConflict(this);
+            }
+        }
+        if(this.conflict != null){
+            this.conflict.update();
+        }
     }
 
     @Override
