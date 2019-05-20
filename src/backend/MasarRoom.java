@@ -73,7 +73,7 @@ public class MasarRoom implements Renderable{
 
     public void update(GameContainer gc, int delta){
         deltaSum += delta;
-        if(this.gameData.getCurrentRoom().getRoomType() != 2) {
+        if(this.gameData.getCurrentRoom().getRoomType() == MasarRoom.GAMEROOM) {
             if (deltaSum >= 250) {
                 for (MasarSystem s : this.gameData.getSystemList())
                     s.update(gc);
