@@ -1,5 +1,6 @@
 package backend;
 
+import Objects.MasarSystem;
 import Objects.SystemLink;
 import org.newdawn.slick.*;
 import org.newdawn.slick.gui.GUIContext;
@@ -44,7 +45,10 @@ public class LinkClickable implements Clickable{
     }
 
     public void onMousePressed(int button){
-        if(button == Input.MOUSE_RIGHT_BUTTON){
+        if(button == Input.MOUSE_RIGHT_BUTTON
+                && this.attachedLink.getSys1().getClan() == MasarSystem.ALLIED
+                && this.attachedLink.getSys2().getClan() != MasarSystem.ENNEMY
+        ){
             this.gameData.removeLink(this.getAttachedLink());
             this.gameData.getCurrentRoom().getClickManager().getRegisteredClickables().remove(this);
         }

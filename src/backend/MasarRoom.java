@@ -9,6 +9,7 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.tests.xml.GameData;
 
+import java.util.ConcurrentModificationException;
 import java.util.LinkedList;
 
 public class MasarRoom implements Renderable{
@@ -76,10 +77,12 @@ public class MasarRoom implements Renderable{
         deltaSum += delta;
         if(this.gameData.getCurrentRoom().getRoomType() == MasarRoom.GAMEROOM) {
             if (deltaSum >= 250) {
-                for (MasarSystem s : this.gameData.getSystemList())
-                    s.update(gc);
-                for (SystemLink l : this.gameData.getLinkList())
-                    l.update();
+                try {
+                    for (MasarSystem s : this.gameData.getSystemList())
+                        s.update(gc);
+                    for (SystemLink l : this.gameData.getLinkList())
+                        l.update();
+                }catch (ConcurrentModificationException e){}
                 deltaSum = 0;
             }
         }

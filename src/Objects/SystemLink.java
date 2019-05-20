@@ -70,9 +70,7 @@ public class SystemLink implements Renderable{
         if(this.getSys1().getClan() == this.getSys2().getClan() && this.conflict != null)
             this.conflict = null;
         if(this.getSys1().getClan() != this.getSys2().getClan()){
-            if(this.getSys2().getClan() == MasarSystem.NEUTRAL){
-                //Conquerir le systeme
-            }else if(this.conflict == null && this.getSys1().getClan() != MasarSystem.NEUTRAL){
+            if(this.conflict == null && this.getSys1().getClan() != MasarSystem.NEUTRAL){
                 System.out.println("new conflict !");
                 this.conflict = new LinkConflict(this);
             }

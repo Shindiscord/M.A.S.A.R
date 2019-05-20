@@ -5,6 +5,7 @@ import UI.MenuButton;
 import backend.*;
 import org.lwjgl.input.Cursor;
 import org.newdawn.slick.*;
+import org.newdawn.slick.tests.xml.GameData;
 
 //Classe/Structure de donées échangées entre les différents composants principaux du jeu
 
@@ -47,15 +48,15 @@ class MasarGame implements Game {
         */
 
         this.gameData.getSystemList().add(new MasarSystem(1,1000000,3, this.gameData));
-        this.gameData.getSystemList().add(new MasarSystem(2,10000,1, this.gameData));
-        this.gameData.getSystemList().add(new MasarSystem(0,0,1, this.gameData));
-        this.gameData.getSystemList().add(new MasarSystem(0,0,2, this.gameData));
+        this.gameData.getSystemList().add(new MasarSystem(0,100000,1, this.gameData));
+        this.gameData.getSystemList().add(new MasarSystem(0,100000,1, this.gameData));
+        this.gameData.getSystemList().add(new MasarSystem(2,1000000,3, this.gameData));
 
-        /*for (int i=4 ; i<24 ; i++)
-            this.gameData.getSystemList().add(new MasarSystem(0,0,1, this.gameData));*/
+        for (int i=4 ; i<24 ; i++)
+            this.gameData.getSystemList().add(new MasarSystem(0,100000,1, this.gameData));
 
 
-        for (int i=0 ; i<4 ; i++)
+        for (int i = 0; i< MasarData.NB_SYSTEMS ; i++)
             this.gameData.getSystemList().get(i).setPos(gameData.getCoordinates()[i][0], gameData.getCoordinates()[i][1]);
 
 

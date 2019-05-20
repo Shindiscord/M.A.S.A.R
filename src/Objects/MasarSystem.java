@@ -11,6 +11,7 @@ import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.tests.xml.GameData;
 
 import java.awt.*;
+import java.util.ConcurrentModificationException;
 
 public class MasarSystem implements Renderable{
 
@@ -51,11 +52,16 @@ public class MasarSystem implements Renderable{
     public void beHit(MasarSystem s2, int value){
         this.pop = this.pop - value*10;
         if(this.pop <= 0){
+            System.out.println("Conflict resolved");
             this.clan = s2.getClan();
             this.pop = 1;
-            for(SystemLink l:this.gameData.getLinkList()){
-                if((l.getSys1() == this && l.getSys2().getClan() != this.clan) || (l.getSys2() == this && l.getSys1().getClan() != this.clan))
-                    this.gameData.removeLink(l);
+            try {
+                for (SystemLink l : this.gameData.getLinkList()) {
+                    if ((l.getSys1() == this && l.getSys2().getClan() != this.clan) || (l.getSys2() == this && l.getSys1().getClan() != this.clan))
+                        this.gameData.removeLink(l);
+                }
+            }catch (ConcurrentModificationException e){
+                System.out.println("oopsie");
             }
         }
     }
@@ -161,18 +167,18 @@ public class MasarSystem implements Renderable{
         int link_out = 0;
         int fecondity_rate = 0;
         for(SystemLink l: this.gameData.getLinkList()){
-            if( l.getSys1() == this  && l.getSys2().getClan() == this.getClan())
+            if( l.getSys1() == this  || (l.getSys2() == this && l.getSys1().getClan() != this.getClan()))
                 link_out++;
         }
         if ( this.clan != NEUTRAL && this.pop != 0){
             if (link_out == 0 && this.pop != this.maxPop) {
                 if (this.pop < 10) fecondity_rate = 1;
-                else if (this.pop < 1000) fecondity_rate = 10;
-                else if (this.pop < 10000) fecondity_rate = 20;
-                else if (this.pop < 100000) fecondity_rate = 40;
-                else if (this.pop < 1000000) fecondity_rate = 80;
-                else if (this.pop < 10000000) fecondity_rate = 160;
-                else fecondity_rate = 320;
+                else if (this.pop < 1000) fecondity_rate = 2;
+                else if (this.pop < 10000) fecondity_rate = 4;
+                else if (this.pop < 100000) fecondity_rate = 8;
+                else if (this.pop < 1000000) fecondity_rate = 16;
+                else if (this.pop < 10000000) fecondity_rate = 32;
+                else fecondity_rate = 64;
 
                 this.pop += this.pop / fecondity_rate;
                 //System.out.println("Normies : " + this.pop);
@@ -197,9 +203,9 @@ public class MasarSystem implements Renderable{
         this.pop = pop;
         this.RPS = 0;
         this.RPS_BOOST = 0;
-        if ( level == 1 ) this.maxRPS = 400;
-        if ( level == 2 ) this.maxRPS = 700;
-        if ( level == 3 ) this.maxRPS = 1000;
+        if ( level == 1 ) this.maxRPS = 4000;
+        if ( level == 2 ) this.maxRPS = 7000;
+        if ( level == 3 ) this.maxRPS = 10000;
         this.gameData = g;
         int system_variant = 1 + (int) (Math.random() * 3);
         this.system_variant = system_variant;

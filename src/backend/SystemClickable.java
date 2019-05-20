@@ -51,6 +51,8 @@ public class SystemClickable implements Clickable{
                     return;
                 }
             }
+            if(((SystemClickable) clickablePressed).getAttachedSystem().getClan() == MasarSystem.NEUTRAL)
+                return;
             if(this.attachedSystem.getDistance(((SystemClickable) clickablePressed).getAttachedSystem()) < MasarData.DIST_SYST + 5f) {
                 this.gameData.getLinkList().add(newLink);
                 this.gameData.getCurrentRoom().addClickable(new LinkClickable(newLink, this.gameData));

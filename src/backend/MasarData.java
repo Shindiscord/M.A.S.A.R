@@ -26,7 +26,7 @@ public class MasarData{
     private MasarRoom currentRoom;
     private GameContainer gc;
 
-    private static int NB_SYSTEMS = 24;
+    public final static int NB_SYSTEMS = 24;
     public final static float DIST_SYST = 180;
     public final static float DIST_JOINING_CONFLICT = 154;
 
