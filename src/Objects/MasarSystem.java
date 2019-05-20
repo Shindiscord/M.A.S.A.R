@@ -78,7 +78,7 @@ public class MasarSystem implements Renderable{
                 else if (this.pop < 10000000) fecondity_rate = 160;
                 else fecondity_rate = 320;
 
-                this.pop += this.pop * fecondity_rate;
+                this.pop += this.pop / fecondity_rate;
                 System.out.println("Normies : " + this.pop);
             }
             if (this.pop > this.maxPop) this.pop = this.maxPop;
@@ -105,7 +105,7 @@ public class MasarSystem implements Renderable{
         if ( level == 2 ) this.maxRPS = 700;
         if ( level == 3 ) this.maxRPS = 1000;
         this.gameData = g;
-        int system_variant = 1 + (int) (Math.random() * 2);
+        int system_variant = 1 + (int) (Math.random() * 3);
         //System.out.println(system_variant);
         //System.out.println("level : " + this.level + " max pop : " + this.maxPop + " maxRPS : " + this.maxRPS);
 

@@ -8,8 +8,10 @@ import org.newdawn.slick.GameContainer;
 import UI.MasarSprite;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.function.Predicate;
 
 public class MasarData{
     private LinkedList<MasarSystem> systemList;
@@ -49,11 +51,8 @@ public class MasarData{
     }
 
     public void removeLink(SystemLink link){
-        linkList.remove(link);
-        for(Clickable l:this.currentRoom.getClickManager().getRegisteredClickables()){
-            if(l instanceof LinkClickable && ((LinkClickable) l).getAttachedLink() == link)
-                this.currentRoom.getClickManager().getRegisteredClickables().remove(l);
-        }
+        this.getCurrentRoom().getClickManager().getRegisteredClickables().removeIf(lc -> (lc instanceof LinkClickable &&((LinkClickable) lc).getAttachedLink().equals(link)));
+        this.getLinkList().removeIf(Predicate.isEqual(link));
     }
 
     public MasarData(GameContainer gc){
