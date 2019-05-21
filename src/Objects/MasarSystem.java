@@ -1,6 +1,7 @@
 package Objects;
 
 import UI.MasarSprite;
+import UI.WindowSystem;
 import backend.Clickable;
 import backend.MasarData;
 import backend.Renderable;
@@ -25,6 +26,8 @@ public class MasarSystem implements Renderable{
     private int maxRPS;
     private int level;
     private int system_variant;
+    private boolean showWindow;
+    private WindowSystem windowSys;
 
     private MasarData gameData;
 
@@ -42,12 +45,13 @@ public class MasarSystem implements Renderable{
     public int getRPS(){return this.RPS;}
     public int getRPS_BOOST(){return this.RPS_BOOST;}
     public int getMaxRPS(){return this.maxRPS;}
+    public int getPop(){return this.pop;}
+    public int getMaxPop(){return this.maxPop;}
+    public int getLevel(){return this.level;}
 
     public float getX(){return this.x_pos;}
     public float getY(){return this.y_pos;}
 
-    public int getPop(){return this.pop;}
-    public int getMaxPop(){return this.maxPop;}
     public ConquestSystem getConquest() {return conquest;}
     public int getClan(){return this.clan;}
 
@@ -57,6 +61,10 @@ public class MasarSystem implements Renderable{
 
         return (float)Math.sqrt(dx*dx + dy*dy);
     }
+    public WindowSystem getWindowSys(){return this.windowSys;}
+    public boolean isShowWindow(){return this.showWindow;}
+
+    public void invertShowWindow(){this.showWindow = !this.showWindow;}
 
     public void setPos(float x, float y){
         this.x_pos = x;
@@ -175,6 +183,9 @@ public class MasarSystem implements Renderable{
                 font.drawString(this.getX(), this.getY(), this.getConquest().getPercentEnnemy() + "%" , Color.red);
 
         }
+
+        if(this.showWindow)
+            this.windowSys.render(gc, g);
     }
 
     public void startGrowthPopulace(){ this.pop++; }
@@ -218,6 +229,7 @@ public class MasarSystem implements Renderable{
 
         this.clan = clan;
         this.level = level;
+        this.showWindow = false;
 
         this.maxPop = level * 10000000;
         this.pop = pop;
@@ -231,6 +243,8 @@ public class MasarSystem implements Renderable{
         this.conquest = new ConquestSystem(g, this);
 
         this.gameData = g;
+        this.windowSys = new WindowSystem(this, this.gameData);
+        this.gameData.getWindowList().add(this.getWindowSys());
 
         int system_variant = 1 + (int) (Math.random() * 3);
         this.system_variant = system_variant;

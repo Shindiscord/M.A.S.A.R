@@ -3,10 +3,13 @@ package backend;
 import Objects.MasarSystem;
 import Objects.SystemLink;
 import UI.MenuButton;
+import UI.WindowSystem;
 import backend.ClickManager;
 import org.newdawn.slick.GameContainer;
 import UI.MasarSprite;
+import org.newdawn.slick.TrueTypeFont;
 
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -17,9 +20,12 @@ public class MasarData{
     private LinkedList<MasarSystem> systemList;
     private LinkedList<SystemLink> linkList;
     private LinkedList<MasarRoom> roomList;
+    private LinkedList<WindowSystem> windowList;
     private Map<String, MasarSprite> systemsImages;
     private Map<String, MasarSprite> buttonsImages;
     private Map<String, MasarSprite> linkImages;
+    private Map<String, MasarSprite> planetImage;
+    private Map<String, TrueTypeFont> fontMap;
 
     private float[][] Coordinates;
 
@@ -33,6 +39,7 @@ public class MasarData{
     public LinkedList<MasarSystem> getSystemList(){return this.systemList;}
     public LinkedList<SystemLink> getLinkList(){return this.linkList;}
     public LinkedList<MasarRoom> getRoomList(){return this.roomList;}
+    public LinkedList<WindowSystem> getWindowList() {return windowList;}
     public GameContainer getGameContainer(){return this.gc;}
     public MasarRoom getCurrentRoom(){return this.currentRoom;}
     public void setCurrentRoom(MasarRoom room){this.currentRoom = room;}
@@ -40,6 +47,8 @@ public class MasarData{
     public Map<String, MasarSprite> getButtonsImages() {return this.buttonsImages;}
     public Map<String, MasarSprite> getLinkImages(){return this.linkImages;}
     public float[][] getCoordinates(){ return this.Coordinates;}
+    public TrueTypeFont getFont(String s){return this.fontMap.get(s);}
+    public MasarSprite getPlanetImage(String s){return this.planetImage.get(s);}
 
     public void setRoom(int index){
         if(index < roomList.size() && roomList.get(index) != null){
@@ -71,11 +80,14 @@ public class MasarData{
         this.systemList = new LinkedList<>();
         this.linkList = new LinkedList<>();
         this.roomList = new LinkedList<>();
+        this.windowList = new LinkedList<>();
         this.systemsImages = new HashMap<>();
         this.buttonsImages = new HashMap<>();
         this.linkImages = new HashMap<>();
         this.Coordinates = new float[NB_SYSTEMS][2];
         this.currentRoom = null;
+        this.planetImage = new HashMap<>();
+        this.fontMap = new HashMap<>();
     }
 
     public void loadCoordinates(){
@@ -130,5 +142,14 @@ public class MasarData{
 
         this.linkImages.put("player_link_sprite", new MasarSprite("res/img/Link/ray_pl_loop_180px_sheet.png", 170, 11, 19));
         this.linkImages.put("enemy_link_sprite", new MasarSprite("res/img/Link/ray_en_loop_180px_sheet.png", 170, 11, 19));
+
+        this.planetImage.put("planet1", new MasarSprite("res/img/Planets/planet1.png", 26, 26, 25));
+        this.planetImage.put("planet2", new MasarSprite("res/img/Planets/planet1.png", 26, 26, 25));
+        this.planetImage.put("planet3", new MasarSprite("res/img/Planets/planet1.png", 26, 26, 25));
+
+        this.fontMap.put("default", new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 12), false));
+        this.fontMap.put("default2", new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 9), false));
+
+        this.planetImage.put("InfoWindow", new MasarSprite("res/img/InfoWindow/cadreblanc.png", 240, 137, 1));
     }
 }

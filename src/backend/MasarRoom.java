@@ -3,6 +3,7 @@ package backend;
 import Objects.MasarSystem;
 import Objects.SystemLink;
 import UI.MenuButton;
+import UI.WindowSystem;
 import backend.Clickable;
 import backend.Renderable;
 import org.newdawn.slick.GameContainer;
@@ -65,7 +66,10 @@ public class MasarRoom implements Renderable{
             for(Renderable s: this.gameData.getSystemList()){
                 s.render(gc, g);
             }
-
+            for(WindowSystem w: this.gameData.getWindowList()){
+                if(w.getMs().isShowWindow() == true)
+                    w.render(gc, g);
+            }
             //this.getClickManager().renderHitboxes(gc, g);
 
         }

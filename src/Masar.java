@@ -31,6 +31,7 @@ class MasarGame implements Game {
 
     public void init(GameContainer gc){
 
+
         this.gameData = new MasarData(gc);
 
        try {
@@ -39,6 +40,7 @@ class MasarGame implements Game {
        } catch (SlickException e) {
            e.printStackTrace();
        }
+
 
        gameData.loadImages();
        gameData.loadCoordinates();
@@ -98,6 +100,7 @@ public class Masar{
             screen.setShowFPS(false);
             System.out.println("Starting...");
             screen.start();//debut de init puis boucle update-render
+
         }catch(SlickException e){
             e.printStackTrace();
         }
