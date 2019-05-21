@@ -129,6 +129,7 @@ public class MasarData{
         this.buttonsImages.put("Back", new MasarSprite("./res/img/Buttons/sheet_b_back.png", 115, 65, 2));
         this.buttonsImages.put("Chapter1", new MasarSprite("./res/img/Buttons/sheet_b_chapter1.png", 344, 104, 2));
         this.buttonsImages.put("Done", new MasarSprite("./res/img/Buttons/sheet_b_done.png", 115, 65, 2));
+        this.buttonsImages.put("PlayPause", new MasarSprite("./res/img/Buttons/sheet_b_playpause.png", 54, 26, 2));
 
         this.systemsImages.put("en_3planet_var3", new MasarSprite("res/img/System/Enemy/en_starsys3_130_105px_3pl.png", 130,105,5));
 

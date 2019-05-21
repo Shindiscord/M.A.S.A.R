@@ -63,6 +63,8 @@ class MasarGame implements Game {
         this.gameData.getSystemList().get(3).setPos(gameData.getCoordinates()[7][0], gameData.getCoordinates()[7][1]);
 
 
+        MenuButton p = new MenuButton(1207f, 13f, this.gameData, "./res/img/Buttons/b_playpause.png", "PlayPause");
+        MenuButton b = new MenuButton(1257f, 13f, this.gameData, "./res/img/Buttons/b_back_lte.png", "BackLte");
 
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.MENUROOM, this.gameData));
         this.gameData.getRoomList().get(0).addButton(new MenuButton(640f, 300f, this.gameData, "./res/img/Buttons/b_chapters.png", "Chapters"));
@@ -74,7 +76,11 @@ class MasarGame implements Game {
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.MENUROOM, this.gameData));
         this.gameData.getRoomList().get(2).addButton(new MenuButton(640f, 687.5f, this.gameData, "./res/img/Buttons/b_done.png", "Done"));
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.GAMEROOM, this.gameData));
-        this.gameData.getRoomList().get(3).addButton(new MenuButton(1257f, 13f, this.gameData, "./res/img/Buttons/b_back_lte.png", "BackLte"));
+        this.gameData.getRoomList().get(3).addButton(b);
+        this.gameData.getRoomList().get(3).addButton(p);
+        this.gameData.getRoomList().add(new MasarRoom(MasarRoom.PAUSEROOM, this.gameData));
+        this.gameData.getRoomList().get(4).addButton(p);
+        this.gameData.getRoomList().get(4).addButton(b);
         this.gameData.setRoom(0);
 
     }

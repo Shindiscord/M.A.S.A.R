@@ -23,6 +23,7 @@ public class MasarRoom implements Renderable{
 
     public static final int  MENUROOM = 1;
     public static final int GAMEROOM = 2;
+    public static final int PAUSEROOM = 3;
 
     public ClickManager getClickManager(){return this.clickManager;}
 

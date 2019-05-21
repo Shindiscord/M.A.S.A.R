@@ -3,10 +3,7 @@ package UI;
 import backend.Clickable;
 import backend.MasarData;
 import backend.Renderable;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
+import org.newdawn.slick.*;
 import org.newdawn.slick.gui.GUIContext;
 import org.newdawn.slick.gui.MouseOverArea;
 
@@ -57,6 +54,10 @@ public class MenuButton implements Clickable, Renderable {
                 break;
             case "Done" :
                 Sprite = this.gameData.getButtonsImages().get("Done");
+                break;
+            case "PlayPause" :
+                Sprite = this.gameData.getButtonsImages().get("PlayPause");
+                break;
         }
     }
 
@@ -105,6 +106,13 @@ public class MenuButton implements Clickable, Renderable {
             case "Chapter1":
                 this.gameData.setRoom(3);
                 break;
+            case "PlayPause":
+                if(this.gameData.getCurrentRoom().getRoomType() == 2) {
+                    this.gameData.setRoom(4);
+                } else {
+                    this.gameData.setRoom(3);
+                }
+                break;
         }
     }
 
@@ -121,6 +129,10 @@ public class MenuButton implements Clickable, Renderable {
     @Override
     public void render(GameContainer gc, Graphics g) {
         this.Sprite.drawButtonImage(this.getPosx(), this.getPosy(), this.isMouseOver());
+        if(this.gameData.getCurrentRoom().getRoomType() == 3) {
+            TrueTypeFont font = new TrueTypeFont(new java.awt.Font("Monospaced", java.awt.Font.PLAIN, 50), false);
+                font.drawString(560, 325, "Pause" , Color.green);
+        }
     }
 
     public void updateLocation(){
