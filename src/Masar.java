@@ -68,7 +68,13 @@ class MasarGame implements Game {
         this.gameData.getRoomList().get(0).addButton(new MenuButton(640f, 300f, this.gameData, "./res/img/Buttons/b_chapters.png", "Chapters"));
         this.gameData.getRoomList().get(0).addButton(new MenuButton(640f, 450f, this.gameData, "./res/img/Buttons/b_settings.png", "Settings"));
         this.gameData.getRoomList().get(0).addButton(new MenuButton(640f, 600f, this.gameData, "./res/img/Buttons/b_quit.png", "Quit"));
+        this.gameData.getRoomList().add(new MasarRoom(MasarRoom.MENUROOM, this.gameData));
+        this.gameData.getRoomList().get(1).addButton(new MenuButton(640f, 58f, this.gameData, "./res/img/Buttons/b_chapter1.png", "Chapter1"));
+        this.gameData.getRoomList().get(1).addButton(new MenuButton(640f, 687.5f, this.gameData, "./res/img/Buttons/b_back.png", "Back"));
+        this.gameData.getRoomList().add(new MasarRoom(MasarRoom.MENUROOM, this.gameData));
+        this.gameData.getRoomList().get(2).addButton(new MenuButton(640f, 687.5f, this.gameData, "./res/img/Buttons/b_done.png", "Done"));
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.GAMEROOM, this.gameData));
+        this.gameData.getRoomList().get(3).addButton(new MenuButton(1257f, 13f, this.gameData, "./res/img/Buttons/b_back_lte.png", "BackLte"));
         this.gameData.setRoom(0);
 
     }

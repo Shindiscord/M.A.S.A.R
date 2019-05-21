@@ -46,6 +46,17 @@ public class MenuButton implements Clickable, Renderable {
             case "Quit" :
                 Sprite = this.gameData.getButtonsImages().get("Quit");
                 break;
+            case "BackLte" :
+                Sprite = this.gameData.getButtonsImages().get("BackLte");
+                break;
+            case "Back" :
+                Sprite = this.gameData.getButtonsImages().get("Back");
+                break;
+            case "Chapter1" :
+                Sprite = this.gameData.getButtonsImages().get("Chapter1");
+                break;
+            case "Done" :
+                Sprite = this.gameData.getButtonsImages().get("Done");
         }
     }
 
@@ -78,12 +89,21 @@ public class MenuButton implements Clickable, Renderable {
     public void onMousePressed(int button) {
         switch (this.getName()) {
             case "Chapters":
+            case "BackLte":
                 this.gameData.setRoom(1);
                 break;
             case "Settings":
+                this.gameData.setRoom(2);
                 break;
             case "Quit":
                 System.exit(0);
+                break;
+            case "Back":
+            case "Done":
+                this.gameData.setRoom(0);
+                break;
+            case "Chapter1":
+                this.gameData.setRoom(3);
                 break;
         }
     }
