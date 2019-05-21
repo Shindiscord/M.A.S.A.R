@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/backend/MasarData.java" line="38" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d325f15-3ffc-4d6b-9386-49b5d6f75a55" name="Default Changelist" comment="">
+    <list default="true" id="1d325f15-3ffc-4d6b-9386-49b5d6f75a55" name="Default Changelist" comment="Ajout menu Chapters et Settings">
+      <change afterPath="$PROJECT_DIR$/res/img/UI/res_allied.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Masar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Masar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MenuButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/MasarData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MasarData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/MasarRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MasarRoom.java" afterDir="false" />
     </list>
@@ -18,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Masar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="79" column="91" selection-start-line="79" selection-start-column="91" selection-end-line="79" selection-end-column="91" />
+            <state relative-caret-position="303">
+              <caret line="77" column="78" selection-start-line="77" selection-start-column="78" selection-end-line="77" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2822#2823#0" expanded="true" />
@@ -35,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="109" column="5" lean-forward="true" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
+            <state relative-caret-position="231">
+              <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -53,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="131" column="109" selection-start-line="131" selection-start-column="109" selection-end-line="131" selection-end-column="109" />
+            <state relative-caret-position="365">
+              <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -90,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/MenuButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="133" column="39" selection-start-line="133" selection-start-column="39" selection-end-line="133" selection-end-column="39" />
+            <state relative-caret-position="1748">
+              <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1954#1955#0" expanded="true" />
@@ -133,10 +136,10 @@
         <option value="$PROJECT_DIR$/src/backend/LinkClickable.java" />
         <option value="$PROJECT_DIR$/src/Objects/MasarSystem.java" />
         <option value="$PROJECT_DIR$/src/UI/MasarSprite.java" />
+        <option value="$PROJECT_DIR$/src/UI/MenuButton.java" />
         <option value="$PROJECT_DIR$/src/backend/MasarData.java" />
         <option value="$PROJECT_DIR$/src/backend/MasarRoom.java" />
         <option value="$PROJECT_DIR$/src/Masar.java" />
-        <option value="$PROJECT_DIR$/src/UI/MenuButton.java" />
       </list>
     </option>
   </component>
@@ -157,6 +160,24 @@
             <path>
               <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
               <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
@@ -272,7 +293,21 @@
       <option name="project" value="LOCAL" />
       <updated>1558458738540</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ajout menu Chapters et Settings">
+      <created>1558463125024</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1558463125024</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Ajout menu Chapters et Settings">
+      <created>1558463173456</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1558463173456</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -426,32 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="131" column="109" selection-start-line="131" selection-start-column="109" selection-end-line="131" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Masar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="79" column="91" selection-start-line="79" selection-start-column="91" selection-end-line="79" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2822#2823#0" expanded="true" />
-            <element signature="e#2886#2887#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="109" column="5" lean-forward="true" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/SystemClickable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1121">
@@ -472,14 +481,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/MenuButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="133" column="39" selection-start-line="133" selection-start-column="39" selection-end-line="133" selection-end-column="39" />
+        <state relative-caret-position="1748">
+          <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1954#1955#0" expanded="true" />
             <element signature="e#1986#1987#0" expanded="true" />
             <element signature="e#2016#2017#0" expanded="true" />
             <element signature="e#2048#2049#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Masar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="77" column="78" selection-start-line="77" selection-start-column="78" selection-end-line="77" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2822#2823#0" expanded="true" />
+            <element signature="e#2886#2887#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -67,6 +67,8 @@ public class MasarRoom implements Renderable{
                 s.render(gc, g);
             }
 
+            this.gameData.getImageList().get(0).draw(10, 5);
+
             //this.getClickManager().renderHitboxes(gc, g);
 
         }

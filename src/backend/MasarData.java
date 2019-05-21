@@ -6,6 +6,8 @@ import UI.MenuButton;
 import backend.ClickManager;
 import org.newdawn.slick.GameContainer;
 import UI.MasarSprite;
+import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -17,6 +19,7 @@ public class MasarData{
     private LinkedList<MasarSystem> systemList;
     private LinkedList<SystemLink> linkList;
     private LinkedList<MasarRoom> roomList;
+    private LinkedList<Image> imageList;
     private Map<String, MasarSprite> systemsImages;
     private Map<String, MasarSprite> buttonsImages;
     private Map<String, MasarSprite> linkImages;
@@ -33,6 +36,7 @@ public class MasarData{
     public LinkedList<MasarSystem> getSystemList(){return this.systemList;}
     public LinkedList<SystemLink> getLinkList(){return this.linkList;}
     public LinkedList<MasarRoom> getRoomList(){return this.roomList;}
+    public LinkedList<Image> getImageList() {return this.imageList;}
     public GameContainer getGameContainer(){return this.gc;}
     public MasarRoom getCurrentRoom(){return this.currentRoom;}
     public void setCurrentRoom(MasarRoom room){this.currentRoom = room;}
@@ -71,6 +75,7 @@ public class MasarData{
         this.systemList = new LinkedList<>();
         this.linkList = new LinkedList<>();
         this.roomList = new LinkedList<>();
+        this.imageList = new LinkedList<>();
         this.systemsImages = new HashMap<>();
         this.buttonsImages = new HashMap<>();
         this.linkImages = new HashMap<>();
@@ -135,5 +140,13 @@ public class MasarData{
 
         this.linkImages.put("player_link_sprite", new MasarSprite("res/img/Link/ray_pl_loop_180px_sheet.png", 170, 11, 19));
         this.linkImages.put("enemy_link_sprite", new MasarSprite("res/img/Link/ray_en_loop_180px_sheet.png", 170, 11, 19));
+
+        Image i = null;
+        try {
+            i = new Image("./res/img/UI/res_allied.png");
+        } catch (SlickException e) {
+            e.printStackTrace();
+        }
+        this.imageList.add(i);
     }
 }
