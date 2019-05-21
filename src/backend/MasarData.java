@@ -58,11 +58,11 @@ public class MasarData{
     public void removeAllLinksOfSystem(MasarSystem system){
         for(SystemLink l : this.getLinkList()){
             if( l.getSys2() == system || l.getSys1() == system)
-                this.getLinkList().remove(l);
+                this.removeLink(l);
         }
         for(SystemLink l : this.getLinkList()){
             if( l.getSys2() == system || l.getSys1() == system)
-                this.getLinkList().remove(l);
+                this.removeLink(l);
         }
     }
 
@@ -128,7 +128,9 @@ public class MasarData{
 
         this.systemsImages.put("en_3planet_var3", new MasarSprite("res/img/System/Enemy/en_starsys3_130_105px_3pl.png", 130,105,5));
 
-        this.linkImages.put("player_link_sprite", new MasarSprite("res/img/Link/ray_pl_loop_180px_sheet.png", 170, 11, 19));
-        this.linkImages.put("enemy_link_sprite", new MasarSprite("res/img/Link/ray_en_loop_180px_sheet.png", 170, 11, 19));
+        this.linkImages.put("player_link_sprite", new MasarSprite("res/img/Link/ray_pl_loop_180px_sheet.png", 170, 11, 20));
+        this.linkImages.put("enemy_link_sprite", new MasarSprite("res/img/Link/ray_en_loop_180px_sheet.png", 170, 11, 20));
+        this.linkImages.put("conflict_link_sprite", new MasarSprite("res/img/Link/ray_conflict_180px_sheet.png", 180, 19, 20));
+
     }
 }
