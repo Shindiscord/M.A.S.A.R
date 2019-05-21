@@ -55,6 +55,17 @@ public class MasarData{
         this.getLinkList().removeIf(Predicate.isEqual(link));
     }
 
+    public void removeAllLinksOfSystem(MasarSystem system){
+        for(SystemLink l : this.getLinkList()){
+            if( l.getSys2() == system || l.getSys1() == system)
+                this.getLinkList().remove(l);
+        }
+        for(SystemLink l : this.getLinkList()){
+            if( l.getSys2() == system || l.getSys1() == system)
+                this.getLinkList().remove(l);
+        }
+    }
+
     public MasarData(GameContainer gc){
         this.gc = gc;
         this.systemList = new LinkedList<>();
