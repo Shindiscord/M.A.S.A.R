@@ -98,7 +98,7 @@ public class MasarRoom implements Renderable{
             }
 
             if(deltaBot >= 5000) {
-                this.gameData.getBot().update();
+                //this.gameData.getBot().update();
                 deltaBot = 0;
             }
         }

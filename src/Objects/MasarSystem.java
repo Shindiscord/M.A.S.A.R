@@ -6,6 +6,7 @@ import backend.Clickable;
 import backend.MasarData;
 import backend.Renderable;
 import backend.SystemClickable;
+import org.lwjgl.Sys;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Color;
@@ -76,10 +77,11 @@ public class MasarSystem implements Renderable{
     }
 
     public void beHit(MasarSystem s2, int value){
-        this.pop = this.pop - value*10;
+        this.pop = this.pop - value*1000;
         if(this.pop <= 0){
             this.clan = s2.getClan();
-            this.pop = 1;
+            this.pop = s2.getPop()/4;
+            s2.subPopulace(s2.getPop()/4);
             try {
                 for (SystemLink l : this.gameData.getLinkList()) {
                     if ((l.getSys1() == this && l.getSys2().getClan() != this.clan) || (l.getSys2() == this && l.getSys1().getClan() != this.clan))
@@ -90,6 +92,9 @@ public class MasarSystem implements Renderable{
             }
         }
     }
+
+    public void addPopulace(int add){ this.pop += add; }
+    public void subPopulace(int sub){ this.pop -= sub; }
 
     public void render(GameContainer gc, Graphics g){
         if(this.systemsheet == null)
@@ -188,8 +193,6 @@ public class MasarSystem implements Renderable{
             this.windowSys.render(gc, g);
     }
 
-    public void startGrowthPopulace(){ this.pop++; }
-
     public void update(GameContainer gc){
 
         // -- POPULATION GROWTH
@@ -216,10 +219,17 @@ public class MasarSystem implements Renderable{
 
             // -- RPS / RPS_BOOST CALCULATION
             this.RPS = (int)((this.maxRPS/(float)this.maxPop) * this.pop);
+            //System.out.println("RPS : " + this.RPS + " this.maxRPS  : " + this.maxRPS + "this.maxPop" + this.maxPop + " this.pop : " + this.pop );
             this.RPS_BOOST = 0; // reset si jamais un link est coupé puis recalcul
             for (SystemLink l : this.gameData.getLinkList()) {
-                if (l.getSys2() == this)
-                    this.RPS_BOOST += l.getSys1().getRPS() / 2;
+                if (l.getSys2() == this){
+                    // RPS_BOOST donné par un systeme dépends du nombre de links sortants de celui-ci
+                    int nb_link_out = 0;
+                    for(SystemLink l2 : this.gameData.getLinkList())
+                        if( l2.getSys1() == l.getSys1() )
+                            nb_link_out++;
+                    this.RPS_BOOST += l.getSys1().getRPS() / 2 / nb_link_out;
+                }
             }
             //System.out.println("RPS : " + this.RPS + " RPS_BOOST : " + this.RPS_BOOST);
         }

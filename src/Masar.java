@@ -49,7 +49,7 @@ class MasarGame implements Game {
         */
 
         this.gameData.getSystemList().add(new MasarSystem(1,1000000,3, this.gameData));
-        this.gameData.getSystemList().add(new MasarSystem(0,10000,1, this.gameData));
+        this.gameData.getSystemList().add(new MasarSystem(0,0,1, this.gameData));
         this.gameData.getSystemList().add(new MasarSystem(0,0,1, this.gameData));
         this.gameData.getSystemList().add(new MasarSystem(2,100000,2, this.gameData));
 

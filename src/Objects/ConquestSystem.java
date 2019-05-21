@@ -63,13 +63,20 @@ public class ConquestSystem {
         if ( this.alliedProgression >= this.ressourcesNeeded ){
             this.in_conquest = false;
             this.systemConquered.changeClan(1);
-            this.systemConquered.startGrowthPopulace();
-            this.gameData.removeAllLinksOfSystem(this.getSystemConquered());
+            this.gameData.removeAllLinksOfDefeated(this.getSystemConquered());
+            for ( SystemLink l : this.gameData.getLinkList() ){
+                int transferredPopulace = 0;
+                if ( l.getSys2() == this.getSystemConquered() ){
+                    transferredPopulace = l.getSys1().getPop()/4;
+                    l.getSys1().subPopulace(transferredPopulace);
+                    l.getSys2().addPopulace(transferredPopulace);
+                }
+            }
         }
         //double test_percent = (double) this.alliedProgression  * 100 / (double)this.ressourcesNeeded;
-        System.out.println("TotalRPM : " + totalRPM + " this.ressourcesNeeded : " + this.ressourcesNeeded);
+        //System.out.println("TotalRPM : " + totalRPM + " this.ressourcesNeeded : " + this.ressourcesNeeded);
         //System.out.println("Test percent ?? : " + test_percent);
-        System.out.println("Progress conquest allied : " + this.alliedProgression);
+        //System.out.println("Progress conquest allied : " + this.alliedProgression);
     }
 
     public void addEnnemyProgress(int totalRPM){
@@ -83,11 +90,19 @@ public class ConquestSystem {
                 this.alliedProgression = 0;
             }
         }
+
         if ( this.ennemyProgression >= this.ressourcesNeeded ){
             this.in_conquest = false;
             this.systemConquered.changeClan(2);
-            this.systemConquered.startGrowthPopulace();
-            this.gameData.removeAllLinksOfSystem(this.getSystemConquered());
+            this.gameData.removeAllLinksOfDefeated(this.getSystemConquered());
+            for ( SystemLink l : this.gameData.getLinkList() ){
+                int transferredPopulace = 0;
+                if ( l.getSys2() == this.getSystemConquered() ){
+                    transferredPopulace = l.getSys1().getPop()/4;
+                    l.getSys1().subPopulace(transferredPopulace);
+                    l.getSys2().addPopulace(transferredPopulace);
+                }
+            }
         }
     }
 }
