@@ -1,15 +1,7 @@
 package Objects;
 
-import UI.MasarSprite;
 import backend.MasarData;
-import backend.Renderable;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.TrueTypeFont;
-import org.newdawn.slick.tests.xml.GameData;
 
-import java.awt.*;
 
 public class ConquestSystem {
 
