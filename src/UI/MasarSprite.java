@@ -42,4 +42,5 @@ public class MasarSprite{
         img.draw(x-(float)this.width/2, y-(float)this.height/2);
         this.iteration = (this.iteration+1)%nb_sprites;
     }
+
 }

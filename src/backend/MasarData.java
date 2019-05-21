@@ -67,18 +67,16 @@ public class MasarData{
         }
     }
 
+    //remove link and linkclickable (hitbox)
     public void removeLink(SystemLink link){
         this.getCurrentRoom().getClickManager().getRegisteredClickables().removeIf(lc -> (lc instanceof LinkClickable &&((LinkClickable) lc).getAttachedLink().equals(link)));
         this.getLinkList().removeIf(Predicate.isEqual(link));
     }
 
-    public void removeAllLinksOfSystem(MasarSystem system){
+    //at the end of a system conquest, remove all links from the loser
+    public void removeAllLinksOfDefeated(MasarSystem system_conquered){
         for(SystemLink l : this.getLinkList()){
-            if( l.getSys2() == system || l.getSys1() == system)
-                this.removeLink(l);
-        }
-        for(SystemLink l : this.getLinkList()){
-            if( l.getSys2() == system || l.getSys1() == system)
+            if( l.getSys2() == system_conquered && l.getSys1().getClan() != system_conquered.getClan()  )
                 this.removeLink(l);
         }
     }
