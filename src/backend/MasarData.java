@@ -180,6 +180,8 @@ public class MasarData{
 
         this.fontMap.put("default", new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 12), false));
         this.fontMap.put("default2", new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 9), false));
+        this.fontMap.put("UITopFont", new TrueTypeFont(new Font("Monospaced", java.awt.Font.PLAIN, 25),  false));
+        this.fontMap.put("OnMapText", new TrueTypeFont(new Font("Monospaced", Font.BOLD, 12), false));
 
         this.planetImage.put("InfoWindow", new MasarSprite("res/img/InfoWindow/cadreblanc.png", 240, 137, 1));
     }

@@ -77,7 +77,8 @@ public class MasarRoom implements Renderable{
             this.gameData.getImageList().get(1).draw(800, 5);
             this.gameData.getButtonsImages().get("Enemy").drawNextSubimage(600, 16);
             this.gameData.getButtonsImages().get("Allied").drawNextSubimage(500, 16);
-            TrueTypeFont font = new TrueTypeFont(new Font("Monospaced", java.awt.Font.PLAIN, 25),  false);
+
+            TrueTypeFont font = this.gameData.getFont("UITopFont");
             font.drawString(536, 0, "VS" , Color.green);
 
             int popa = 0;
@@ -98,10 +99,10 @@ public class MasarRoom implements Renderable{
             font.drawString(620, 0, ""+pope , Color.red);
             font.drawString(830, 0, ""+rese , Color.red);
             font.drawString(480 - font.getWidth(""+popa), 0, ""+popa , Color.cyan);
-            font.drawString(295 - font.getWidth("" + resa), 0, ""+resa , Color.cyan);
+            font.drawString(295 - font.getWidth(""+resa), 0, ""+resa , Color.cyan);
 
             for(WindowSystem w: this.gameData.getWindowList()){
-                if(w.getMs().isShowWindow() == true)
+                if(w.getMs().isShowWindow())
                     w.render(gc, g);
             }
             //this.getClickManager().renderHitboxes(gc, g);

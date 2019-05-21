@@ -175,12 +175,12 @@ public class MasarSystem implements Renderable{
         }
 
         if(this.getConquest().isIn_conquest()){
-            TrueTypeFont font = new TrueTypeFont(new Font("Monospaced", Font.BOLD, 20), false);
+            TrueTypeFont font = this.gameData.getFont("OnMapText");
             if( this.getConquest().getAlliedProgression() > 0 && this.getConquest().isIn_conquest() ){
-                font.drawString(this.getX(), this.getY(), this.getConquest().getPercentAllied() + "%" , Color.blue);
+                font.drawString(this.getX()-30, this.getY()-50, this.getConquest().getPercentAllied() + "%" , Color.cyan);
             }
             else if (this.getConquest().getEnnemyProgression() > 0 && this.getConquest().isIn_conquest())
-                font.drawString(this.getX(), this.getY(), this.getConquest().getPercentEnnemy() + "%" , Color.red);
+                font.drawString(this.getX()-30, this.getY()-50, this.getConquest().getPercentEnnemy() + "%" , Color.red);
 
         }
 
