@@ -175,7 +175,7 @@ public class MasarSystem implements Renderable{
         }
 
         if(this.getConquest().isIn_conquest()){
-            TrueTypeFont font = new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 20), false);
+            TrueTypeFont font = new TrueTypeFont(new Font("Monospaced", Font.BOLD, 20), false);
             if( this.getConquest().getAlliedProgression() > 0 && this.getConquest().isIn_conquest() ){
                 font.drawString(this.getX(), this.getY(), this.getConquest().getPercentAllied() + "%" , Color.blue);
             }
