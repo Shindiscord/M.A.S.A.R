@@ -62,11 +62,11 @@ public class MasarData{
     public void removeAllLinksOfSystem(MasarSystem system){
         for(SystemLink l : this.getLinkList()){
             if( l.getSys2() == system || l.getSys1() == system)
-                this.getLinkList().remove(l);
+                this.removeLink(l);
         }
         for(SystemLink l : this.getLinkList()){
             if( l.getSys2() == system || l.getSys1() == system)
-                this.getLinkList().remove(l);
+                this.removeLink(l);
         }
     }
 
@@ -148,5 +148,7 @@ public class MasarData{
             e.printStackTrace();
         }
         this.imageList.add(i);
+        this.linkImages.put("conflict_link_sprite", new MasarSprite("res/img/Link/ray_conflict_180px_sheet.png", 180, 19, 20));
+
     }
 }

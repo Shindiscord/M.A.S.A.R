@@ -92,12 +92,23 @@ public class SystemLink implements Renderable{
     @Override
     public void render(GameContainer gc, Graphics g) {
         MasarSprite sprite;
-        if(this.getSys1().getClan() == MasarSystem.ALLIED)
+        if(this.getSys1().getClan() == MasarSystem.ALLIED && this.conflict == null) {
             sprite = this.gameData.getLinkImages().get("player_link_sprite");
-        else
+            sprite.drawNextSubimageRotated(this.centerX, this.centerY, this.angleInDegrees);
+        }
+        else if (this.getSys1().getClan() == MasarSystem.ENNEMY && this.conflict == null) {
             sprite = this.gameData.getLinkImages().get("enemy_link_sprite");
-        sprite.drawNextSubimageRotated(this.centerX, this.centerY, this.angleInDegrees);
-        if(this.conflict != null){
+            sprite.drawNextSubimageRotated(this.centerX, this.centerY, this.angleInDegrees);
+        }
+        else if(this.getSys1().getClan() == MasarSystem.ALLIED && this.conflict != null) {
+            sprite = this.gameData.getLinkImages().get("conflict_link_sprite");
+            sprite.drawNextSubimageRotated(this.centerX, this.centerY, this.angleInDegrees - 180);
+        }
+        else if(this.getSys1().getClan() == MasarSystem.ENNEMY && this.conflict != null) {
+            sprite = this.gameData.getLinkImages().get("conflict_link_sprite");
+            sprite.drawNextSubimageRotated(this.centerX, this.centerY, this.angleInDegrees);
+        }
+            if(this.conflict != null){
             TrueTypeFont font = new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 10), false);
             font.drawString(this.centerX-50, this.centerY+50, this.getSys1().getPop() + " vs " + this.getSys2().getPop());
         }
