@@ -19,6 +19,7 @@ public class MasarRoom implements Renderable{
     private ClickManager clickManager;
 
     private int deltaSum;
+    private int deltaBot;
 
     private int roomType;
 
@@ -34,6 +35,7 @@ public class MasarRoom implements Renderable{
         this.clickManager = new ClickManager(this.gameData);
         this.roomType = roomType;
         this.deltaSum = 0;
+        this.deltaBot = 0;
     }
 
     public void addRenderable(Renderable renderable){
@@ -83,6 +85,7 @@ public class MasarRoom implements Renderable{
 
     public void update(GameContainer gc, int delta){
         deltaSum += delta;
+        deltaBot += delta;
         if(this.gameData.getCurrentRoom().getRoomType() == MasarRoom.GAMEROOM) {
             if (deltaSum >= 250) {
                 try {
@@ -92,6 +95,11 @@ public class MasarRoom implements Renderable{
                         l.update();
                 }catch (ConcurrentModificationException e){}
                 deltaSum = 0;
+            }
+
+            if(deltaBot >= 5000) {
+                this.gameData.getBot().update();
+                deltaBot = 0;
             }
         }
     }
