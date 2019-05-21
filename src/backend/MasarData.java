@@ -1,5 +1,6 @@
 package backend;
 
+import IA.Bot;
 import Objects.MasarSystem;
 import Objects.SystemLink;
 import UI.MenuButton;
@@ -26,6 +27,8 @@ public class MasarData{
     private MasarRoom currentRoom;
     private GameContainer gc;
 
+    private Bot bot;
+
     public final static int NB_SYSTEMS = 24;
     public final static float DIST_SYST = 180;
     public final static float DIST_JOINING_CONFLICT = 154;
@@ -40,6 +43,7 @@ public class MasarData{
     public Map<String, MasarSprite> getButtonsImages() {return this.buttonsImages;}
     public Map<String, MasarSprite> getLinkImages(){return this.linkImages;}
     public float[][] getCoordinates(){ return this.Coordinates;}
+    public Bot getBot() {return this.bot;}
 
     public void setRoom(int index){
         if(index < roomList.size() && roomList.get(index) != null){
@@ -76,6 +80,7 @@ public class MasarData{
         this.linkImages = new HashMap<>();
         this.Coordinates = new float[NB_SYSTEMS][2];
         this.currentRoom = null;
+        this.bot = new Bot(this);
     }
 
     public void loadCoordinates(){
