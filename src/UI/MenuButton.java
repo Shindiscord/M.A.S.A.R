@@ -105,6 +105,19 @@ public class MenuButton implements Clickable, Renderable {
             case "Chapter1":
                 this.gameData.setRoom(3);
                 break;
+
+        if(this.gameData.getCurrentRoom().getRoomType() == 1) {
+            switch (this.getName()) {
+                case "Chapters":
+                    this.gameData.setRoom(1);
+
+                    break;
+                case "Settings":
+                    break;
+                case "Quit":
+                    System.exit(0);
+                    break;
+            }
         }
     }
 
