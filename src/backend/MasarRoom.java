@@ -6,10 +6,13 @@ import UI.MenuButton;
 import UI.WindowSystem;
 import backend.Clickable;
 import backend.Renderable;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.TrueTypeFont;
 import org.newdawn.slick.tests.xml.GameData;
 
+import java.awt.*;
 import java.util.ConcurrentModificationException;
 import java.util.LinkedList;
 
@@ -70,7 +73,32 @@ public class MasarRoom implements Renderable{
                 s.render(gc, g);
             }
 
-            this.gameData.getImageList().get(0).draw(10, 5);
+            this.gameData.getImageList().get(0).draw(300, 5);
+            this.gameData.getImageList().get(1).draw(800, 5);
+            this.gameData.getButtonsImages().get("Enemy").drawNextSubimage(600, 16);
+            this.gameData.getButtonsImages().get("Allied").drawNextSubimage(500, 16);
+            TrueTypeFont font = new TrueTypeFont(new Font("Monospaced", java.awt.Font.PLAIN, 25),  false);
+            font.drawString(536, 0, "VS" , Color.green);
+
+            int popa = 0;
+            int pope = 0;
+            int resa = 0;
+            int rese = 0;
+
+            for (MasarSystem s:this.gameData.getSystemList()){
+                if(s.getClan() == MasarSystem.ALLIED) {
+                    popa += s.getPop();
+                    resa += s.getRPS();
+                } else  if(s.getClan() == MasarSystem.ENNEMY) {
+                    pope += s.getPop();
+                    rese += s.getRPS();
+                }
+            }
+
+            font.drawString(620, 0, ""+pope , Color.red);
+            font.drawString(830, 0, ""+rese , Color.red);
+            font.drawString(480 - font.getWidth(""+popa), 0, ""+popa , Color.cyan);
+            font.drawString(295 - font.getWidth("" + resa), 0, ""+resa , Color.cyan);
 
             for(WindowSystem w: this.gameData.getWindowList()){
                 if(w.getMs().isShowWindow() == true)

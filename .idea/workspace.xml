@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/backend/MasarData.java" line="38" />
+    <bookmark url="file://$PROJECT_DIR$/src/backend/MasarData.java" line="46" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d325f15-3ffc-4d6b-9386-49b5d6f75a55" name="Default Changelist" comment="Ajout menu Chapters et Settings">
-      <change afterPath="$PROJECT_DIR$/res/img/UI/res_allied.png" afterDir="false" />
+    <list default="true" id="1d325f15-3ffc-4d6b-9386-49b5d6f75a55" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/res/img/UI/human_allied.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/UI/human_enemy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/UI/res_enemy.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Masar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Masar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/MasarData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MasarData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/MasarRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MasarRoom.java" afterDir="false" />
     </list>
@@ -21,25 +22,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Masar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="77" column="78" selection-start-line="77" selection-start-column="78" selection-end-line="77" selection-end-column="78" />
+            <state relative-caret-position="513">
+              <caret line="84" column="56" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2822#2823#0" expanded="true" />
-                <element signature="e#2886#2887#0" expanded="true" />
+                <element signature="e#4456#4457#0" expanded="true" />
+                <element signature="e#4520#4521#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
+            <state relative-caret-position="303">
+              <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+              <folding>
+                <element signature="e#4877#4878#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,8 +60,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
+            <state relative-caret-position="1964">
+              <caret line="170" column="100" selection-start-line="170" selection-start-column="100" selection-end-line="170" selection-end-column="100" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/backend/SystemClickable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1121">
+            <state relative-caret-position="1239">
               <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
               <folding>
                 <element signature="e#2296#2297#0" expanded="true" />
@@ -78,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/MasarSprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="88" />
+            <state relative-caret-position="197">
+              <caret line="29" column="87" selection-start-line="29" selection-start-column="87" selection-end-line="29" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -87,8 +94,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Objects/MasarSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="172" column="13" lean-forward="true" selection-start-line="169" selection-start-column="12" selection-end-line="172" selection-end-column="13" />
+            <state relative-caret-position="2667">
+              <caret line="180" column="13" selection-start-line="180" selection-start-column="13" selection-end-line="180" selection-end-column="13" />
+              <folding>
+                <element signature="e#2062#2063#0" expanded="true" />
+                <element signature="e#2094#2095#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/MenuButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1748">
-              <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+            <state relative-caret-position="236">
+              <caret line="133" column="65" selection-start-line="132" selection-start-column="12" selection-end-line="133" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1954#1955#0" expanded="true" />
@@ -137,9 +148,9 @@
         <option value="$PROJECT_DIR$/src/Objects/MasarSystem.java" />
         <option value="$PROJECT_DIR$/src/UI/MasarSprite.java" />
         <option value="$PROJECT_DIR$/src/UI/MenuButton.java" />
+        <option value="$PROJECT_DIR$/src/Masar.java" />
         <option value="$PROJECT_DIR$/src/backend/MasarData.java" />
         <option value="$PROJECT_DIR$/src/backend/MasarRoom.java" />
-        <option value="$PROJECT_DIR$/src/Masar.java" />
       </list>
     </option>
   </component>
@@ -307,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558463173456</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Menu pause et modif display dans l'UI">
+      <created>1558465706430</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1558465706430</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -392,7 +410,8 @@
     <MESSAGE value="Conflit systemes systemes ok" />
     <MESSAGE value="Affichage de la pop lors d'un conflit, a virer plus tard ou ameliorer" />
     <MESSAGE value="Ajout menu Chapters et Settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout menu Chapters et Settings" />
+    <MESSAGE value="Menu pause et modif display dans l'UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu pause et modif display dans l'UI" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -447,23 +466,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/backend/ClickManager.java">
+    <entry file="file://$PROJECT_DIR$/src/Masar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/MasarSprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="88" />
+        <state relative-caret-position="513">
+          <caret line="84" column="56" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4456#4457#0" expanded="true" />
+            <element signature="e#4520#4521#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/SystemClickable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
+        <state relative-caret-position="1239">
           <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
           <folding>
             <element signature="e#2296#2297#0" expanded="true" />
@@ -472,17 +489,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Objects/MasarSystem.java">
+    <entry file="file://$PROJECT_DIR$/src/UI/MasarSprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="172" column="13" lean-forward="true" selection-start-line="169" selection-start-column="12" selection-end-line="172" selection-end-column="13" />
+        <state relative-caret-position="197">
+          <caret line="29" column="87" selection-start-line="29" selection-start-column="87" selection-end-line="29" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/ClickManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="903">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/MenuButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1748">
-          <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+        <state relative-caret-position="236">
+          <caret line="133" column="65" selection-start-line="132" selection-start-column="12" selection-end-line="133" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1954#1955#0" expanded="true" />
@@ -495,26 +519,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
+        <state relative-caret-position="1964">
+          <caret line="170" column="100" selection-start-line="170" selection-start-column="100" selection-end-line="170" selection-end-column="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Objects/MasarSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2667">
+          <caret line="180" column="13" selection-start-line="180" selection-start-column="13" selection-end-line="180" selection-end-column="13" />
+          <folding>
+            <element signature="e#2062#2063#0" expanded="true" />
+            <element signature="e#2094#2095#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Masar.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
-          <caret line="77" column="78" selection-start-line="77" selection-start-column="78" selection-end-line="77" selection-end-column="78" />
+          <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2822#2823#0" expanded="true" />
-            <element signature="e#2886#2887#0" expanded="true" />
+            <element signature="e#4877#4878#0" expanded="true" />
           </folding>
         </state>
       </provider>

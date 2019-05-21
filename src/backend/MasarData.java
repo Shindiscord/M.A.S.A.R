@@ -158,13 +158,19 @@ public class MasarData{
         this.linkImages.put("player_link_sprite", new MasarSprite("res/img/Link/ray_pl_loop_180px_sheet.png", 170, 11, 19));
         this.linkImages.put("enemy_link_sprite", new MasarSprite("res/img/Link/ray_en_loop_180px_sheet.png", 170, 11, 19));
 
-        Image i = null;
+        Image i1 = null;
+        Image i2 = null;
         try {
-            i = new Image("./res/img/UI/res_allied.png");
+            i1 = new Image("./res/img/UI/res_allied.png");
+            i2 = new Image("./res/img/UI/res_enemy.png");
         } catch (SlickException e) {
             e.printStackTrace();
         }
-        this.imageList.add(i);
+        this.imageList.add(i1);
+        this.imageList.add(i2);
+        this.buttonsImages.put("Enemy", new MasarSprite("./res/img/UI/human_enemy.png", 28, 27, 9));
+        this.buttonsImages.put("Allied", new MasarSprite("./res/img/UI/human_allied.png", 28, 27, 9));
+
         this.linkImages.put("conflict_link_sprite", new MasarSprite("res/img/Link/ray_conflict_180px_sheet.png", 180, 19, 20));
 
 
