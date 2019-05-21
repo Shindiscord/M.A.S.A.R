@@ -41,7 +41,7 @@ public class SystemClickable implements Clickable{
 
     public void onMouseReleased(int button, Clickable clickablePressed){
         if(clickablePressed == this){
-            //afficher les donées du systeme
+            this.attachedSystem.invertShowWindow();
         }else if(clickablePressed instanceof SystemClickable){
             //CreateLink
             SystemLink newLink = new SystemLink(((SystemClickable) clickablePressed).getAttachedSystem(), this.getAttachedSystem(), this.gameData);
