@@ -37,8 +37,8 @@ class MasarGame implements Game {
         gameData.getBackground().setVolume(0.2f);
 
        try {
-           this.BackgroundMenu = new Image("./res/img/Background/bgm.png");
-           this.BackgroundGame = new Image("./res/img/Background/bgg.png");
+           this.BackgroundMenu = new Image("img/Background/bgm.png");
+           this.BackgroundGame = new Image("img/Background/bgg.png");
        } catch (SlickException e) {
            e.printStackTrace();
        }
@@ -67,18 +67,18 @@ class MasarGame implements Game {
         this.gameData.getSystemList().get(3).setPos(gameData.getCoordinates()[7][0], gameData.getCoordinates()[7][1]);
 
 
-        MenuButton p = new MenuButton(1207f, 16f, this.gameData, "./res/img/Buttons/b_playpause.png", "PlayPause");
-        MenuButton b = new MenuButton(1257f, 16f, this.gameData, "./res/img/Buttons/b_back_lte.png", "BackLte");
+        MenuButton p = new MenuButton(1207f, 16f, this.gameData, "img/Buttons/b_playpause.png", "PlayPause");
+        MenuButton b = new MenuButton(1257f, 16f, this.gameData, "img/Buttons/b_back_lte.png", "BackLte");
 
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.MENUROOM, this.gameData));
-        this.gameData.getRoomList().get(0).addButton(new MenuButton(640f, 300f, this.gameData, "./res/img/Buttons/b_chapters.png", "Chapters"));
-        this.gameData.getRoomList().get(0).addButton(new MenuButton(640f, 450f, this.gameData, "./res/img/Buttons/b_settings.png", "Settings"));
-        this.gameData.getRoomList().get(0).addButton(new MenuButton(640f, 600f, this.gameData, "./res/img/Buttons/b_quit.png", "Quit"));
+        this.gameData.getRoomList().get(0).addButton(new MenuButton(640f, 300f, this.gameData, "img/Buttons/b_chapters.png", "Chapters"));
+        this.gameData.getRoomList().get(0).addButton(new MenuButton(640f, 450f, this.gameData, "img/Buttons/b_settings.png", "Settings"));
+        this.gameData.getRoomList().get(0).addButton(new MenuButton(640f, 600f, this.gameData, "img/Buttons/b_quit.png", "Quit"));
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.MENUROOM, this.gameData));
-        this.gameData.getRoomList().get(1).addButton(new MenuButton(640f, 58f, this.gameData, "./res/img/Buttons/b_chapter1.png", "Chapter1"));
-        this.gameData.getRoomList().get(1).addButton(new MenuButton(640f, 687.5f, this.gameData, "./res/img/Buttons/b_back.png", "Back"));
+        this.gameData.getRoomList().get(1).addButton(new MenuButton(640f, 58f, this.gameData, "img/Buttons/b_chapter1.png", "Chapter1"));
+        this.gameData.getRoomList().get(1).addButton(new MenuButton(640f, 687.5f, this.gameData, "img/Buttons/b_back.png", "Back"));
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.MENUROOM, this.gameData));
-        this.gameData.getRoomList().get(2).addButton(new MenuButton(640f, 687.5f, this.gameData, "./res/img/Buttons/b_done.png", "Done"));
+        this.gameData.getRoomList().get(2).addButton(new MenuButton(640f, 687.5f, this.gameData, "img/Buttons/b_done.png", "Done"));
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.GAMEROOM, this.gameData));
         this.gameData.getRoomList().get(3).addButton(b);
         this.gameData.getRoomList().get(3).addButton(p);

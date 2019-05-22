@@ -23,7 +23,7 @@ public class LinkClickable implements Clickable{
 
         Image img;
         try{
-            img = new Image("res/img/Hitboxes/Link_Hitbox.png");
+            img = new Image("img/Hitboxes/Link_Hitbox.png");
         }catch(SlickException e){
             System.out.println("Hitbox image file can't be found");
             return;

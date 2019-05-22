@@ -21,7 +21,7 @@ public class SystemClickable implements Clickable{
     public SystemClickable(MasarSystem attachedSystem, MasarData gameData){
         Image img;
         try {
-            img = new Image("res/img/Hitboxes/System_Hitbox.png");
+            img = new Image("img/Hitboxes/System_Hitbox.png");
         }catch (SlickException e){
             System.out.println("Can't open System Hitbox image");
             return;

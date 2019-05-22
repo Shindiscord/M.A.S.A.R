@@ -97,7 +97,7 @@ public class MasarData{
         this.planetImage = new HashMap<>();
         this.fontMap = new HashMap<>();
         this.bot = new Bot(this);
-        this.background = new Music("./res/music/Kevin_MacLeod-8bit_Dungeon_Boss.ogg");
+        this.background = new Music("music/Kevin_MacLeod-8bit_Dungeon_Boss.ogg");
     }
 
     public void loadCoordinates(){
@@ -116,75 +116,75 @@ public class MasarData{
     }
 
     public void loadImages(){
-        this.systemsImages.put("ne_1planet_var1", new MasarSprite("res/img/System/Neutral/ne_starsys1_130_105px_1pl.png", 130,105,5));
-        this.systemsImages.put("ne_2planet_var1", new MasarSprite("res/img/System/Neutral/ne_starsys1_130_105px_2pl.png", 130,105,5));
-        this.systemsImages.put("ne_3planet_var1", new MasarSprite("res/img/System/Neutral/ne_starsys1_130_105px_3pl.png", 130,105,5));
-        this.systemsImages.put("ne_1planet_var2", new MasarSprite("res/img/System/Neutral/ne_starsys2_130_105px_1pl.png", 130,105,5));
-        this.systemsImages.put("ne_2planet_var2", new MasarSprite("res/img/System/Neutral/ne_starsys2_130_105px_2pl.png", 130,105,5));
-        this.systemsImages.put("ne_3planet_var2", new MasarSprite("res/img/System/Neutral/ne_starsys2_130_105px_3pl.png", 130,105,5));
-        this.systemsImages.put("ne_1planet_var3", new MasarSprite("res/img/System/Neutral/ne_starsys3_130_105px_1pl.png", 130,105,5));
-        this.systemsImages.put("ne_2planet_var3", new MasarSprite("res/img/System/Neutral/ne_starsys3_130_105px_2pl.png", 130,105,5));
-        this.systemsImages.put("ne_3planet_var3", new MasarSprite("res/img/System/Neutral/ne_starsys3_130_105px_3pl.png", 130,105,5));
-        this.systemsImages.put("allied_1planet_var1", new MasarSprite("res/img/System/Allied/allied_starsys1_130_105px_1pl.png", 130,105,5));
-        this.systemsImages.put("allied_2planet_var1", new MasarSprite("res/img/System/Allied/allied_starsys1_130_105px_2pl.png", 130,105,5));
-        this.systemsImages.put("allied_3planet_var1", new MasarSprite("res/img/System/Allied/allied_starsys1_130_105px_3pl.png", 130,105,5));
-        this.systemsImages.put("allied_1planet_var2", new MasarSprite("res/img/System/Allied/allied_starsys2_130_105px_1pl.png", 130,105,5));
-        this.systemsImages.put("allied_2planet_var2", new MasarSprite("res/img/System/Allied/allied_starsys2_130_105px_2pl.png", 130,105,5));
-        this.systemsImages.put("allied_3planet_var2", new MasarSprite("res/img/System/Allied/allied_starsys2_130_105px_3pl.png", 130,105,5));
-        this.systemsImages.put("allied_1planet_var3", new MasarSprite("res/img/System/Allied/allied_starsys3_130_105px_1pl.png", 130,105,5));
-        this.systemsImages.put("allied_2planet_var3", new MasarSprite("res/img/System/Allied/allied_starsys3_130_105px_2pl.png", 130,105,5));
-        this.systemsImages.put("allied_3planet_var3", new MasarSprite("res/img/System/Allied/allied_starsys3_130_105px_3pl.png", 130,105,5));
-        this.systemsImages.put("en_1planet_var1", new MasarSprite("res/img/System/Enemy/en_starsys1_130_105px_1pl.png", 130,105,5));
-        this.systemsImages.put("en_2planet_var1", new MasarSprite("res/img/System/Enemy/en_starsys1_130_105px_2pl.png", 130,105,5));
-        this.systemsImages.put("en_3planet_var1", new MasarSprite("res/img/System/Enemy/en_starsys1_130_105px_3pl.png", 130,105,5));
-        this.systemsImages.put("en_1planet_var2", new MasarSprite("res/img/System/Enemy/en_starsys2_130_105px_1pl.png", 130,105,5));
-        this.systemsImages.put("en_2planet_var2", new MasarSprite("res/img/System/Enemy/en_starsys2_130_105px_2pl.png", 130,105,5));
-        this.systemsImages.put("en_3planet_var2", new MasarSprite("res/img/System/Enemy/en_starsys2_130_105px_3pl.png", 130,105,5));
-        this.systemsImages.put("en_1planet_var3", new MasarSprite("res/img/System/Enemy/en_starsys3_130_105px_1pl.png", 130,105,5));
-        this.systemsImages.put("en_2planet_var3", new MasarSprite("res/img/System/Enemy/en_starsys3_130_105px_2pl.png", 130,105,5));
-        this.systemsImages.put("en_3planet_var3", new MasarSprite("res/img/System/Enemy/en_starsys3_130_105px_3pl.png", 130,105,5));
+        this.systemsImages.put("ne_1planet_var1", new MasarSprite("img/System/Neutral/ne_starsys1_130_105px_1pl.png", 130,105,5));
+        this.systemsImages.put("ne_2planet_var1", new MasarSprite("img/System/Neutral/ne_starsys1_130_105px_2pl.png", 130,105,5));
+        this.systemsImages.put("ne_3planet_var1", new MasarSprite("img/System/Neutral/ne_starsys1_130_105px_3pl.png", 130,105,5));
+        this.systemsImages.put("ne_1planet_var2", new MasarSprite("img/System/Neutral/ne_starsys2_130_105px_1pl.png", 130,105,5));
+        this.systemsImages.put("ne_2planet_var2", new MasarSprite("img/System/Neutral/ne_starsys2_130_105px_2pl.png", 130,105,5));
+        this.systemsImages.put("ne_3planet_var2", new MasarSprite("img/System/Neutral/ne_starsys2_130_105px_3pl.png", 130,105,5));
+        this.systemsImages.put("ne_1planet_var3", new MasarSprite("img/System/Neutral/ne_starsys3_130_105px_1pl.png", 130,105,5));
+        this.systemsImages.put("ne_2planet_var3", new MasarSprite("img/System/Neutral/ne_starsys3_130_105px_2pl.png", 130,105,5));
+        this.systemsImages.put("ne_3planet_var3", new MasarSprite("img/System/Neutral/ne_starsys3_130_105px_3pl.png", 130,105,5));
+        this.systemsImages.put("allied_1planet_var1", new MasarSprite("img/System/Allied/allied_starsys1_130_105px_1pl.png", 130,105,5));
+        this.systemsImages.put("allied_2planet_var1", new MasarSprite("img/System/Allied/allied_starsys1_130_105px_2pl.png", 130,105,5));
+        this.systemsImages.put("allied_3planet_var1", new MasarSprite("img/System/Allied/allied_starsys1_130_105px_3pl.png", 130,105,5));
+        this.systemsImages.put("allied_1planet_var2", new MasarSprite("img/System/Allied/allied_starsys2_130_105px_1pl.png", 130,105,5));
+        this.systemsImages.put("allied_2planet_var2", new MasarSprite("img/System/Allied/allied_starsys2_130_105px_2pl.png", 130,105,5));
+        this.systemsImages.put("allied_3planet_var2", new MasarSprite("img/System/Allied/allied_starsys2_130_105px_3pl.png", 130,105,5));
+        this.systemsImages.put("allied_1planet_var3", new MasarSprite("img/System/Allied/allied_starsys3_130_105px_1pl.png", 130,105,5));
+        this.systemsImages.put("allied_2planet_var3", new MasarSprite("img/System/Allied/allied_starsys3_130_105px_2pl.png", 130,105,5));
+        this.systemsImages.put("allied_3planet_var3", new MasarSprite("img/System/Allied/allied_starsys3_130_105px_3pl.png", 130,105,5));
+        this.systemsImages.put("en_1planet_var1", new MasarSprite("img/System/Enemy/en_starsys1_130_105px_1pl.png", 130,105,5));
+        this.systemsImages.put("en_2planet_var1", new MasarSprite("img/System/Enemy/en_starsys1_130_105px_2pl.png", 130,105,5));
+        this.systemsImages.put("en_3planet_var1", new MasarSprite("img/System/Enemy/en_starsys1_130_105px_3pl.png", 130,105,5));
+        this.systemsImages.put("en_1planet_var2", new MasarSprite("img/System/Enemy/en_starsys2_130_105px_1pl.png", 130,105,5));
+        this.systemsImages.put("en_2planet_var2", new MasarSprite("img/System/Enemy/en_starsys2_130_105px_2pl.png", 130,105,5));
+        this.systemsImages.put("en_3planet_var2", new MasarSprite("img/System/Enemy/en_starsys2_130_105px_3pl.png", 130,105,5));
+        this.systemsImages.put("en_1planet_var3", new MasarSprite("img/System/Enemy/en_starsys3_130_105px_1pl.png", 130,105,5));
+        this.systemsImages.put("en_2planet_var3", new MasarSprite("img/System/Enemy/en_starsys3_130_105px_2pl.png", 130,105,5));
+        this.systemsImages.put("en_3planet_var3", new MasarSprite("img/System/Enemy/en_starsys3_130_105px_3pl.png", 130,105,5));
 
-        this.systemsImages.put("al_res_map", new MasarSprite("res/img/UI/res_var1_12_11.png", 12, 11, 1));
-        this.systemsImages.put("en_res_map", new MasarSprite("res/img/UI/res_var2_12_11.png", 12, 11, 1));
+        this.systemsImages.put("al_res_map", new MasarSprite("img/UI/res_var1_12_11.png", 12, 11, 1));
+        this.systemsImages.put("en_res_map", new MasarSprite("img/UI/res_var2_12_11.png", 12, 11, 1));
 
-        this.buttonsImages.put("Chapters", new MasarSprite("./res/img/Buttons/sheet_b_chapters.png", 312, 104, 2));
-        this.buttonsImages.put("Settings", new MasarSprite("./res/img/Buttons/sheet_b_settings.png", 320, 104, 2));
-        this.buttonsImages.put("Quit", new MasarSprite("./res/img/Buttons/sheet_b_quit.png", 200, 104, 2));
-        this.buttonsImages.put("BackLte", new MasarSprite("./res/img/Buttons/sheet_b_back_lte.png", 46, 26, 2));
-        this.buttonsImages.put("Back", new MasarSprite("./res/img/Buttons/sheet_b_back.png", 115, 65, 2));
-        this.buttonsImages.put("Chapter1", new MasarSprite("./res/img/Buttons/sheet_b_chapter1.png", 344, 104, 2));
-        this.buttonsImages.put("Done", new MasarSprite("./res/img/Buttons/sheet_b_done.png", 115, 65, 2));
-        this.buttonsImages.put("PlayPause", new MasarSprite("./res/img/Buttons/sheet_b_playpause.png", 54, 26, 2));
+        this.buttonsImages.put("Chapters", new MasarSprite("img/Buttons/sheet_b_chapters.png", 312, 104, 2));
+        this.buttonsImages.put("Settings", new MasarSprite("img/Buttons/sheet_b_settings.png", 320, 104, 2));
+        this.buttonsImages.put("Quit", new MasarSprite("img/Buttons/sheet_b_quit.png", 200, 104, 2));
+        this.buttonsImages.put("BackLte", new MasarSprite("img/Buttons/sheet_b_back_lte.png", 46, 26, 2));
+        this.buttonsImages.put("Back", new MasarSprite("img/Buttons/sheet_b_back.png", 115, 65, 2));
+        this.buttonsImages.put("Chapter1", new MasarSprite("img/Buttons/sheet_b_chapter1.png", 344, 104, 2));
+        this.buttonsImages.put("Done", new MasarSprite("img/Buttons/sheet_b_done.png", 115, 65, 2));
+        this.buttonsImages.put("PlayPause", new MasarSprite("img/Buttons/sheet_b_playpause.png", 54, 26, 2));
 
 
-        this.linkImages.put("player_link_sprite", new MasarSprite("res/img/Link/ray_pl_loop_180px_sheet.png", 170, 11, 19));
-        this.linkImages.put("enemy_link_sprite", new MasarSprite("res/img/Link/ray_en_loop_180px_sheet.png", 170, 11, 19));
+        this.linkImages.put("player_link_sprite", new MasarSprite("img/Link/ray_pl_loop_180px_sheet.png", 170, 11, 19));
+        this.linkImages.put("enemy_link_sprite", new MasarSprite("img/Link/ray_en_loop_180px_sheet.png", 170, 11, 19));
 
         Image i1 = null;
         Image i2 = null;
         try {
-            i1 = new Image("./res/img/UI/res_allied.png");
-            i2 = new Image("./res/img/UI/res_enemy.png");
+            i1 = new Image("img/UI/res_allied.png");
+            i2 = new Image("img/UI/res_enemy.png");
         } catch (SlickException e) {
             e.printStackTrace();
         }
         this.imageList.add(i1);
         this.imageList.add(i2);
-        this.buttonsImages.put("Enemy", new MasarSprite("./res/img/UI/human_enemy.png", 28, 27, 9));
-        this.buttonsImages.put("Allied", new MasarSprite("./res/img/UI/human_allied.png", 28, 27, 9));
+        this.buttonsImages.put("Enemy", new MasarSprite("img/UI/human_enemy.png", 28, 27, 9));
+        this.buttonsImages.put("Allied", new MasarSprite("img/UI/human_allied.png", 28, 27, 9));
 
-        this.linkImages.put("conflict_link_sprite", new MasarSprite("res/img/Link/ray_conflict_180px_sheet.png", 180, 19, 20));
+        this.linkImages.put("conflict_link_sprite", new MasarSprite("img/Link/ray_conflict_180px_sheet.png", 180, 19, 20));
 
 
-        this.planetImage.put("planet1", new MasarSprite("res/img/Planets/planet1.png", 26, 26, 25));
-        this.planetImage.put("planet2", new MasarSprite("res/img/Planets/planet1.png", 26, 26, 25));
-        this.planetImage.put("planet3", new MasarSprite("res/img/Planets/planet1.png", 26, 26, 25));
+        this.planetImage.put("planet1", new MasarSprite("img/Planets/planet1.png", 26, 26, 25));
+        this.planetImage.put("planet2", new MasarSprite("img/Planets/planet1.png", 26, 26, 25));
+        this.planetImage.put("planet3", new MasarSprite("img/Planets/planet1.png", 26, 26, 25));
 
         this.fontMap.put("default", new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 12), false));
         this.fontMap.put("default2", new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 9), false));
         this.fontMap.put("UITopFont", new TrueTypeFont(new Font("Monospaced", java.awt.Font.PLAIN, 25),  false));
         this.fontMap.put("OnMapText", new TrueTypeFont(new Font("Monospaced", Font.BOLD, 12), false));
 
-        this.planetImage.put("InfoWindow", new MasarSprite("res/img/InfoWindow/window.png", 240, 137, 1));
+        this.planetImage.put("InfoWindow", new MasarSprite("img/InfoWindow/window.png", 240, 137, 1));
     }
 }

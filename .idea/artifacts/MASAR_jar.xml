@@ -3,14 +3,10 @@
     <output-path>$PROJECT_DIR$/out/artifacts/MASAR_jar</output-path>
     <root id="archive" name="MASAR.jar">
       <element id="module-output" name="MASAR" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jorbis-0.0.15.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/slick.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jogg-0.0.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jorbis-0.0.15.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/lwjgl.jar" path-in-jar="/" />
-      <element id="library" level="project" name="jogg-0.0.7" />
-      <element id="library" level="project" name="lwjgl" />
-      <element id="library" level="project" name="jorbis-0.0.15" />
-      <element id="library" level="project" name="slick" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/slick.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
