@@ -38,7 +38,7 @@ class MasarGame implements Game {
         this.gameData.getBackground().setVolume(0.2f);
 
        try {
-           this.BackgroundMenu = new Image("img/Background/bgm.png");
+           this.BackgroundMenu = new Image("img/Background/bgmt.png");
            this.BackgroundGame = new Image("img/Background/bgg.png");
        } catch (SlickException e) {
            e.printStackTrace();
