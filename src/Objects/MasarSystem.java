@@ -188,11 +188,14 @@ public class MasarSystem implements Renderable{
                 font.drawString(this.getX()-30, this.getY()-50, this.getConquest().getPercentEnnemy() + "%" , Color.red);
 
         }
+        String rpsStr = ""+(this.getRPS()+this.getRPS_BOOST());
         if(this.getClan() == MasarSystem.ALLIED){
-            font.drawString(this.getX() + 30, this.getY() + 30, ""+(this.getRPS()+this.getRPS_BOOST()), Color.cyan);
+            font.drawString(this.getX() + 30 - font.getWidth(rpsStr), this.getY() + 30, rpsStr, Color.cyan);
+            this.gameData.getSystemsImages().get("al_res_map").drawNextSubimage(this.getX() + 40, this.getY() + 39);
         }
-        if(this.getClan() == MasarSystem.ENNEMY){
-            font.drawString(this.getX() + 30, this.getY() + 30, ""+(this.getRPS()+this.getRPS_BOOST()), Color.red);
+        else if(this.getClan() == MasarSystem.ENNEMY){
+            font.drawString(this.getX() + 30 - font.getWidth(rpsStr), this.getY() + 30, rpsStr, Color.red);
+            this.gameData.getSystemsImages().get("en_res_map").drawNextSubimage(this.getX() + 40, this.getY() + 39);
         }
 
         if(this.showWindow)
