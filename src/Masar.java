@@ -35,6 +35,7 @@ class MasarGame implements Game {
 
         this.gameData = new MasarData(gc);
 
+        //Lance la musique en boucle et met son volume à 20%
         this.gameData.getBackground().loop();
         this.gameData.getBackground().setVolume(0.2f);
 

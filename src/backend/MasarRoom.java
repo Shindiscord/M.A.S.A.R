@@ -140,6 +140,7 @@ public class MasarRoom implements Renderable{
                 deltaSum = 0;
             }
 
+            // Update le bot toute les 5 secondes
             if(deltaBot >= 5000) {
                 this.gameData.getBot().update();
                 deltaBot = 0;
