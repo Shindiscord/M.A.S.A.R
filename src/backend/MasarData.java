@@ -173,6 +173,6 @@ public class MasarData{
         this.fontMap.put("default", new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 12), false));
         this.fontMap.put("default2", new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 9), false));
 
-        this.planetImage.put("InfoWindow", new MasarSprite("res/img/InfoWindow/cadreblanc.png", 240, 137, 1));
+        this.planetImage.put("InfoWindow", new MasarSprite("res/img/InfoWindow/window.png", 240, 137, 1));
     }
 }
