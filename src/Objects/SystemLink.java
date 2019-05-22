@@ -108,9 +108,5 @@ public class SystemLink implements Renderable{
             sprite = this.gameData.getLinkImages().get("conflict_link_sprite");
             sprite.drawNextSubimageRotated(this.centerX, this.centerY, this.angleInDegrees);
         }
-            if(this.conflict != null){
-            TrueTypeFont font = new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 10), false);
-            font.drawString(this.centerX-50, this.centerY+50, this.getSys1().getPop() + " vs " + this.getSys2().getPop());
-        }
     }
 }
