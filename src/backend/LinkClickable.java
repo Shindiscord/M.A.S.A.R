@@ -13,7 +13,7 @@ public class LinkClickable implements Clickable{
 
     private MasarData gameData;
 
-    public SystemLink getAttachedLink(){return this.attachedLink;}
+    SystemLink getAttachedLink(){return this.attachedLink;}
 
     public LinkClickable(SystemLink l, MasarData gameData){
         this.attachedLink = l;

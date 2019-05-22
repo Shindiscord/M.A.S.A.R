@@ -36,29 +36,29 @@ public class MasarData{
 
     private Music background;
 
-    public final static int NB_SYSTEMS = 24;
+    private final static int NB_SYSTEMS = 24;
     public final static float DIST_SYST = 180;
-    public final static float DIST_JOINING_CONFLICT = 154;
+    private final static float DIST_JOINING_CONFLICT = 154;
 
     public LinkedList<MasarSystem> getSystemList(){return this.systemList;}
     public LinkedList<SystemLink> getLinkList(){return this.linkList;}
     public LinkedList<MasarRoom> getRoomList(){return this.roomList;}
-    public LinkedList<Image> getImageList() {return this.imageList;}
+    LinkedList<Image> getImageList() {return this.imageList;}
     public LinkedList<WindowSystem> getWindowList() {return windowList;}
     public GameContainer getGameContainer(){return this.gc;}
     public MasarRoom getCurrentRoom(){return this.currentRoom;}
-    public void setCurrentRoom(MasarRoom room){this.currentRoom = room;}
+    void setCurrentRoom(MasarRoom room){this.currentRoom = room;}
     public Map<String, MasarSprite> getSystemsImages() {return this.systemsImages;}
     public Map<String, MasarSprite> getButtonsImages() {return this.buttonsImages;}
     public Map<String, MasarSprite> getLinkImages(){return this.linkImages;}
-    public float[][] getCoordinates(){ return this.Coordinates;}
+    private float[][] getCoordinates(){ return this.Coordinates;}
     public TrueTypeFont getFont(String s){return this.fontMap.get(s);}
     public MasarSprite getPlanetImage(String s){return this.planetImage.get(s);}
-    public Bot getBot() {return this.bot;}
+    Bot getBot() {return this.bot;}
     public int getChapitre() {return this.chapitre;}
     public Music getBackground() {return background;}
 
-    public int getPopA(){
+    int getPopA(){
         int popa = 0;
         for (MasarSystem s:this.getSystemList()){
             if(s.getClan() == MasarSystem.ALLIED) {
@@ -69,7 +69,7 @@ public class MasarData{
         return popa;
     }
 
-    public int getPopE(){
+    int getPopE(){
         int pope = 0;
         for (MasarSystem s:this.getSystemList()){
             if(s.getClan() == MasarSystem.ENNEMY) {
@@ -80,7 +80,7 @@ public class MasarData{
         return pope;
     }
 
-    public int getResA(){
+    int getResA(){
         int resa = 0;
         for (MasarSystem s:this.getSystemList()){
             if(s.getClan() == MasarSystem.ALLIED) {

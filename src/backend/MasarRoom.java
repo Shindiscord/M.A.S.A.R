@@ -27,11 +27,11 @@ public class MasarRoom implements Renderable{
     public static final int PAUSEROOM = 3;
     public static final int VICTORYROOM = 4;
     public static final int DEFEATROOM = 5;
-    public static int NBROOM = 0;
+    private static int NBROOM = 0;
 
     private int RoomNumber;
 
-    public ClickManager getClickManager(){return this.clickManager;}
+    ClickManager getClickManager(){return this.clickManager;}
 
     /* Constructeur */
     public MasarRoom(int roomType, MasarData gameData){
@@ -41,8 +41,8 @@ public class MasarRoom implements Renderable{
         this.roomType = roomType;
         this.deltaSum = 0;
         this.deltaBot = 0;
-        this.NBROOM++;
-        this.RoomNumber = this.NBROOM;
+        MasarRoom.NBROOM++;
+        this.RoomNumber = MasarRoom.NBROOM;
     }
 
     /* Ajout d'un clickable au click manager */
@@ -133,7 +133,9 @@ public class MasarRoom implements Renderable{
                         s.update(gc);
                     for (SystemLink l : this.gameData.getLinkList())
                         l.update();
-                }catch (ConcurrentModificationException e){}
+                }catch (ConcurrentModificationException e){
+                    System.out.println("ConcurrentModificationException");
+                }
                 deltaSum = 0;
             }
 
@@ -145,7 +147,7 @@ public class MasarRoom implements Renderable{
     }
 
     /* Change la salle active */
-    public void setAsRoom(MasarData gameData){
+    void setAsRoom(MasarData gameData){
     gameData.getGameContainer().getInput().removeAllListeners();
 
         if(this.roomType == GAMEROOM){

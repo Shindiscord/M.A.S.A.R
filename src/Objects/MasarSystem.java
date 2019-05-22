@@ -47,7 +47,7 @@ public class MasarSystem implements Renderable{
     public float getX(){return this.x_pos;}
     public float getY(){return this.y_pos;}
 
-    public ConquestSystem getConquest() {return conquest;}
+    ConquestSystem getConquest() {return conquest;}
     public int getClan(){return this.clan;}
 
     public float getDistance(MasarSystem s2){
@@ -56,7 +56,7 @@ public class MasarSystem implements Renderable{
 
         return (float)Math.sqrt(dx*dx + dy*dy);
     }
-    public WindowSystem getWindowSys(){return this.windowSys;}
+    private WindowSystem getWindowSys(){return this.windowSys;}
     public boolean isShowWindow(){return this.showWindow;}
 
     public void invertShowWindow(){this.showWindow = !this.showWindow;}
@@ -66,11 +66,11 @@ public class MasarSystem implements Renderable{
         this.y_pos = y;
     }
 
-    public void changeClan(int CLAN){
+    void changeClan(int CLAN){
         this.clan = CLAN;
     }
 
-    public void beHit(MasarSystem s2, int value){
+    void beHit(MasarSystem s2, int value){
         this.pop = this.pop - value*1000;
         if(this.pop <= 0){
             this.clan = s2.getClan();
@@ -87,8 +87,8 @@ public class MasarSystem implements Renderable{
         }
     }
 
-    public void addPopulace(int add){ this.pop += add; }
-    public void subPopulace(int sub){ this.pop -= sub; }
+    void addPopulace(int add){ this.pop += add; }
+    void subPopulace(int sub){ this.pop -= sub; }
 
     public void render(GameContainer gc, Graphics g){
         if(this.systemsheet == null)
@@ -200,7 +200,7 @@ public class MasarSystem implements Renderable{
 
         // -- POPULATION GROWTH
         int link_out = 0;
-        int fecundity_rate = 0;
+        int fecundity_rate;
         for(SystemLink l: this.gameData.getLinkList()){
             if( l.getSys1() == this  || (l.getSys2() == this && l.getSys1().getClan() != this.getClan()))
                 link_out++;

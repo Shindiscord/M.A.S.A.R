@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MASAR:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/backend/MasarData.java" line="31" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa0d13b-4da4-446a-80d5-87877c8b42d5" name="Default Changelist" comment="">
+    <list default="true" id="c99caf1e-5e05-4cf1-b171-df5cec4c1e99" name="Default Changelist" comment="Plus de Warning POGGERS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/ConquestSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/ConquestSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/LinkConflict.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/LinkConflict.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/MasarSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/MasarSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/SystemLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objects/SystemLink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/MasarSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MasarSprite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MenuButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WindowSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/WindowSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/ClickManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/ClickManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/LinkClickable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/LinkClickable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/MasarData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MasarData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/MasarRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MasarRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/Renderable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/Renderable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/SystemClickable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/SystemClickable.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,75 +38,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Objects/SystemLink.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/backend/LinkClickable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="35" column="83" selection-start-line="35" selection-start-column="83" selection-end-line="35" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UI/MenuButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2700">
-              <caret line="180" column="37" selection-start-line="180" selection-start-column="37" selection-end-line="180" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2813#2814#0" expanded="true" />
-                <element signature="e#2845#2846#0" expanded="true" />
-                <element signature="e#2875#2876#0" expanded="true" />
-                <element signature="e#2907#2908#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Masar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="94" column="33" lean-forward="true" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4473#4474#0" expanded="true" />
-                <element signature="e#4537#4538#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
-              <caret line="146" column="32" selection-start-line="146" selection-start-column="32" selection-end-line="146" selection-end-column="32" />
+            <state relative-caret-position="2176">
+              <caret line="171" column="1" lean-forward="true" selection-start-line="171" selection-start-column="1" selection-end-line="171" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5643#5644#0" expanded="true" />
-                <element signature="e#5679#5680#0" expanded="true" />
-                <element signature="e#5713#5714#0" expanded="true" />
-                <element signature="e#5751#5752#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/backend/MenuButtonClickable.java">
+        <entry file="file://$PROJECT_DIR$/src/Objects/ConquestSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="1139">
+              <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/backend/Renderable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
               <folding>
-                <element signature="e#0#1788#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Objects/LinkConflict.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <folding>
+                <element signature="e#117#118#0" expanded="true" />
+                <element signature="e#149#150#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="-2780">
+              <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,14 +96,62 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Objects/MasarSystem.java">
+        <entry file="file://$PROJECT_DIR$/src/backend/Clickable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="170">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2084#2085#0" expanded="true" />
-                <element signature="e#2116#2117#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/backend/SystemClickable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/backend/ClickManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/UI/MenuButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/backend/LinkClickable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1309#1310#0" expanded="true" />
+                <element signature="e#1364#1365#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,73 +159,116 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>System.out</find>
+      <find>getRps</find>
+      <find>maxRps</find>
+      <find>SystemLink</find>
+      <find>./</find>
+      <find>res/</find>
+      <find>gameda</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Cepsy &lt;maximegraziano@live.fr&gt;" />
+      </list>
+    </option>
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Antho" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/Masar.java" />
+        <option value="$PROJECT_DIR$/src/backend/Clickable.java" />
+        <option value="$PROJECT_DIR$/src/UI/WindowSystem.java" />
+        <option value="$PROJECT_DIR$/src/backend/SystemClickable.java" />
+        <option value="$PROJECT_DIR$/src/UI/MasarSprite.java" />
+        <option value="$PROJECT_DIR$/src/Objects/SystemLink.java" />
+        <option value="$PROJECT_DIR$/src/Objects/MasarSystem.java" />
+        <option value="$PROJECT_DIR$/src/Objects/LinkConflict.java" />
+        <option value="$PROJECT_DIR$/src/Objects/ConquestSystem.java" />
         <option value="$PROJECT_DIR$/src/backend/MasarRoom.java" />
+        <option value="$PROJECT_DIR$/src/backend/LinkClickable.java" />
+        <option value="$PROJECT_DIR$/src/backend/MasarData.java" />
+        <option value="$PROJECT_DIR$/src/backend/Renderable.java" />
+        <option value="$PROJECT_DIR$/src/backend/ClickManager.java" />
         <option value="$PROJECT_DIR$/src/UI/MenuButton.java" />
       </list>
     </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="345" />
+    <option name="y" value="51" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
-              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+              <item name="MASAR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MASAR" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
-              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
-              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
-              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+              <item name="MASAR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MASAR" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
-              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+              <item name="MASAR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MASAR" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
-              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+              <item name="MASAR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MASAR" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="IA" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MASAR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MASAR" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Objects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="M.A.S.A.R" type="b2602c69:ProjectViewProjectNode" />
-              <item name="M.A.S.A.R" type="462c0819:PsiDirectoryNode" />
+              <item name="MASAR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MASAR" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Masar.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MASAR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -201,6 +284,8 @@
   </component>
   <component name="RunManager">
     <configuration name="Masar" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="12" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Masar" />
       <module name="MASAR" />
       <method v="2">
@@ -208,8 +293,9 @@
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="12" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Masar" />
-      <module name="MASAR" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,12 +305,133 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Render des Liens du joueur fini">
+      <created>1558367006828</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558367006828</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Conflit systemes systemes ok">
+      <created>1558376511752</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558376511752</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Affichage de la pop lors d'un conflit, a virer plus tard ou ameliorer">
+      <created>1558379423453</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558379423453</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Ajout menu Chapters et Settings">
+      <created>1558458595397</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558458595397</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Ajout menu Chapters et Settings">
+      <created>1558458738540</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558458738540</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Ajout menu Chapters et Settings">
+      <created>1558463125024</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1558463125024</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Ajout menu Chapters et Settings">
+      <created>1558463173456</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1558463173456</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Events de fin de conquête &#10;Rework des RPM&#10;Rework RPM Max envoyés selon le nombre de links sortant&#10;Tranfert de pop en cas de victoire">
+      <created>1558481895657</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1558481895657</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Events de fin de conquête &#10;Rework des RPM&#10;Rework RPM Max envoyés selon le nombre de links sortant&#10;Tranfert de pop en cas de victoire&#10;affichage final des res sous syteme">
+      <created>1558484997117</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1558484997117</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fix Musique nullpointerException">
+      <created>1558485855163</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1558485855163</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge max">
+      <created>1558488095353</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1558488095353</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Merge seb">
+      <created>1558493371118</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1558493371118</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c99caf1e-5e05-4cf1-b171-df5cec4c1e99" name="Default Changelist" comment="" />
+      <created>1558532496881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558532496881</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Merge seb">
+      <created>1558533647815</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1558533647815</updated>
+    </task>
+    <task id="LOCAL-00014" summary="InfoWindow isoke">
+      <created>1558534133634</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1558534133634</updated>
+    </task>
+    <task id="LOCAL-00015" summary="remove un res/">
+      <created>1558534529884</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1558534529884</updated>
+    </task>
+    <task id="LOCAL-00016" summary="clean du code">
+      <created>1558542729743</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1558542729743</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14126097" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15991472" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -234,15 +441,15 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.3306189" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.33152762" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4989339" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015129" side_tool="true" weight="0.20588236" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5010661" side_tool="true" weight="0.16045198" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4978678" weight="0.21129943" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.07189543" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -297,10 +504,31 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Render des Liens du joueur fini" />
+    <MESSAGE value="Conflit systemes systemes ok" />
+    <MESSAGE value="Affichage de la pop lors d'un conflit, a virer plus tard ou ameliorer" />
+    <MESSAGE value="Ajout menu Chapters et Settings" />
+    <MESSAGE value="Events de fin de conquête &#10;Rework des RPM&#10;Rework RPM Max envoyés selon le nombre de links sortant&#10;Tranfert de pop en cas de victoire" />
+    <MESSAGE value="Events de fin de conquête &#10;Rework des RPM&#10;Rework RPM Max envoyés selon le nombre de links sortant&#10;Tranfert de pop en cas de victoire&#10;affichage final des res sous syteme" />
+    <MESSAGE value="Fix Musique nullpointerException" />
+    <MESSAGE value="Merge max" />
+    <MESSAGE value="Merge seb" />
+    <MESSAGE value="InfoWindow isoke" />
+    <MESSAGE value="remove un res/" />
+    <MESSAGE value="clean du code" />
+    <MESSAGE value="Plus de Warning POGGERS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plus de Warning POGGERS" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/JDK/jdk-12.0.1/lib/src.zip!/java.base/java/util/LinkedList.java" />
     <entry file="file://$PROJECT_DIR$/src/backend/MenuButtonClickable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="535">
+          <caret line="75" column="2" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="2" />
           <folding>
             <element signature="e#0#1788#0" expanded="true" />
           </folding>
@@ -309,20 +537,148 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Masar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="94" column="33" lean-forward="true" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+        <state relative-caret-position="-1692">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4473#4474#0" expanded="true" />
-            <element signature="e#4537#4538#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#4392#4393#0" expanded="true" />
+            <element signature="e#4456#4457#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IA/Bot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/WindowSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-230">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/MasarSprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Objects/SystemLink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Objects/MasarSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4480">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#2116#2117#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="-2780">
+          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/Clickable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/Renderable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Objects/ConquestSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Objects/LinkConflict.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#117#118#0" expanded="true" />
+            <element signature="e#149#150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/LinkClickable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1364#1365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/SystemClickable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/ClickManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2176">
+          <caret line="171" column="1" lean-forward="true" selection-start-line="171" selection-start-column="1" selection-end-line="171" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -331,31 +687,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/MenuButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2700">
-          <caret line="180" column="37" selection-start-line="180" selection-start-column="37" selection-end-line="180" selection-end-column="37" />
+        <state relative-caret-position="221">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2813#2814#0" expanded="true" />
-            <element signature="e#2845#2846#0" expanded="true" />
-            <element signature="e#2875#2876#0" expanded="true" />
-            <element signature="e#2907#2908#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="146" column="32" selection-start-line="146" selection-start-column="32" selection-end-line="146" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5643#5644#0" expanded="true" />
-            <element signature="e#5679#5680#0" expanded="true" />
-            <element signature="e#5713#5714#0" expanded="true" />
-            <element signature="e#5751#5752#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>MASAR:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>MASAR</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lwjgl</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

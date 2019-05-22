@@ -3,7 +3,7 @@ package Objects;
 import backend.MasarData;
 
 
-public class ConquestSystem {
+class ConquestSystem {
 
     private int ressourcesNeeded;
     private MasarSystem systemConquered;
@@ -13,32 +13,32 @@ public class ConquestSystem {
 
     private MasarData gameData;
 
-    public MasarSystem getSystemConquered() {
+    private MasarSystem getSystemConquered() {
         return systemConquered;
     }
 
-    public int getAlliedProgression() {
+    int getAlliedProgression() {
         return alliedProgression;
     }
 
-    public int getEnnemyProgression() {
+    int getEnnemyProgression() {
         return ennemyProgression;
     }
 
-    public boolean isIn_conquest() {
+    boolean isIn_conquest() {
         return in_conquest;
     }
 
-    public double getPercentAllied(){
+    double getPercentAllied(){
         return (double) this.alliedProgression  * 100 / (double)this.ressourcesNeeded;
     }
 
-    public double getPercentEnnemy(){
+    double getPercentEnnemy(){
         return (double) this.ennemyProgression  * 100 / (double)this.ressourcesNeeded;
     }
 
 
-    public ConquestSystem(MasarData gd, MasarSystem s){
+    ConquestSystem(MasarData gd, MasarSystem s){
         this.systemConquered = s;
         this.gameData = gd;
         this.ressourcesNeeded = s.getMaxRPS() * 4;
@@ -47,7 +47,7 @@ public class ConquestSystem {
         this.in_conquest = false;
     }
 
-    public void addAlliedProgress(int totalRPM){
+    void addAlliedProgress(int totalRPM){
         this.in_conquest = true;
         if ( this.ennemyProgression == 0 )
             this.alliedProgression += totalRPM;
@@ -63,7 +63,7 @@ public class ConquestSystem {
             this.systemConquered.changeClan(1);
             this.gameData.removeAllLinksOfDefeated(this.getSystemConquered());
             for ( SystemLink l : this.gameData.getLinkList() ){
-                int transferredPopulace = 0;
+                int transferredPopulace;
                 if ( l.getSys2() == this.getSystemConquered() ){
                     transferredPopulace = l.getSys1().getPop()/4;
                     l.getSys1().subPopulace(transferredPopulace);
@@ -77,7 +77,7 @@ public class ConquestSystem {
         //System.out.println("Progress conquest allied : " + this.alliedProgression);
     }
 
-    public void addEnnemyProgress(int totalRPM){
+    void addEnnemyProgress(int totalRPM){
         this.in_conquest = true;
         if ( this.alliedProgression == 0 )
             this.ennemyProgression += totalRPM;
@@ -94,7 +94,7 @@ public class ConquestSystem {
             this.systemConquered.changeClan(2);
             this.gameData.removeAllLinksOfDefeated(this.getSystemConquered());
             for ( SystemLink l : this.gameData.getLinkList() ){
-                int transferredPopulace = 0;
+                int transferredPopulace;
                 if ( l.getSys2() == this.getSystemConquered() ){
                     transferredPopulace = l.getSys1().getPop()/4;
                     l.getSys1().subPopulace(transferredPopulace);

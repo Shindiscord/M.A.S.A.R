@@ -24,11 +24,12 @@ public class MenuButton implements Clickable, Renderable {
         this.gameData = md;
         this.name = name;
 
-        Image img = null;
+        Image img;
         try{
             img = new Image(ImagePath);
         } catch (SlickException e) {
             e.printStackTrace();
+            return;
         }
 
         this.mouseOverArea = new MouseOverArea(this.gameData.getGameContainer(), img, 0, 0);
@@ -80,15 +81,15 @@ public class MenuButton implements Clickable, Renderable {
         }
     }
 
-    public float getPosx() {
+    private float getPosx() {
         return this.posx;
     }
 
-    public float getPosy() {
+    private float getPosy() {
         return this.posy;
     }
 
-    public String getName() {return this.name;}
+    private String getName() {return this.name;}
 
     /* Fonction detectant si la souris est au-dessus du bouton */
     @Override
@@ -99,11 +100,8 @@ public class MenuButton implements Clickable, Renderable {
         int minY = this.mouseOverArea.getY();
         int maxX = this.mouseOverArea.getX() + this.mouseOverArea.getWidth();
         int maxY = this.mouseOverArea.getY() + this.mouseOverArea.getHeight();
-        if(mouseX > minX && mouseX < maxX && mouseY > minY && mouseY < maxY){
-            return true;
-        }else{
-            return false;
-        }
+
+        return (mouseX > minX && mouseX < maxX && mouseY > minY && mouseY < maxY);
     }
 
     /* Détection du clic souris et réaction en fonction du bouton cliqué */
@@ -200,7 +198,7 @@ public class MenuButton implements Clickable, Renderable {
         }
     }
 
-    public void updateLocation(){
+    private void updateLocation(){
         float x = this.getPosx() - (float)this.mouseOverArea.getWidth()/2;
         float y =  this.getPosy() - (float)this.mouseOverArea.getHeight()/2;
         mouseOverArea.setLocation(x, y);

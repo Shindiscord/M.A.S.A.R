@@ -13,9 +13,7 @@ public class WindowSystem implements Renderable{
 
     private MasarSystem ms;
     private MasarData gameData;
-    private MasarSprite window, planet,planet1, planet2, planet3;
-    private List<String> planetList;
-    private Random rand;
+    private MasarSprite window,planet1, planet2, planet3;
 
 
     public WindowSystem(MasarSystem ms, MasarData gameData){
@@ -24,12 +22,12 @@ public class WindowSystem implements Renderable{
 
         this.window = this.gameData.getPlanetImage("InfoWindow");
 
-        this.planetList = new ArrayList<>();
-        this.planetList.add("planet1");
-        this.planetList.add("planet2");
-        this.planetList.add("planet3");
+        List<String> planetList = new ArrayList<>();
+        planetList.add("planet1");
+        planetList.add("planet2");
+        planetList.add("planet3");
 
-        rand = new Random();
+        Random rand = new Random();
         this.planet1 = this.gameData.getPlanetImage(planetList.get(rand.nextInt(planetList.size())));
         this.planet2 = this.gameData.getPlanetImage(planetList.get(rand.nextInt(planetList.size())));
         this.planet3 = this.gameData.getPlanetImage(planetList.get(rand.nextInt(planetList.size())));

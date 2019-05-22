@@ -23,14 +23,10 @@ public class SystemLink implements Renderable{
 
     private float angleInDegrees;
 
-    public boolean isInConflict(){return this.conflict != null;}
-
     private void initValues(){
         //Compute angle between two systems
         float delX = this.getSys2().getX() - this.getSys1().getX();
         float delY = this.getSys2().getY() - this.getSys1().getY();
-
-        float distance = this.getSys1().getDistance(this.sys2);
 
         double angle = Math.atan(delY/delX);
 
@@ -54,9 +50,7 @@ public class SystemLink implements Renderable{
 
     //verifier si le lien est le meme (un lien/couple de syst max)
     public boolean equals(SystemLink l2){
-        if((sys1 == l2.getSys1() && sys2 == l2.getSys2()) || (sys1 == l2.getSys2() && sys2 == l2.getSys1()))
-            return true;
-        return false;
+        return((sys1 == l2.getSys1() && sys2 == l2.getSys2()) || (sys1 == l2.getSys2() && sys2 == l2.getSys1()));
     }
 
     public MasarSystem getSys1() {

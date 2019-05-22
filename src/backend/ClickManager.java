@@ -10,19 +10,20 @@ import java.util.LinkedList;
 public class ClickManager implements MouseListener {
 
     private LinkedList<Clickable> registeredClickables;
-    private MasarData gameData;
 
     private Clickable pressedClickable;
 
-    public LinkedList<Clickable> getRegisteredClickables(){return this.registeredClickables;}
+    LinkedList<Clickable> getRegisteredClickables(){return this.registeredClickables;}
 
-    public ClickManager(MasarData gameData){
-        this.gameData = gameData;
+    ClickManager(MasarData masarData){
         this.registeredClickables = new LinkedList<>();
         this.pressedClickable = null;
+        if(masarData == null){
+            System.out.println("WARNING : NO MASARDATA");
+        }
     }
 
-    public void addClickable(Clickable c){
+    void addClickable(Clickable c){
         if(!registeredClickables.contains(c)){
             registeredClickables.add(c);
         }

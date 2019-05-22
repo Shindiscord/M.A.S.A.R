@@ -14,9 +14,9 @@ public class SystemClickable implements Clickable{
     private MouseOverArea mouseOverArea;
     private MasarData gameData;
 
-    public MasarSystem getAttachedSystem(){return this.attachedSystem;}
+    private MasarSystem getAttachedSystem(){return this.attachedSystem;}
 
-    public SystemClickable(MasarSystem attachedSystem, MasarData gameData){
+    SystemClickable(MasarSystem attachedSystem, MasarData gameData){
         Image img;
         try {
             img = new Image("img/Hitboxes/System_Hitbox.png");
@@ -64,7 +64,7 @@ public class SystemClickable implements Clickable{
         this.mouseOverArea.render(gc, g);
     }
 
-    public void updateLocation(){
+    private void updateLocation(){
         float x = attachedSystem.getX() - (float)this.mouseOverArea.getWidth()/2;
         float y =  attachedSystem.getY() - (float)this.mouseOverArea.getHeight()/2;
 
