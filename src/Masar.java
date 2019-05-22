@@ -31,11 +31,11 @@ class MasarGame implements Game {
 
     public void init(GameContainer gc) throws SlickException{
 
-        gameData.getBackground().loop();
-        gameData.getBackground().setVolume(0.2f);
 
         this.gameData = new MasarData(gc);
-
+        gameData.getBackground().loop();
+        gameData.getBackground().setVolume(0.2f);
+        
        try {
            this.BackgroundMenu = new Image("./res/img/Background/bgm.png");
            this.BackgroundGame = new Image("./res/img/Background/bgg.png");
