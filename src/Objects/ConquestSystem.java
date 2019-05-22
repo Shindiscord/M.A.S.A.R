@@ -37,9 +37,6 @@ public class ConquestSystem {
         return (double) this.ennemyProgression  * 100 / (double)this.ressourcesNeeded;
     }
 
-
-    public int getRessourcesNeeded() {return ressourcesNeeded;}
-
     public ConquestSystem(MasarData gd, MasarSystem s){
         this.systemConquered = s;
         this.gameData = gd;
@@ -49,6 +46,7 @@ public class ConquestSystem {
         this.in_conquest = false;
     }
 
+    //avancement du progrès de conquête allié
     public void addAlliedProgress(int totalRPM){
         this.in_conquest = true;
         if ( this.ennemyProgression == 0 )
@@ -60,10 +58,12 @@ public class ConquestSystem {
                 this.ennemyProgression = 0;
             }
         }
+        //verification de victoire
         if ( this.alliedProgression >= this.ressourcesNeeded ){
             this.in_conquest = false;
             this.systemConquered.changeClan(1);
             this.gameData.removeAllLinksOfDefeated(this.getSystemConquered());
+            //tranfert du quart de la population des systèmes victorieux au conqueri
             for ( SystemLink l : this.gameData.getLinkList() ){
                 int transferredPopulace = 0;
                 if ( l.getSys2() == this.getSystemConquered() ){
@@ -79,6 +79,7 @@ public class ConquestSystem {
         //System.out.println("Progress conquest allied : " + this.alliedProgression);
     }
 
+    //avancement du progrès de conquête ennemi
     public void addEnnemyProgress(int totalRPM){
         this.in_conquest = true;
         if ( this.alliedProgression == 0 )
@@ -90,11 +91,12 @@ public class ConquestSystem {
                 this.alliedProgression = 0;
             }
         }
-
+        //vérification de victoire
         if ( this.ennemyProgression >= this.ressourcesNeeded ){
             this.in_conquest = false;
             this.systemConquered.changeClan(2);
             this.gameData.removeAllLinksOfDefeated(this.getSystemConquered());
+            //tranfert du quart de la population des systèmes victorieux au conqueri
             for ( SystemLink l : this.gameData.getLinkList() ){
                 int transferredPopulace = 0;
                 if ( l.getSys2() == this.getSystemConquered() ){
