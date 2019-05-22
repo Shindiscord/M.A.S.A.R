@@ -28,6 +28,8 @@ public class MasarRoom implements Renderable{
     public static final int  MENUROOM = 1;
     public static final int GAMEROOM = 2;
     public static final int PAUSEROOM = 3;
+    public static final int VICTORYROOM = 4;
+    public static final int DEFEATROOM = 5;
     public static int NBROOM = 0;
 
     private int RoomNumber;
@@ -65,6 +67,14 @@ public class MasarRoom implements Renderable{
 
         for(Renderable r:renderables){
             r.render(gc, g);
+        }
+
+        if(this.gameData.getCurrentRoom().getRoomType() == MasarRoom.VICTORYROOM) {
+            this.gameData.getImageList().get(2).draw(226, 284);
+        }
+
+        if(this.gameData.getCurrentRoom().getRoomType() == MasarRoom.DEFEATROOM) {
+            this.gameData.getImageList().get(3).draw(120, 288);
         }
 
 
@@ -110,11 +120,11 @@ public class MasarRoom implements Renderable{
     }
 
     public void update(GameContainer gc, int delta){
-        if(gameData.getPopA() == 0){
-            //TODO Charge la room Game Over
+        if(gameData.getPopA() == 0 && this.gameData.getCurrentRoom().getRoomType() == MasarRoom.GAMEROOM){
+            this.gameData.setRoom(6);
         }
-        else if(gameData.getPopE() == 0){
-            //TODO Charge la room WINNER, WWINNER, CHICKEN DINNER
+        else if(gameData.getPopE() == 0 && this.gameData.getCurrentRoom().getRoomType() == MasarRoom.GAMEROOM){
+            this.gameData.setRoom(5);
         }
 
         deltaSum += delta;

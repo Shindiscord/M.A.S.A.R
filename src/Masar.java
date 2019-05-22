@@ -13,6 +13,7 @@ class MasarGame implements Game {
 
     private MasarData gameData;
 
+    Image BackgroundTitle;
     Image BackgroundMenu;
     Image BackgroundGame;
 
@@ -38,7 +39,8 @@ class MasarGame implements Game {
         this.gameData.getBackground().setVolume(0.2f);
 
        try {
-           this.BackgroundMenu = new Image("img/Background/bgmt.png");
+           this.BackgroundTitle = new Image("img/Background/bgmt.png");
+           this.BackgroundMenu = new Image("img/Background/bgm.png");
            this.BackgroundGame = new Image("img/Background/bgg.png");
        } catch (SlickException e) {
            e.printStackTrace();
@@ -64,6 +66,7 @@ class MasarGame implements Game {
 
         MenuButton p = new MenuButton(1207f, 16f, this.gameData, "img/Buttons/b_playpause.png", "PlayPause");
         MenuButton b = new MenuButton(1257f, 16f, this.gameData, "img/Buttons/b_back_lte.png", "BackLte");
+        MenuButton e = new MenuButton(640f, 687.5f, this.gameData, "img/Buttons/b_back.png", "BackEnd");
 
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.MENUROOM, this.gameData));
         this.gameData.getRoomList().get(0).addButton(new MenuButton(640f, 300f, this.gameData, "img/Buttons/b_chapters.png", "Chapters"));
@@ -85,12 +88,18 @@ class MasarGame implements Game {
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.PAUSEROOM, this.gameData));
         this.gameData.getRoomList().get(4).addButton(p);
         this.gameData.getRoomList().get(4).addButton(b);
+        this.gameData.getRoomList().add(new MasarRoom(MasarRoom.VICTORYROOM, this.gameData));
+        this.gameData.getRoomList().get(5).addButton(e);
+        this.gameData.getRoomList().add(new MasarRoom(MasarRoom.DEFEATROOM, this.gameData));
+        this.gameData.getRoomList().get(6).addButton(e);
         this.gameData.setRoom(0);
 
     }
 
     public void render(GameContainer gc, Graphics graphics){
-        if(this.gameData.getCurrentRoom().getRoomType() == 1) {
+        if(this.gameData.getCurrentRoom().getRoomType() == 1 && this.gameData.getCurrentRoom().getRoomNumber() == 1) {
+            BackgroundTitle.draw(0, 0, gc.getWidth(), gc.getHeight());
+        } else if (this.gameData.getCurrentRoom().getRoomType() == 1 && this.gameData.getCurrentRoom().getRoomNumber() != 1) {
             BackgroundMenu.draw(0, 0, gc.getWidth(), gc.getHeight());
         } else {
             BackgroundGame.draw(0, 0, gc.getWidth(), gc.getHeight());
