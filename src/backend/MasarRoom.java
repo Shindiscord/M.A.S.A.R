@@ -81,23 +81,12 @@ public class MasarRoom implements Renderable{
             TrueTypeFont font = this.gameData.getFont("UITopFont");
             font.drawString(536, 0, "VS" , Color.green);
 
-            int popa = 0;
-            int pope = 0;
-            int resa = 0;
-            int rese = 0;
+            int popa = this.gameData.getPopA();
+            int pope = this.gameData.getPopE();
+            int resa = this.gameData.getResA();
+            int rese = this.gameData.getResE();
 
-            for (MasarSystem s:this.gameData.getSystemList()){
-                if(s.getClan() == MasarSystem.ALLIED) {
-                    popa += s.getPop();
-                    resa += s.getRPS();
-                } else  if(s.getClan() == MasarSystem.ENNEMY) {
-                    pope += s.getPop();
-                    rese += s.getRPS();
-                }
-            }
-            if ( pope > 1000000 ) font.drawString(620, 0, "" + pope/1000000 + "M" , Color.red);
-            else if ( pope > 1000 ) font.drawString(620, 0, "" + pope/1000 + "K" , Color.red);
-            else font.drawString(620, 0, "" + pope, Color.red);
+            font.drawString(620, 0, ""+pope , Color.red);
             font.drawString(830, 0, ""+rese , Color.red);
 
             if ( popa > 1000000 ) font.drawString(480 - font.getWidth(""+popa/1000000 + "M"), 0, ""+popa/1000000 + "M" , Color.cyan);
@@ -117,6 +106,13 @@ public class MasarRoom implements Renderable{
     }
 
     public void update(GameContainer gc, int delta){
+        if(gameData.getPopA() == 0){
+            //TODO Charge la room Game Over
+        }
+        else if(gameData.getPopE() == 0){
+            //TODO Charge la room WINNER, WWINNER, CHICKEN DINNER
+        }
+
         deltaSum += delta;
         deltaBot += delta;
         if(this.gameData.getCurrentRoom().getRoomType() == MasarRoom.GAMEROOM) {

@@ -59,6 +59,50 @@ public class MasarData{
     public Bot getBot() {return this.bot;}
     public Music getBackground() {return background;}
 
+    public int getPopA(){
+        int popa = 0;
+        for (MasarSystem s:this.getSystemList()){
+            if(s.getClan() == MasarSystem.ALLIED) {
+                popa += s.getPop();
+            }
+        }
+
+        return popa;
+    }
+
+    public int getPopE(){
+        int pope = 0;
+        for (MasarSystem s:this.getSystemList()){
+            if(s.getClan() == MasarSystem.ENNEMY) {
+                pope += s.getPop();
+            }
+        }
+
+        return pope;
+    }
+
+    public int getResA(){
+        int resa = 0;
+        for (MasarSystem s:this.getSystemList()){
+            if(s.getClan() == MasarSystem.ALLIED) {
+                resa += s.getRPS();
+            }
+        }
+
+        return resa;
+    }
+
+    public int getResE(){
+        int rese = 0;
+        for (MasarSystem s:this.getSystemList()){
+            if(s.getClan() == MasarSystem.ENNEMY) {
+                rese += s.getRPS();
+            }
+        }
+
+        return rese;
+    }
+
     public void setRoom(int index){
         if(index < roomList.size() && roomList.get(index) != null){
             this.roomList.get(index).setAsRoom(this);
