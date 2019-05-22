@@ -259,8 +259,8 @@ public class MasarData{
 
 
         this.planetImage.put("planet1", new MasarSprite("img/Planets/planet1.png", 26, 26, 25));
-        this.planetImage.put("planet2", new MasarSprite("img/Planets/planet1.png", 26, 26, 25));
-        this.planetImage.put("planet3", new MasarSprite("img/Planets/planet1.png", 26, 26, 25));
+        this.planetImage.put("planet2", new MasarSprite("img/Planets/planet2.png", 26, 26, 25));
+        this.planetImage.put("planet3", new MasarSprite("img/Planets/planet3.png", 28, 26, 17));
 
         this.fontMap.put("default", new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 12), false));
         this.fontMap.put("default2", new TrueTypeFont(new Font("Monospaced", Font.PLAIN, 9), false));

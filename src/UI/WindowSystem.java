@@ -5,11 +5,17 @@ import backend.MasarData;
 import backend.Renderable;
 import org.newdawn.slick.*;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class WindowSystem implements Renderable{
 
     private MasarSystem ms;
     private MasarData gameData;
-    private MasarSprite planet1, planet2, planet3, window;
+    private MasarSprite window, planet,planet1, planet2, planet3;
+    private List<String> planetList;
+    private Random rand;
 
 
     public WindowSystem(MasarSystem ms, MasarData gameData){
@@ -17,9 +23,16 @@ public class WindowSystem implements Renderable{
         this.ms = ms;
 
         this.window = this.gameData.getPlanetImage("InfoWindow");
-        this.planet1 = this.gameData.getPlanetImage("planet1");
-        this.planet2 = this.gameData.getPlanetImage("planet2");
-        this.planet3 = this.gameData.getPlanetImage("planet3");
+
+        this.planetList = new ArrayList<>();
+        this.planetList.add("planet1");
+        this.planetList.add("planet2");
+        this.planetList.add("planet3");
+
+        rand = new Random();
+        this.planet1 = this.gameData.getPlanetImage(planetList.get(rand.nextInt(planetList.size())));
+        this.planet2 = this.gameData.getPlanetImage(planetList.get(rand.nextInt(planetList.size())));
+        this.planet3 = this.gameData.getPlanetImage(planetList.get(rand.nextInt(planetList.size())));
     }
 
     public MasarSystem getMs(){return this.ms;}
