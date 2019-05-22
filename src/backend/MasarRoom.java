@@ -23,12 +23,14 @@ public class MasarRoom implements Renderable{
 
     private int deltaSum;
     private int deltaBot;
-
     private int roomType;
 
     public static final int  MENUROOM = 1;
     public static final int GAMEROOM = 2;
     public static final int PAUSEROOM = 3;
+    public static int NBROOM = 0;
+
+    private int RoomNumber;
 
     public ClickManager getClickManager(){return this.clickManager;}
 
@@ -39,6 +41,8 @@ public class MasarRoom implements Renderable{
         this.roomType = roomType;
         this.deltaSum = 0;
         this.deltaBot = 0;
+        this.NBROOM++;
+        this.RoomNumber = this.NBROOM;
     }
 
     public void addRenderable(Renderable renderable){
@@ -151,5 +155,9 @@ public class MasarRoom implements Renderable{
 
     public int getRoomType() {
         return this.roomType;
+    }
+
+    public int getRoomNumber() {
+        return this.RoomNumber;
     }
 }

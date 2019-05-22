@@ -52,11 +52,26 @@ public class MenuButton implements Clickable, Renderable {
             case "Chapter1" :
                 Sprite = this.gameData.getButtonsImages().get("Chapter1");
                 break;
+            case "Chapter2" :
+                Sprite = this.gameData.getButtonsImages().get("Chapter2");
+                break;
+            case "Chapter3" :
+                Sprite = this.gameData.getButtonsImages().get("Chapter3");
+                break;
+            case "Chapter4" :
+                Sprite = this.gameData.getButtonsImages().get("Chapter4");
+                break;
+            case "Chapter5" :
+                Sprite = this.gameData.getButtonsImages().get("Chapter5");
+                break;
             case "Done" :
                 Sprite = this.gameData.getButtonsImages().get("Done");
                 break;
             case "PlayPause" :
                 Sprite = this.gameData.getButtonsImages().get("PlayPause");
+                break;
+            case "Music" :
+                Sprite = this.gameData.getButtonsImages().get("Music");
                 break;
         }
     }
@@ -90,8 +105,12 @@ public class MenuButton implements Clickable, Renderable {
     public void onMousePressed(int button) {
         switch (this.getName()) {
             case "Chapters":
+                this.gameData.setRoom(1);
+                break;
             case "BackLte":
                 this.gameData.setRoom(1);
+                this.gameData.getSystemList().clear();
+                this.gameData.getLinkList().clear();
                 break;
             case "Settings":
                 this.gameData.setRoom(2);
@@ -105,12 +124,37 @@ public class MenuButton implements Clickable, Renderable {
                 break;
             case "Chapter1":
                 this.gameData.setRoom(3);
+                this.gameData.setChapitre(1);
+                break;
+            case "Chapter2":
+                this.gameData.setRoom(3);
+                this.gameData.setChapitre(2);
+                break;
+            case "Chapter3":
+                this.gameData.setRoom(3);
+                this.gameData.setChapitre(3);
+                break;
+            case "Chapter4":
+                this.gameData.setRoom(3);
+                this.gameData.setChapitre(4);
+                break;
+            case "Chapter5":
+                this.gameData.setRoom(3);
+                this.gameData.setChapitre(5);
                 break;
             case "PlayPause":
                 if(this.gameData.getCurrentRoom().getRoomType() == 2) {
                     this.gameData.setRoom(4);
                 } else {
                     this.gameData.setRoom(3);
+                }
+                break;
+            case "Music":
+                if(this.gameData.background.playing()) {
+                    this.gameData.background.stop();
+                } else {
+                    this.gameData.background.loop();
+                    this.gameData.background.setVolume(0.2f);
                 }
                 break;
         }
@@ -128,10 +172,22 @@ public class MenuButton implements Clickable, Renderable {
 
     @Override
     public void render(GameContainer gc, Graphics g) {
+
+        if (this.gameData.getCurrentRoom().getRoomNumber() == 3) {
+            if (this.gameData.background.playing() && this.name.equals("Music")) {
+                this.Sprite.sheet.getSubImage(0, 0).draw(this.getPosx() - (float)(344/2), this.getPosy() - (float)(144/2));
+            } else if (!this.gameData.background.playing() && this.name.equals("Music")) {
+                this.Sprite.sheet.getSubImage(1, 0).draw(this.getPosx() - (float)(344/2), this.getPosy() - (float)(144/2));
+            } else {
+                this.Sprite.drawButtonImage(this.getPosx(), this.getPosy(), this.isMouseOver());
+            }
+            return;
+        }
+
         this.Sprite.drawButtonImage(this.getPosx(), this.getPosy(), this.isMouseOver());
         if(this.gameData.getCurrentRoom().getRoomType() == 3) {
             TrueTypeFont font = new TrueTypeFont(new java.awt.Font("Monospaced", java.awt.Font.PLAIN, 50), false);
-                font.drawString(560, 325, "Pause" , Color.green);
+            font.drawString(560, 325, "Pause" , Color.green);
         }
     }
 

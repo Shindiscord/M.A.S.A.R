@@ -11,7 +11,6 @@ import UI.MasarSprite;
 import org.newdawn.slick.Image;
 
 import java.awt.*;
-import java.awt.Font;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -35,8 +34,11 @@ public class MasarData{
     private MasarRoom currentRoom;
     private GameContainer gc;
 
+    private int chapitre;
+
     private Bot bot;
-    private Music background;
+
+    public Music background;
 
     public final static int NB_SYSTEMS = 24;
     public final static float DIST_SYST = 180;
@@ -57,6 +59,7 @@ public class MasarData{
     public TrueTypeFont getFont(String s){return this.fontMap.get(s);}
     public MasarSprite getPlanetImage(String s){return this.planetImage.get(s);}
     public Bot getBot() {return this.bot;}
+    public int getChapitre() {return this.chapitre;}
     public Music getBackground() {return background;}
 
     public int getPopA(){
@@ -118,10 +121,13 @@ public class MasarData{
         this.getLinkList().removeIf(Predicate.isEqual(link));
     }
 
-    //at the end of a system conquest, remove all links from the loser
-    public void removeAllLinksOfDefeated(MasarSystem system_conquered){
+    public void removeAllLinksOfSystem(MasarSystem system){
         for(SystemLink l : this.getLinkList()){
-            if( l.getSys2() == system_conquered && l.getSys1().getClan() != system_conquered.getClan()  )
+            if( l.getSys2() == system || l.getSys1() == system)
+                this.removeLink(l);
+        }
+        for(SystemLink l : this.getLinkList()){
+            if( l.getSys2() == system || l.getSys1() == system)
                 this.removeLink(l);
         }
     }
@@ -142,6 +148,7 @@ public class MasarData{
         this.fontMap = new HashMap<>();
         this.bot = new Bot(this);
         this.background = new Music("music/Kevin_MacLeod-8bit_Dungeon_Boss.ogg");
+        this.chapitre = 0;
     }
 
     public void loadCoordinates(){
@@ -157,6 +164,10 @@ public class MasarData{
             itab = (itab + 1)%6;
             if ( itab == 0 ) ytab++;
         }
+    }
+
+    public void setChapitre(int x) {
+        this.chapitre = x;
     }
 
     public void loadImages(){
@@ -190,15 +201,21 @@ public class MasarData{
 
         this.systemsImages.put("al_res_map", new MasarSprite("img/UI/res_var1_12_11.png", 12, 11, 1));
         this.systemsImages.put("en_res_map", new MasarSprite("img/UI/res_var2_12_11.png", 12, 11, 1));
-
         this.buttonsImages.put("Chapters", new MasarSprite("img/Buttons/sheet_b_chapters.png", 312, 104, 2));
         this.buttonsImages.put("Settings", new MasarSprite("img/Buttons/sheet_b_settings.png", 320, 104, 2));
         this.buttonsImages.put("Quit", new MasarSprite("img/Buttons/sheet_b_quit.png", 200, 104, 2));
         this.buttonsImages.put("BackLte", new MasarSprite("img/Buttons/sheet_b_back_lte.png", 46, 26, 2));
         this.buttonsImages.put("Back", new MasarSprite("img/Buttons/sheet_b_back.png", 115, 65, 2));
         this.buttonsImages.put("Chapter1", new MasarSprite("img/Buttons/sheet_b_chapter1.png", 344, 104, 2));
+        this.buttonsImages.put("Chapter2", new MasarSprite("img/Buttons/sheet_b_chapter2.png", 344, 104, 2));
+        this.buttonsImages.put("Chapter3", new MasarSprite("img/Buttons/sheet_b_chapter3.png", 360, 104, 2));
+        this.buttonsImages.put("Chapter4", new MasarSprite("img/Buttons/sheet_b_chapter4.png", 360, 104, 2));
+        this.buttonsImages.put("Chapter5", new MasarSprite("img/Buttons/sheet_b_chapter5.png", 344, 104, 2));
         this.buttonsImages.put("Done", new MasarSprite("img/Buttons/sheet_b_done.png", 115, 65, 2));
         this.buttonsImages.put("PlayPause", new MasarSprite("img/Buttons/sheet_b_playpause.png", 54, 26, 2));
+        this.buttonsImages.put("Music", new MasarSprite("img/Buttons/sheet_b_music.png", 344, 104, 2));
+
+        this.systemsImages.put("en_3planet_var3", new MasarSprite("res/img/System/Enemy/en_starsys3_130_105px_3pl.png", 130,105,5));
 
 
         this.linkImages.put("player_link_sprite", new MasarSprite("img/Link/ray_pl_loop_180px_sheet.png", 170, 11, 19));
@@ -229,6 +246,6 @@ public class MasarData{
         this.fontMap.put("UITopFont", new TrueTypeFont(new Font("Monospaced", java.awt.Font.PLAIN, 25),  false));
         this.fontMap.put("OnMapText", new TrueTypeFont(new Font("Monospaced", Font.BOLD, 12), false));
 
-        this.planetImage.put("InfoWindow", new MasarSprite("img/InfoWindow/window.png", 240, 137, 1));
+        this.planetImage.put("InfoWindow", new MasarSprite("img/InfoWindow/cadreblanc.png", 240, 137, 1));
     }
 }
