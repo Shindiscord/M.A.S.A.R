@@ -32,9 +32,9 @@ public class WindowSystem implements Renderable{
         else if ( pop > 1000 )  pop = pop/1000;
         int popMax = this.ms.getMaxPop()/1000000;
         if ( this.getMs().getPop()/1000000 != 0 )
-            this.gameData.getFont("default").drawString(this.ms.getX() - 50 , this.ms.getY() + 120, "Pop : " + pop + "M/ " + popMax/1000000 + "M", Color.black);
+            this.gameData.getFont("default").drawString(this.ms.getX() - 50 , this.ms.getY() + 120, "Pop : " + pop + "M/ " + popMax + "M", Color.black);
         else if ( this.getMs().getPop()/1000 != 0 )
-            this.gameData.getFont("default").drawString(this.ms.getX() - 50 , this.ms.getY() + 120, "Pop : " + pop + "K/" + popMax/1000000 + "M", Color.black);
+            this.gameData.getFont("default").drawString(this.ms.getX() - 50 , this.ms.getY() + 120, "Pop : " + pop + "K/" + popMax + "M", Color.black);
         else
             this.gameData.getFont("default").drawString(this.ms.getX() - 50 , this.ms.getY() + 120, "Pop : " + pop + " / " + popMax + "M", Color.black);
 
