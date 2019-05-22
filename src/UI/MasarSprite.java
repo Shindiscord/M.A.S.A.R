@@ -11,7 +11,7 @@ public class MasarSprite{
     int width;
     int height;
 
-    public MasarSprite(java.lang.String ref, int width, int height, int nb_sprites){
+    public MasarSprite(String ref, int width, int height, int nb_sprites){
         try {
             this.sheet = new SpriteSheet(ref, width, height);
         } catch( SlickException e) {

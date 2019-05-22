@@ -3,6 +3,7 @@ package Objects;
 import UI.MasarSprite;
 import backend.MasarData;
 import backend.Renderable;
+import org.lwjgl.Sys;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -72,7 +73,11 @@ public class SystemLink implements Renderable{
         if(this.getSys1().getClan() != this.getSys2().getClan()){
             if(this.getSys2().getClan() == MasarSystem.NEUTRAL){
                 // -- CONQUEST
-                int RPS_sent = this.getSys1().getRPS() + this.getSys1().getRPS_BOOST();
+                int nb_links_system = 0;
+                for(SystemLink l : this.gameData.getLinkList())
+                    if ( l.getSys1() == this.getSys1() )
+                        nb_links_system++;
+                int RPS_sent = (this.getSys1().getRPS() + this.getSys1().getRPS_BOOST())/nb_links_system;
                 if(this.getSys1().getClan() == 1){
                     this.getSys2().getConquest().addAlliedProgress(RPS_sent);
                 }
