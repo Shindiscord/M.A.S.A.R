@@ -2,13 +2,11 @@ package backend;
 
 import Objects.MasarSystem;
 import Objects.SystemLink;
-import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.gui.GUIContext;
 import org.newdawn.slick.gui.MouseOverArea;
-import org.newdawn.slick.tests.xml.GameData;
 
 public class SystemClickable implements Clickable{
 

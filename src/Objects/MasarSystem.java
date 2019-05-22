@@ -2,19 +2,13 @@ package Objects;
 
 import UI.MasarSprite;
 import UI.WindowSystem;
-import backend.Clickable;
 import backend.MasarData;
 import backend.Renderable;
-import backend.SystemClickable;
-import org.lwjgl.Sys;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Color;
-import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.TrueTypeFont;
-import org.newdawn.slick.tests.xml.GameData;
 
-import java.awt.*;
 import java.util.ConcurrentModificationException;
 
 public class MasarSystem implements Renderable{

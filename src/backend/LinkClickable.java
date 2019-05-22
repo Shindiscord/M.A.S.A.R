@@ -38,10 +38,7 @@ public class LinkClickable implements Clickable{
 
 
     public boolean isMouseOver() {
-        if(mouseOverArea.isMouseOver())
-            return true;
-        else
-            return false;
+        return this.mouseOverArea.isMouseOver();
     }
 
     public void onMousePressed(int button){

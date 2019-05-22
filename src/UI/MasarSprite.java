@@ -6,10 +6,10 @@ import org.newdawn.slick.SpriteSheet;
 
 public class MasarSprite{
     SpriteSheet sheet;
-    int iteration;
-    int nb_sprites;
-    int width;
-    int height;
+    private int iteration;
+    private int nb_sprites;
+    private int width;
+    private int height;
 
     public MasarSprite(String ref, int width, int height, int nb_sprites){
         try {
@@ -24,7 +24,7 @@ public class MasarSprite{
     }
 
     public void drawButtonImage(float x, float y, boolean mouseIsOver){
-        if(mouseIsOver == false)
+        if(!mouseIsOver)
             sheet.getSubImage(1, 0).draw(x-(float)this.width/2, y-(float)this.height/2);
         else
             sheet.getSubImage(0,0).draw(x-(float)this.width/2, y-(float)this.height/2);

@@ -6,5 +6,5 @@ import org.newdawn.slick.Graphics;
 import java.awt.*;
 
 public interface Renderable{
-    public void render(GameContainer gc, Graphics g);
+    void render(GameContainer gc, Graphics g);
 }

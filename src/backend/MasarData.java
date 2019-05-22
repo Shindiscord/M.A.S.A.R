@@ -3,17 +3,12 @@ package backend;
 import IA.Bot;
 import Objects.MasarSystem;
 import Objects.SystemLink;
-import UI.MenuButton;
 import UI.WindowSystem;
-import backend.ClickManager;
 import org.newdawn.slick.*;
 import UI.MasarSprite;
 import org.newdawn.slick.Image;
-
-import java.awt.*;
 import java.awt.Font;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.function.Predicate;

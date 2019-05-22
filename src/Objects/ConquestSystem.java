@@ -38,8 +38,6 @@ public class ConquestSystem {
     }
 
 
-    public int getRessourcesNeeded() {return ressourcesNeeded;}
-
     public ConquestSystem(MasarData gd, MasarSystem s){
         this.systemConquered = s;
         this.gameData = gd;

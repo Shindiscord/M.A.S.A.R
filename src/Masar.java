@@ -1,9 +1,7 @@
 /* Main program here test*/
 
-import Objects.MasarSystem;
 import UI.MenuButton;
 import backend.*;
-import org.lwjgl.input.Cursor;
 import org.newdawn.slick.*;
 
 //Classe/Structure de donées échangées entre les différents composants principaux du jeu

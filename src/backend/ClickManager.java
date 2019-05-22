@@ -1,32 +1,23 @@
 package backend;
 
-import Objects.MasarSystem;
-import Objects.SystemLink;
-import UI.MenuButton;
-import backend.Clickable;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.MouseListener;
-import org.newdawn.slick.gui.GUIContext;
-import org.newdawn.slick.tests.xml.GameData;
 
 import java.util.LinkedList;
-import java.util.Set;
 
 public class ClickManager implements MouseListener {
 
     private LinkedList<Clickable> registeredClickables;
     private MasarData gameData;
 
-    private boolean mousePressed;
     private Clickable pressedClickable;
 
     public LinkedList<Clickable> getRegisteredClickables(){return this.registeredClickables;}
 
     public ClickManager(MasarData gameData){
         this.gameData = gameData;
-        this.mousePressed = false;
         this.registeredClickables = new LinkedList<>();
         this.pressedClickable = null;
     }
@@ -58,8 +49,6 @@ public class ClickManager implements MouseListener {
             this.pressedClickable = selected.element();
         }
 
-        if(button == Input.MOUSE_LEFT_BUTTON)
-            mousePressed = true;
     }
 
     @Override
@@ -78,8 +67,6 @@ public class ClickManager implements MouseListener {
             selected.element().onMouseReleased(button, this.pressedClickable);
         }
 
-        if(button == Input.MOUSE_LEFT_BUTTON)
-            mousePressed = false;
     }
 
     public void renderHitboxes(GameContainer gc, Graphics g){
