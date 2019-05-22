@@ -103,6 +103,13 @@ public class MasarRoom implements Renderable{
     }
 
     public void update(GameContainer gc, int delta){
+        if(gameData.getPopA() == 0){
+            //TODO Charge la room Game Over
+        }
+        else if(gameData.getPopE() == 0){
+            //TODO Charge la room WINNER, WWINNER, CHICKEN DINNER
+        }
+
         deltaSum += delta;
         deltaBot += delta;
         if(this.gameData.getCurrentRoom().getRoomType() == MasarRoom.GAMEROOM) {
