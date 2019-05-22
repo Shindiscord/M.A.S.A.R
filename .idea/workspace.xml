@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MASAR:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/backend/MasarData.java" line="38" />
+    <bookmark url="file://$PROJECT_DIR$/src/backend/MasarData.java" line="37" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c99caf1e-5e05-4cf1-b171-df5cec4c1e99" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MASAR_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MASAR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MASAR.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Masar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Masar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="27">
-              <caret line="103" column="63" selection-start-line="103" selection-start-column="63" selection-end-line="103" selection-end-column="63" />
+              <caret line="107" column="63" selection-start-line="107" selection-start-column="63" selection-end-line="107" selection-end-column="63" />
               <folding>
                 <element signature="e#3079#3080#0" expanded="true" />
                 <element signature="e#3115#3116#0" expanded="true" />
@@ -33,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+            <state relative-caret-position="1734">
+              <caret line="102" column="34" selection-start-line="102" selection-start-column="34" selection-end-line="102" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,12 +50,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Masar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="306">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="19" selection-end-column="5" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#4456#4457#0" expanded="true" />
                 <element signature="e#4520#4521#0" expanded="true" />
               </folding>
@@ -59,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/src/Objects/SystemLink.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="469">
-              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+              <caret line="112" selection-start-line="112" selection-end-line="112" />
             </state>
           </provider>
         </entry>
@@ -90,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Objects/MasarSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
+            <state relative-caret-position="200">
+              <caret line="185" column="13" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2084#2085#0" expanded="true" />
@@ -149,17 +158,17 @@
         <option value="$PROJECT_DIR$/src/UI/MenuButton.java" />
         <option value="$PROJECT_DIR$/src/backend/MasarRoom.java" />
         <option value="$PROJECT_DIR$/src/Objects/ConquestSystem.java" />
-        <option value="$PROJECT_DIR$/src/Masar.java" />
         <option value="$PROJECT_DIR$/src/Objects/LinkConflict.java" />
         <option value="$PROJECT_DIR$/src/UI/MasarSprite.java" />
         <option value="$PROJECT_DIR$/src/backend/MasarData.java" />
         <option value="$PROJECT_DIR$/src/Objects/MasarSystem.java" />
+        <option value="$PROJECT_DIR$/src/Masar.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="256" />
-    <option name="y" value="74" />
+    <option name="x" value="345" />
+    <option name="y" value="51" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -179,14 +188,7 @@
             </path>
             <path>
               <item name="MASAR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MASAR" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MASAR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MASAR" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -196,6 +198,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -295,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558484997117</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix Musique nullpointerException">
+      <created>1558485855163</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1558485855163</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -381,7 +393,8 @@
     <MESSAGE value="Ajout menu Chapters et Settings" />
     <MESSAGE value="Events de fin de conquête &#10;Rework des RPM&#10;Rework RPM Max envoyés selon le nombre de links sortant&#10;Tranfert de pop en cas de victoire" />
     <MESSAGE value="Events de fin de conquête &#10;Rework des RPM&#10;Rework RPM Max envoyés selon le nombre de links sortant&#10;Tranfert de pop en cas de victoire&#10;affichage final des res sous syteme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Events de fin de conquête &#10;Rework des RPM&#10;Rework RPM Max envoyés selon le nombre de links sortant&#10;Tranfert de pop en cas de victoire&#10;affichage final des res sous syteme" />
+    <MESSAGE value="Fix Musique nullpointerException" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Musique nullpointerException" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -412,17 +425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="89" column="44" selection-start-line="89" selection-start-column="44" selection-end-line="89" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Masar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="e#4456#4457#0" expanded="true" />
-            <element signature="e#4520#4521#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -467,7 +469,7 @@
     <entry file="file://$PROJECT_DIR$/src/Objects/SystemLink.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
         </state>
       </provider>
     </entry>
@@ -506,7 +508,7 @@
     <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
-          <caret line="103" column="63" selection-start-line="103" selection-start-column="63" selection-end-line="103" selection-end-column="63" />
+          <caret line="107" column="63" selection-start-line="107" selection-start-column="63" selection-end-line="107" selection-end-column="63" />
           <folding>
             <element signature="e#3079#3080#0" expanded="true" />
             <element signature="e#3115#3116#0" expanded="true" />
@@ -514,20 +516,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Objects/MasarSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
+        <state relative-caret-position="200">
+          <caret line="185" column="13" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2084#2085#0" expanded="true" />
@@ -536,5 +528,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="102" column="34" selection-start-line="102" selection-start-column="34" selection-end-line="102" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Masar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4456#4457#0" expanded="true" />
+            <element signature="e#4520#4521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>MASAR:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>MASAR</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jorbis-0.0.15</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
