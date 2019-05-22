@@ -23,7 +23,7 @@ public class Bot {
         for(MasarSystem s: this.gameData.getSystemList()){
             if(s.getClan() == MasarSystem.ENNEMY){
                 for(MasarSystem c: this.gameData.getSystemList()){
-                    if(c.getClan() != MasarSystem.ENNEMY){
+                    if(c != s){
                         if(s.getDistance(c) < MasarData.DIST_SYST + 5f){
                             SystemLink newLink = new SystemLink(s, c, gameData);
                             if(!linkExist(newLink))
@@ -34,7 +34,7 @@ public class Bot {
             }
         }
 
-        if(possibleLink.size() > 0) {
+        if(possibleLink.size() > 0 && gameData.getResE() > 5) {
             Random rand = new Random();
             SystemLink newLink = possibleLink.get(rand.nextInt(possibleLink.size()));
             this.gameData.getLinkList().add(newLink);
