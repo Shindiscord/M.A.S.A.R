@@ -235,6 +235,7 @@ public class MasarData{
         this.buttonsImages.put("Done", new MasarSprite("img/Buttons/sheet_b_done.png", 115, 65, 2));
         this.buttonsImages.put("PlayPause", new MasarSprite("img/Buttons/sheet_b_playpause.png", 54, 26, 2));
         this.buttonsImages.put("Music", new MasarSprite("img/Buttons/sheet_b_music.png", 344, 104, 2));
+        this.buttonsImages.put("BackEnd", new MasarSprite("img/Buttons/sheet_b_back.png", 115, 65, 2));
 
         this.systemsImages.put("en_3planet_var3", new MasarSprite("res/img/System/Enemy/en_starsys3_130_105px_3pl.png", 130,105,5));
 
@@ -244,14 +245,20 @@ public class MasarData{
 
         Image i1 = null;
         Image i2 = null;
+        Image i3 = null;
+        Image i4 = null;
         try {
             i1 = new Image("img/UI/res_allied.png");
             i2 = new Image("img/UI/res_enemy.png");
+            i3 = new Image("img/UI/victory.png");
+            i4 = new Image("img/UI/defeat.png");
         } catch (SlickException e) {
             e.printStackTrace();
         }
         this.imageList.add(i1);
         this.imageList.add(i2);
+        this.imageList.add(i3);
+        this.imageList.add(i4);
         this.buttonsImages.put("Enemy", new MasarSprite("img/UI/human_enemy.png", 28, 27, 9));
         this.buttonsImages.put("Allied", new MasarSprite("img/UI/human_allied.png", 28, 27, 9));
 

@@ -73,6 +73,9 @@ public class MenuButton implements Clickable, Renderable {
             case "Music" :
                 Sprite = this.gameData.getButtonsImages().get("Music");
                 break;
+            case "BackEnd" :
+                Sprite = this.gameData.getButtonsImages().get("BackEnd");
+                break;
         }
     }
 
@@ -107,6 +110,7 @@ public class MenuButton implements Clickable, Renderable {
             case "Chapters":
                 this.gameData.setRoom(1);
                 break;
+            case "BackEnd":
             case "BackLte":
                 this.gameData.setRoom(1);
                 this.gameData.getLinkList().clear();
