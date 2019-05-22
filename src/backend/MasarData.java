@@ -55,7 +55,7 @@ public class MasarData{
     public TrueTypeFont getFont(String s){return this.fontMap.get(s);}
     public MasarSprite getPlanetImage(String s){return this.planetImage.get(s);}
     Bot getBot() {return this.bot;}
-    public int getChapitre() {return this.chapitre;}
+    //public int getChapitre() {return this.chapitre;}
     public Music getBackground() {return background;}
 
     int getPopA(){

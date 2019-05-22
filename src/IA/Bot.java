@@ -34,7 +34,7 @@ public class Bot {
             }
         }
 
-        if(possibleLink.size() > 0 && gameData.getResE() > 5) {
+        if(possibleLink.size() > 0 && gameData.getResE() > 20) {
             Random rand = new Random();
             SystemLink newLink = possibleLink.get(rand.nextInt(possibleLink.size()));
             this.gameData.getLinkList().add(newLink);
