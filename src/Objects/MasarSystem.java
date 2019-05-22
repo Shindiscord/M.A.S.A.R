@@ -206,22 +206,22 @@ public class MasarSystem implements Renderable{
 
         // -- POPULATION GROWTH
         int link_out = 0;
-        int fecondity_rate = 0;
+        int fecundity_rate = 0;
         for(SystemLink l: this.gameData.getLinkList()){
             if( l.getSys1() == this  || (l.getSys2() == this && l.getSys1().getClan() != this.getClan()))
                 link_out++;
         }
         if ( this.clan != NEUTRAL && this.pop != 0){
             if (link_out == 0 && this.pop != this.maxPop) {
-                if (this.pop < 10) fecondity_rate = 1;
-                else if (this.pop < 1000) fecondity_rate = 10;
-                else if (this.pop < 10000) fecondity_rate = 20;
-                else if (this.pop < 100000) fecondity_rate = 40;
-                else if (this.pop < 1000000) fecondity_rate = 80;
-                else if (this.pop < 10000000) fecondity_rate = 160;
-                else fecondity_rate = 320;
+                if (this.pop < 10) fecundity_rate = 1;
+                else if (this.pop < 1000) fecundity_rate = 10;
+                else if (this.pop < 10000) fecundity_rate = 20;
+                else if (this.pop < 100000) fecundity_rate = 40;
+                else if (this.pop < 1000000) fecundity_rate = 80;
+                else if (this.pop < 10000000) fecundity_rate = 160;
+                else fecundity_rate = 320;
 
-                this.pop += this.pop / fecondity_rate;
+                this.pop += this.pop / fecundity_rate;
                 //System.out.println("Normies : " + this.pop);
             }
             if (this.pop > this.maxPop) this.pop = this.maxPop;
