@@ -26,7 +26,19 @@ public class WindowSystem implements Renderable{
 
     public void render(GameContainer gc, Graphics g){
         this.window.drawNextSubimage(this.ms.getX() + 50, this.ms.getY() + 120);
-        this.gameData.getFont("default").drawString(this.ms.getX() - 50 , this.ms.getY() + 120, "Pop :" + this.ms.getPop() + "/" + this.ms.getMaxPop(), Color.black);
+
+        int pop = this.ms.getPop();
+        if ( pop > 1000000 )  pop = pop/1000000;
+        else if ( pop > 1000 )  pop = pop/1000;
+        int popMax = this.ms.getMaxPop()/1000000;
+        if ( this.getMs().getPop()/1000000 != 0 )
+            this.gameData.getFont("default").drawString(this.ms.getX() - 50 , this.ms.getY() + 120, "Pop : " + pop + "M/ " + popMax/1000000 + "M", Color.black);
+        else if ( this.getMs().getPop()/1000 != 0 )
+            this.gameData.getFont("default").drawString(this.ms.getX() - 50 , this.ms.getY() + 120, "Pop : " + pop + "K/" + popMax/1000000 + "M", Color.black);
+        else
+            this.gameData.getFont("default").drawString(this.ms.getX() - 50 , this.ms.getY() + 120, "Pop : " + pop + " / " + popMax + "M", Color.black);
+
+
         this.gameData.getFont("default").drawString(this.ms.getX() - 50, this.ms.getY() + 140, "RPS :" + this.ms.getRPS() + "/" + this.ms.getMaxRPS(), Color.black);
         this.gameData.getFont("default").drawString(this.ms.getX() - 50, this.ms.getY() + 160, "RPS BOOST :" + this.ms.getRPS_BOOST(), Color.black);
 
