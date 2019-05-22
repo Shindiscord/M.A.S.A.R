@@ -205,12 +205,17 @@ public class MasarSystem implements Renderable{
     public void update(GameContainer gc){
 
         // -- POPULATION GROWTH
+        // on prends en compte le fait que si le systeme possède un lien sortant, la croissance
+        // démographique de celui-ci se met en stand-by
         int link_out = 0;
         int fecundity_rate = 0;
         for(SystemLink l: this.gameData.getLinkList()){
             if( l.getSys1() == this  || (l.getSys2() == this && l.getSys1().getClan() != this.getClan()))
                 link_out++;
         }
+        // la croissance démographique est proportionnelle au temps où elle n'est pas en stand-by
+        // pour que le jeu reste jouable, il a quand même fallut limiter un minimum la croissance
+        // par un fecundity_rate
         if ( this.clan != NEUTRAL && this.pop != 0){
             if (link_out == 0 && this.pop != this.maxPop) {
                 if (this.pop < 10) fecundity_rate = 1;
@@ -222,13 +227,13 @@ public class MasarSystem implements Renderable{
                 else fecundity_rate = 320;
 
                 this.pop += this.pop / fecundity_rate;
-                //System.out.println("Normies : " + this.pop);
             }
+            //on verifie si on ne depasse pas la population maximale du systeme
             if (this.pop > this.maxPop) this.pop = this.maxPop;
 
             // -- RPS / RPS_BOOST CALCULATION
+            // le RPS est calculé grace au ration pop/maxPop et les maxRPS
             this.RPS = (int)((this.maxRPS/(float)this.maxPop) * this.pop);
-            //System.out.println("RPS : " + this.RPS + " this.maxRPS  : " + this.maxRPS + "this.maxPop" + this.maxPop + " this.pop : " + this.pop );
             this.RPS_BOOST = 0; // reset si jamais un link est coupé puis recalcul
             for (SystemLink l : this.gameData.getLinkList()) {
                 if (l.getSys2() == this){
@@ -240,7 +245,6 @@ public class MasarSystem implements Renderable{
                     this.RPS_BOOST += l.getSys1().getRPS() / 2 / nb_link_out;
                 }
             }
-            //System.out.println("RPS : " + this.RPS + " RPS_BOOST : " + this.RPS_BOOST);
         }
     }
 

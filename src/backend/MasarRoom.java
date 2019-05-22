@@ -120,15 +120,18 @@ public class MasarRoom implements Renderable{
     }
 
     public void update(GameContainer gc, int delta){
+        //si la population alliée totale arrive a 0 -> défaite
         if(gameData.getPopA() == 0 && this.gameData.getCurrentRoom().getRoomType() == MasarRoom.GAMEROOM){
             this.gameData.setRoom(6);
         }
+        //si la population ennemie totale arrive a 0 -> victoire
         else if(gameData.getPopE() == 0 && this.gameData.getCurrentRoom().getRoomType() == MasarRoom.GAMEROOM){
             this.gameData.setRoom(5);
         }
 
-        deltaSum += delta;
-        deltaBot += delta;
+        deltaSum += delta; //permet de definir le temps de chaque cycle d'update des objets
+        deltaBot += delta; //permet de definir le temps de chaque cycle d'update du bot
+
         if(this.gameData.getCurrentRoom().getRoomType() == MasarRoom.GAMEROOM) {
             if (deltaSum >= 250) {
                 try {
