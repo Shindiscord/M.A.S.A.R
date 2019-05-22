@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c99caf1e-5e05-4cf1-b171-df5cec4c1e99" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/MasarData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/MasarData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Masar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Masar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WindowSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/WindowSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,14 +18,14 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49474984">
+    <splitter split-orientation="horizontal" split-proportion="0.5948116">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Masar.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
+                <state relative-caret-position="-156">
+                  <caret line="53" column="63" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#532#533#0" expanded="true" />
@@ -37,22 +38,22 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
+            <entry file="file://$PROJECT_DIR$/src/UI/WindowSystem.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="473">
-                  <caret line="175" column="85" selection-start-line="175" selection-start-column="85" selection-end-line="175" selection-end-column="85" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="303">
+                  <caret line="36" column="119" selection-start-line="36" selection-start-column="119" selection-end-line="36" selection-end-column="119" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
+            <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1513">
-                  <caret line="100" column="18" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
+                <state>
+                  <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -152,7 +153,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Objects/ConquestSystem.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="269">
+                <state relative-caret-position="572">
                   <caret line="97" selection-start-line="97" selection-end-line="97" />
                   <folding>
                     <element signature="e#593#594#0" expanded="true" />
@@ -228,11 +229,12 @@
         <option value="$PROJECT_DIR$/src/UI/MenuButton.java" />
         <option value="$PROJECT_DIR$/src/backend/MasarRoom.java" />
         <option value="$PROJECT_DIR$/src/Objects/ConquestSystem.java" />
-        <option value="$PROJECT_DIR$/src/Masar.java" />
         <option value="$PROJECT_DIR$/src/Objects/LinkConflict.java" />
         <option value="$PROJECT_DIR$/src/UI/MasarSprite.java" />
         <option value="$PROJECT_DIR$/src/Objects/MasarSystem.java" />
         <option value="$PROJECT_DIR$/src/backend/MasarData.java" />
+        <option value="$PROJECT_DIR$/src/Masar.java" />
+        <option value="$PROJECT_DIR$/src/UI/WindowSystem.java" />
       </list>
     </option>
   </component>
@@ -258,31 +260,7 @@
             <path>
               <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MasarProject" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasarProject" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasarProject" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="Link" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasarProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MasarProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
@@ -294,7 +272,7 @@
               <item name="MasarProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MasarProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Masar.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -397,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558481895657</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fenetre">
+      <created>1558483791878</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1558483791878</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -432,34 +417,6 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15938166" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4989339" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5010661" side_tool="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4978678" weight="0.21235102" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="RECENT_FILTERS">
@@ -483,7 +440,8 @@
     <MESSAGE value="Affichage de la pop lors d'un conflit, a virer plus tard ou ameliorer" />
     <MESSAGE value="Ajout menu Chapters et Settings" />
     <MESSAGE value="Events de fin de conquête &#10;Rework des RPM&#10;Rework RPM Max envoyés selon le nombre de links sortant&#10;Tranfert de pop en cas de victoire" />
-    <option name="LAST_COMMIT_MESSAGE" value="Events de fin de conquête &#10;Rework des RPM&#10;Rework RPM Max envoyés selon le nombre de links sortant&#10;Tranfert de pop en cas de victoire" />
+    <MESSAGE value="fenetre" />
+    <option name="LAST_COMMIT_MESSAGE" value="fenetre" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -514,20 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="89" column="44" selection-start-line="89" selection-start-column="44" selection-end-line="89" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Masar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#4456#4457#0" expanded="true" />
-            <element signature="e#4520#4521#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -595,7 +539,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Objects/ConquestSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
+        <state relative-caret-position="572">
           <caret line="97" selection-start-line="97" selection-end-line="97" />
           <folding>
             <element signature="e#593#594#0" expanded="true" />
@@ -628,18 +572,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/MasarRoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
+        <state relative-caret-position="595">
           <caret line="100" column="18" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/MasarData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="175" column="85" selection-start-line="175" selection-start-column="85" selection-end-line="175" selection-end-column="85" />
+        <state>
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Masar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-156">
+          <caret line="53" column="63" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#4456#4457#0" expanded="true" />
+            <element signature="e#4520#4521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/WindowSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="36" column="119" selection-start-line="36" selection-start-column="119" selection-end-line="36" selection-end-column="119" />
         </state>
       </provider>
     </entry>
