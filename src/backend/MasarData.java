@@ -165,6 +165,30 @@ public class MasarData{
 
     public void setChapitre(int x) {
         this.chapitre = x;
+        if(this.getSystemList().isEmpty()) {
+            switch (x) {
+                case 1:
+                    this.getSystemList().add(new MasarSystem(1, 1000000, 3, this));
+                    this.getSystemList().add(new MasarSystem(0, 10000, 1, this));
+                    this.getSystemList().add(new MasarSystem(0, 0, 1, this));
+                    this.getSystemList().add(new MasarSystem(2, 100000, 2, this));
+
+                    this.getSystemList().get(0).setPos(this.getCoordinates()[0][0], this.getCoordinates()[0][1]);
+                    this.getSystemList().get(1).setPos(this.getCoordinates()[1][0], this.getCoordinates()[1][1]);
+                    this.getSystemList().get(2).setPos(this.getCoordinates()[6][0], this.getCoordinates()[6][1]);
+                    this.getSystemList().get(3).setPos(this.getCoordinates()[7][0], this.getCoordinates()[7][1]);
+
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+            }
+        }
     }
 
     public void loadImages(){

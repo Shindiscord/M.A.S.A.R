@@ -123,24 +123,24 @@ public class MenuButton implements Clickable, Renderable {
                 this.gameData.setRoom(0);
                 break;
             case "Chapter1":
-                this.gameData.setRoom(3);
                 this.gameData.setChapitre(1);
+                this.gameData.setRoom(3);
                 break;
             case "Chapter2":
-                this.gameData.setRoom(3);
                 this.gameData.setChapitre(2);
+                this.gameData.setRoom(3);
                 break;
             case "Chapter3":
-                this.gameData.setRoom(3);
                 this.gameData.setChapitre(3);
+                this.gameData.setRoom(3);
                 break;
             case "Chapter4":
-                this.gameData.setRoom(3);
                 this.gameData.setChapitre(4);
+                this.gameData.setRoom(3);
                 break;
             case "Chapter5":
-                this.gameData.setRoom(3);
                 this.gameData.setChapitre(5);
+                this.gameData.setRoom(3);
                 break;
             case "PlayPause":
                 if(this.gameData.getCurrentRoom().getRoomType() == 2) {

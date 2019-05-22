@@ -80,7 +80,6 @@ class MasarGame implements Game {
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.MENUROOM, this.gameData));
         this.gameData.getRoomList().get(2).addButton(new MenuButton(640f, 335f, this.gameData, "img/Buttons/b_music.png", "Music"));
         this.gameData.getRoomList().get(2).addButton(new MenuButton(640f, 687.5f, this.gameData, "img/Buttons/b_done.png", "Done"));
-        this.gameData.getRoomList().get(2).addButton(new MenuButton(640f, 687.5f, this.gameData, "img/Buttons/b_done.png", "Done"));
         this.gameData.getRoomList().add(new MasarRoom(MasarRoom.GAMEROOM, this.gameData));
         this.gameData.getRoomList().get(3).addButton(b);
         this.gameData.getRoomList().get(3).addButton(p);
@@ -102,30 +101,6 @@ class MasarGame implements Game {
     }
 
     public void update(GameContainer gc, int delta){
-        if(this.gameData.getSystemList().isEmpty()) {
-            switch (this.gameData.getChapitre()) {
-                case 1:
-                    this.gameData.getSystemList().add(new MasarSystem(1, 1000000, 3, this.gameData));
-                    this.gameData.getSystemList().add(new MasarSystem(0, 10000, 1, this.gameData));
-                    this.gameData.getSystemList().add(new MasarSystem(0, 0, 1, this.gameData));
-                    this.gameData.getSystemList().add(new MasarSystem(2, 100000, 2, this.gameData));
-
-                    this.gameData.getSystemList().get(0).setPos(gameData.getCoordinates()[0][0], gameData.getCoordinates()[0][1]);
-                    this.gameData.getSystemList().get(1).setPos(gameData.getCoordinates()[1][0], gameData.getCoordinates()[1][1]);
-                    this.gameData.getSystemList().get(2).setPos(gameData.getCoordinates()[6][0], gameData.getCoordinates()[6][1]);
-                    this.gameData.getSystemList().get(3).setPos(gameData.getCoordinates()[7][0], gameData.getCoordinates()[7][1]);
-
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-            }
-        }
         this.gameData.getCurrentRoom().update(gc, delta);
     }
 }
