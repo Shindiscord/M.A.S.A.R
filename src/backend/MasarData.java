@@ -207,6 +207,28 @@ public class MasarData{
                     this.getSystemList().get(23).setPos(this.getCoordinates()[23][0], this.getCoordinates()[23][1]);
                     break;
                 case 5:
+                    this.getSystemList().add(new MasarSystem(1, 10000000, 3, this));
+                    this.getSystemList().add(new MasarSystem(2, 100000, 1, this));
+                    this.getSystemList().add(new MasarSystem(2, 100000, 1, this));
+                    this.getSystemList().add(new MasarSystem(2, 100000, 1, this));
+                    this.getSystemList().add(new MasarSystem(2, 100000, 2, this));
+                    for ( int i=0 ; i<8 ; i++)
+                        this.getSystemList().add(new MasarSystem(0,0,1,this));
+
+                    this.getSystemList().get(0).setPos(this.getCoordinates()[15][0], this.getCoordinates()[15][1]);
+                    this.getSystemList().get(1).setPos(this.getCoordinates()[1][0], this.getCoordinates()[1][1]);
+                    this.getSystemList().get(2).setPos(this.getCoordinates()[5][0], this.getCoordinates()[5][1]);
+                    this.getSystemList().get(3).setPos(this.getCoordinates()[18][0], this.getCoordinates()[18][1]);
+                    this.getSystemList().get(4).setPos(this.getCoordinates()[23][0], this.getCoordinates()[23][1]);
+                    this.getSystemList().get(5).setPos(this.getCoordinates()[2][0], this.getCoordinates()[2][1]);
+                    this.getSystemList().get(6).setPos(this.getCoordinates()[8][0], this.getCoordinates()[8][1]);
+                    this.getSystemList().get(7).setPos(this.getCoordinates()[4][0], this.getCoordinates()[4][1]);
+                    this.getSystemList().get(8).setPos(this.getCoordinates()[9][0], this.getCoordinates()[9][1]);
+                    this.getSystemList().get(9).setPos(this.getCoordinates()[14][0], this.getCoordinates()[14][1]);
+                    this.getSystemList().get(10).setPos(this.getCoordinates()[16][0], this.getCoordinates()[16][1]);
+                    this.getSystemList().get(11).setPos(this.getCoordinates()[19][0], this.getCoordinates()[19][1]);
+                    this.getSystemList().get(12).setPos(this.getCoordinates()[22][0], this.getCoordinates()[22][1]);
+
                     break;
             }
         }
