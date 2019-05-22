@@ -7,6 +7,7 @@ import org.newdawn.slick.*;
 import org.newdawn.slick.gui.GUIContext;
 import org.newdawn.slick.gui.MouseOverArea;
 
+/* Classe implémentant les Boutons */
 public class MenuButton implements Clickable, Renderable {
 
     private float posx;
@@ -16,7 +17,7 @@ public class MenuButton implements Clickable, Renderable {
     private MouseOverArea mouseOverArea;
     private MasarData gameData;
 
-
+    /* Constructeur*/
     public MenuButton(float x, float y, MasarData md, String ImagePath, String name) {
         this.posx = x;
         this.posy = y;
@@ -89,6 +90,7 @@ public class MenuButton implements Clickable, Renderable {
 
     public String getName() {return this.name;}
 
+    /* Fonction detectant si la souris est au-dessus du bouton */
     @Override
     public boolean isMouseOver() {
         int mouseX = this.gameData.getGameContainer().getInput().getMouseX();
@@ -104,6 +106,7 @@ public class MenuButton implements Clickable, Renderable {
         }
     }
 
+    /* Détection du clic souris et réaction en fonction du bouton cliqué */
     @Override
     public void onMousePressed(int button) {
         switch (this.getName()) {
@@ -169,11 +172,13 @@ public class MenuButton implements Clickable, Renderable {
 
     }
 
+    /* Fonction de debug permettant d'afficher les hitboxs des boutons */
     @Override
     public void renderHitbox(GUIContext gc, Graphics g) {
         this.mouseOverArea.render(this.gameData.getGameContainer(), g);
     }
 
+    /* Fonction de dessin des boutons*/
     @Override
     public void render(GameContainer gc, Graphics g) {
 

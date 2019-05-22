@@ -4,18 +4,15 @@ import Objects.MasarSystem;
 import Objects.SystemLink;
 import UI.MenuButton;
 import UI.WindowSystem;
-import backend.Clickable;
-import backend.Renderable;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.TrueTypeFont;
-import org.newdawn.slick.tests.xml.GameData;
 
-import java.awt.*;
 import java.util.ConcurrentModificationException;
 import java.util.LinkedList;
 
+/* Classe du système de salles du jeu */
 public class MasarRoom implements Renderable{
     private LinkedList<Renderable> renderables;
     private MasarData gameData;
@@ -36,6 +33,7 @@ public class MasarRoom implements Renderable{
 
     public ClickManager getClickManager(){return this.clickManager;}
 
+    /* Constructeur */
     public MasarRoom(int roomType, MasarData gameData){
         this.renderables = new LinkedList<>();
         this.gameData = gameData;
@@ -47,22 +45,20 @@ public class MasarRoom implements Renderable{
         this.RoomNumber = this.NBROOM;
     }
 
-    public void addRenderable(Renderable renderable){
-        if(!renderables.contains(renderable)){
-            renderables.add(renderable);
-        }
-    }
+    /* Ajout d'un clickable au click manager */
     public void addClickable(Clickable c){
         if(!this.clickManager.getRegisteredClickables().contains(c)){
             this.clickManager.addClickable(c);
         }
     }
 
+    /* Ajoute le bouton passé en paramètre à la liste des renderables et des clickables */
     public void addButton(MenuButton button){
         this.renderables.add(button);
         this.addClickable(button);
     }
 
+    /* Fonction de dessin propre aux salles */
     public void render(GameContainer gc, Graphics g){
 
         for(Renderable r:renderables){
@@ -119,6 +115,7 @@ public class MasarRoom implements Renderable{
         //this.getClickManager().renderHitboxes(gc, g);
     }
 
+    /* */
     public void update(GameContainer gc, int delta){
         if(gameData.getPopA() == 0 && this.gameData.getCurrentRoom().getRoomType() == MasarRoom.GAMEROOM){
             this.gameData.setRoom(6);
@@ -147,7 +144,7 @@ public class MasarRoom implements Renderable{
         }
     }
 
-
+    /* Change la salle active */
     public void setAsRoom(MasarData gameData){
     gameData.getGameContainer().getInput().removeAllListeners();
 
