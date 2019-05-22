@@ -193,9 +193,19 @@ public class MasarData{
 
                     break;
                 case 3:
+                    this.getSystemList().add(new MasarSystem(MasarSystem.ALLIED, 1000000, 3, this));
+                    this.getSystemList().add(new MasarSystem(MasarSystem.ALLIED, 2000000, 2, this));
+                    this.getSystemList().add(new MasarSystem(MasarSystem.ENNEMY, 1000000, 3, this));
+                    this.getSystemList().add(new MasarSystem(MasarSystem.ENNEMY, 2000000, 2, this));
+                    for(int i = 0; i<10;i++)
+                        this.getSystemList().add(new MasarSystem(MasarSystem.NEUTRAL, 0, 1, this));
 
-
-
+                    int[] indexes = {5,0,18,23,1,2,4,8,9,14,15,19,21,22};
+                    int indexList = 0;
+                    for(int index:indexes) {
+                        this.getSystemList().get(indexList).setPos(this.getCoordinates()[index][0], this.getCoordinates()[index][1]);
+                        indexList++;
+                    }
                     break;
                 case 4:
                     this.getSystemList().add(new MasarSystem(1,1000000, 3, this));
