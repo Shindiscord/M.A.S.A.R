@@ -64,14 +64,21 @@ public class SystemLink implements Renderable{
     public void update(){
         if(this.getSys1().getClan() == this.getSys2().getClan() && this.conflict != null)
             this.conflict = null;
+        // -- CONQUEST
         if(this.getSys1().getClan() != this.getSys2().getClan()){
+            // updates et calculs pour les évènements de conquête
             if(this.getSys2().getClan() == MasarSystem.NEUTRAL){
-                // -- CONQUEST
                 int nb_links_system = 0;
                 for(SystemLink l : this.gameData.getLinkList())
                     if ( l.getSys1() == this.getSys1() )
                         nb_links_system++;
+
+                    //-- calcul des RPS envoyés dans ce lien depuis le systeme emetteur du lien
+                //- on prends en compte que le nombre de ressources envoye est moins important si le
+                //systeme emetteur envoie deja des ressources ailleurs
+                //- on prends aussi en compte les ressources "boost" qu'obtient le systeme emetteur
                 int RPS_sent = (this.getSys1().getRPS() + this.getSys1().getRPS_BOOST())/nb_links_system;
+                //-- modifie le pourcentage de conquête en faveur de l'emetteur du lien (et selon les RPS calcules)
                 if(this.getSys1().getClan() == 1){
                     this.getSys2().getConquest().addAlliedProgress(RPS_sent);
                 }
