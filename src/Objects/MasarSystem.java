@@ -191,9 +191,6 @@ public class MasarSystem implements Renderable{
             font.drawString(this.getX() + 30 - font.getWidth(rpsStr), this.getY() + 30, rpsStr, Color.red);
             this.gameData.getSystemsImages().get("en_res_map").drawNextSubimage(this.getX() + 40, this.getY() + 39);
         }
-
-        if(this.showWindow)
-            this.windowSys.render(gc, g);
     }
 
     public void update(GameContainer gc){

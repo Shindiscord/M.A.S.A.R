@@ -43,6 +43,7 @@ public class MasarData{
     public LinkedList<MasarSystem> getSystemList(){return this.systemList;}
     public LinkedList<SystemLink> getLinkList(){return this.linkList;}
     public LinkedList<MasarRoom> getRoomList(){return this.roomList;}
+    public LinkedList<WindowSystem> getWindowList(){return this.windowList;}
     LinkedList<Image> getImageList() {return this.imageList;}
     //public LinkedList<WindowSystem> getWindowList() {return windowList;}
     public GameContainer getGameContainer(){return this.gc;}
