@@ -11,6 +11,7 @@ import UI.MasarSprite;
 import org.newdawn.slick.Image;
 
 import java.awt.*;
+import java.awt.Font;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -121,13 +122,9 @@ public class MasarData{
         this.getLinkList().removeIf(Predicate.isEqual(link));
     }
 
-    public void removeAllLinksOfSystem(MasarSystem system){
+    public void removeAllLinksOfDefeated(MasarSystem system_conquered){
         for(SystemLink l : this.getLinkList()){
-            if( l.getSys2() == system || l.getSys1() == system)
-                this.removeLink(l);
-        }
-        for(SystemLink l : this.getLinkList()){
-            if( l.getSys2() == system || l.getSys1() == system)
+            if( l.getSys2() == system_conquered && l.getSys1().getClan() != system_conquered.getClan()  )
                 this.removeLink(l);
         }
     }
