@@ -39,7 +39,7 @@ public class MasarData{
 
     private Bot bot;
 
-    public Music background;
+    private Music background;
 
     public final static int NB_SYSTEMS = 24;
     public final static float DIST_SYST = 180;

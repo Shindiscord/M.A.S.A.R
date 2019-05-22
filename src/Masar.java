@@ -34,9 +34,8 @@ class MasarGame implements Game {
 
         this.gameData = new MasarData(gc);
 
-        this.gameData.background = new Music("music/Kevin_MacLeod-8bit_Dungeon_Boss.ogg");
-        this.gameData.background.loop();
-        this.gameData.background.setVolume(0.2f);
+        this.gameData.getBackground().loop();
+        this.gameData.getBackground().setVolume(0.2f);
 
        try {
            this.BackgroundMenu = new Image("img/Background/bgm.png");

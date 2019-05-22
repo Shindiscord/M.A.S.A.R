@@ -150,11 +150,11 @@ public class MenuButton implements Clickable, Renderable {
                 }
                 break;
             case "Music":
-                if(this.gameData.background.playing()) {
-                    this.gameData.background.stop();
+                if(this.gameData.getBackground().playing()) {
+                    this.gameData.getBackground().stop();
                 } else {
-                    this.gameData.background.loop();
-                    this.gameData.background.setVolume(0.2f);
+                    this.gameData.getBackground().loop();
+                    this.gameData.getBackground().setVolume(0.2f);
                 }
                 break;
         }
@@ -174,9 +174,9 @@ public class MenuButton implements Clickable, Renderable {
     public void render(GameContainer gc, Graphics g) {
 
         if (this.gameData.getCurrentRoom().getRoomNumber() == 3) {
-            if (this.gameData.background.playing() && this.name.equals("Music")) {
+            if (this.gameData.getBackground().playing() && this.name.equals("Music")) {
                 this.Sprite.sheet.getSubImage(0, 0).draw(this.getPosx() - (float)(344/2), this.getPosy() - (float)(144/2));
-            } else if (!this.gameData.background.playing() && this.name.equals("Music")) {
+            } else if (!this.gameData.getBackground().playing() && this.name.equals("Music")) {
                 this.Sprite.sheet.getSubImage(1, 0).draw(this.getPosx() - (float)(344/2), this.getPosy() - (float)(144/2));
             } else {
                 this.Sprite.drawButtonImage(this.getPosx(), this.getPosy(), this.isMouseOver());
