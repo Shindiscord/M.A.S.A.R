@@ -106,10 +106,6 @@ public class MasarRoom implements Renderable{
             else  font.drawString(620, 0, ""+pope , Color.red);
             font.drawString(830, 0, ""+rese , Color.red);
 
-            for(WindowSystem w: this.gameData.getWindowList()){
-                if(w.getMs().isShowWindow())
-                    w.render(gc, g);
-            }
             //this.getClickManager().renderHitboxes(gc, g);
 
         }

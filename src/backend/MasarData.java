@@ -44,7 +44,7 @@ public class MasarData{
     public LinkedList<SystemLink> getLinkList(){return this.linkList;}
     public LinkedList<MasarRoom> getRoomList(){return this.roomList;}
     LinkedList<Image> getImageList() {return this.imageList;}
-    public LinkedList<WindowSystem> getWindowList() {return windowList;}
+    //public LinkedList<WindowSystem> getWindowList() {return windowList;}
     public GameContainer getGameContainer(){return this.gc;}
     public MasarRoom getCurrentRoom(){return this.currentRoom;}
     void setCurrentRoom(MasarRoom room){this.currentRoom = room;}
@@ -207,7 +207,7 @@ public class MasarData{
                     this.getSystemList().get(23).setPos(this.getCoordinates()[23][0], this.getCoordinates()[23][1]);
                     break;
                 case 5:
-                    this.getSystemList().add(new MasarSystem(1, 10000000, 3, this));
+                    this.getSystemList().add(new MasarSystem(1, 1000000, 3, this));
                     this.getSystemList().add(new MasarSystem(2, 100000, 1, this));
                     this.getSystemList().add(new MasarSystem(2, 100000, 1, this));
                     this.getSystemList().add(new MasarSystem(2, 100000, 1, this));
