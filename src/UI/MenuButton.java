@@ -109,8 +109,8 @@ public class MenuButton implements Clickable, Renderable {
                 break;
             case "BackLte":
                 this.gameData.setRoom(1);
-                this.gameData.getSystemList().clear();
                 this.gameData.getLinkList().clear();
+                this.gameData.getSystemList().clear();
                 break;
             case "Settings":
                 this.gameData.setRoom(2);
