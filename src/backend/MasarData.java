@@ -6,13 +6,12 @@ import Objects.SystemLink;
 import UI.MenuButton;
 import UI.WindowSystem;
 import backend.ClickManager;
-import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.*;
 import UI.MasarSprite;
 import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
-import org.newdawn.slick.TrueTypeFont;
 
 import java.awt.*;
+import java.awt.Font;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -37,6 +36,7 @@ public class MasarData{
     private GameContainer gc;
 
     private Bot bot;
+    private Music background;
 
     public final static int NB_SYSTEMS = 24;
     public final static float DIST_SYST = 180;
@@ -57,6 +57,7 @@ public class MasarData{
     public TrueTypeFont getFont(String s){return this.fontMap.get(s);}
     public MasarSprite getPlanetImage(String s){return this.planetImage.get(s);}
     public Bot getBot() {return this.bot;}
+    public Music getBackground() {return background;}
 
     public void setRoom(int index){
         if(index < roomList.size() && roomList.get(index) != null){
@@ -83,7 +84,7 @@ public class MasarData{
         }
     }
 
-    public MasarData(GameContainer gc){
+    public MasarData(GameContainer gc) throws SlickException {
         this.gc = gc;
         this.systemList = new LinkedList<>();
         this.linkList = new LinkedList<>();
@@ -98,6 +99,7 @@ public class MasarData{
         this.planetImage = new HashMap<>();
         this.fontMap = new HashMap<>();
         this.bot = new Bot(this);
+        this.background = new Music("./res/music/Kevin_MacLeod-8bit_Dungeon_Boss.ogg");
     }
 
     public void loadCoordinates(){
