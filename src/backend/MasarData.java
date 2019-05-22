@@ -142,6 +142,9 @@ public class MasarData{
         this.systemsImages.put("en_2planet_var3", new MasarSprite("res/img/System/Enemy/en_starsys3_130_105px_2pl.png", 130,105,5));
         this.systemsImages.put("en_3planet_var3", new MasarSprite("res/img/System/Enemy/en_starsys3_130_105px_3pl.png", 130,105,5));
 
+        this.systemsImages.put("al_res_map", new MasarSprite("res/img/UI/res_var1_12_11.png", 12, 11, 1));
+        this.systemsImages.put("en_res_map", new MasarSprite("res/img/UI/res_var2_12_11.png", 12, 11, 1));
+
         this.buttonsImages.put("Chapters", new MasarSprite("./res/img/Buttons/sheet_b_chapters.png", 312, 104, 2));
         this.buttonsImages.put("Settings", new MasarSprite("./res/img/Buttons/sheet_b_settings.png", 320, 104, 2));
         this.buttonsImages.put("Quit", new MasarSprite("./res/img/Buttons/sheet_b_quit.png", 200, 104, 2));
@@ -151,7 +154,6 @@ public class MasarData{
         this.buttonsImages.put("Done", new MasarSprite("./res/img/Buttons/sheet_b_done.png", 115, 65, 2));
         this.buttonsImages.put("PlayPause", new MasarSprite("./res/img/Buttons/sheet_b_playpause.png", 54, 26, 2));
 
-        this.systemsImages.put("en_3planet_var3", new MasarSprite("res/img/System/Enemy/en_starsys3_130_105px_3pl.png", 130,105,5));
 
         this.linkImages.put("player_link_sprite", new MasarSprite("res/img/Link/ray_pl_loop_180px_sheet.png", 170, 11, 19));
         this.linkImages.put("enemy_link_sprite", new MasarSprite("res/img/Link/ray_en_loop_180px_sheet.png", 170, 11, 19));

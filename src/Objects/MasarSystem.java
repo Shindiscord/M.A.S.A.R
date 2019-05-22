@@ -178,15 +178,21 @@ public class MasarSystem implements Renderable{
                     systemsheet = this.gameData.getSystemsImages().get("en_3planet_var3");
             }
         }
-
+        TrueTypeFont font = this.gameData.getFont("OnMapText");
         if(this.getConquest().isIn_conquest()){
-            TrueTypeFont font = this.gameData.getFont("OnMapText");
+
             if( this.getConquest().getAlliedProgression() > 0 && this.getConquest().isIn_conquest() ){
                 font.drawString(this.getX()-30, this.getY()-50, this.getConquest().getPercentAllied() + "%" , Color.cyan);
             }
             else if (this.getConquest().getEnnemyProgression() > 0 && this.getConquest().isIn_conquest())
                 font.drawString(this.getX()-30, this.getY()-50, this.getConquest().getPercentEnnemy() + "%" , Color.red);
 
+        }
+        if(this.getClan() == MasarSystem.ALLIED){
+            font.drawString(this.getX() + 30, this.getY() + 30, ""+(this.getRPS()+this.getRPS_BOOST()), Color.cyan);
+        }
+        if(this.getClan() == MasarSystem.ENNEMY){
+            font.drawString(this.getX() + 30, this.getY() + 30, ""+(this.getRPS()+this.getRPS_BOOST()), Color.red);
         }
 
         if(this.showWindow)
