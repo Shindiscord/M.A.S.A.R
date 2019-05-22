@@ -164,21 +164,47 @@ public class MasarData{
             switch (x) {
                 case 1:
                     this.getSystemList().add(new MasarSystem(1, 1000000, 3, this));
-                    this.getSystemList().add(new MasarSystem(0, 10000, 1, this));
+                    this.getSystemList().add(new MasarSystem(0, 0, 1, this));
                     this.getSystemList().add(new MasarSystem(0, 0, 1, this));
                     this.getSystemList().add(new MasarSystem(2, 100000, 2, this));
 
-                    this.getSystemList().get(0).setPos(this.getCoordinates()[0][0], this.getCoordinates()[0][1]);
-                    this.getSystemList().get(1).setPos(this.getCoordinates()[1][0], this.getCoordinates()[1][1]);
-                    this.getSystemList().get(2).setPos(this.getCoordinates()[6][0], this.getCoordinates()[6][1]);
-                    this.getSystemList().get(3).setPos(this.getCoordinates()[7][0], this.getCoordinates()[7][1]);
+                    this.getSystemList().get(0).setPos(this.getCoordinates()[8][0], this.getCoordinates()[8][1]);
+                    this.getSystemList().get(1).setPos(this.getCoordinates()[15][0], this.getCoordinates()[15][1]);
+                    this.getSystemList().get(2).setPos(this.getCoordinates()[9][0], this.getCoordinates()[9][1]);
+                    this.getSystemList().get(3).setPos(this.getCoordinates()[16][0], this.getCoordinates()[16][1]);
 
                     break;
                 case 2:
+                    this.getSystemList().add(new MasarSystem(1, 1000000, 3, this));
+                    this.getSystemList().add(new MasarSystem(0, 0, 1, this));
+                    this.getSystemList().add(new MasarSystem(0, 0, 1, this));
+                    this.getSystemList().add(new MasarSystem(0, 0, 3, this));
+                    this.getSystemList().add(new MasarSystem(0, 0, 1, this));
+                    this.getSystemList().add(new MasarSystem(0, 0, 1, this));
+                    this.getSystemList().add(new MasarSystem(2, 1000000, 3, this));
+
+                    this.getSystemList().get(0).setPos(this.getCoordinates()[1][0], this.getCoordinates()[1][1]);
+                    this.getSystemList().get(1).setPos(this.getCoordinates()[2][0], this.getCoordinates()[2][1]);
+                    this.getSystemList().get(2).setPos(this.getCoordinates()[7][0], this.getCoordinates()[7][1]);
+                    this.getSystemList().get(3).setPos(this.getCoordinates()[8][0], this.getCoordinates()[8][1]);
+                    this.getSystemList().get(4).setPos(this.getCoordinates()[9][0], this.getCoordinates()[9][1]);
+                    this.getSystemList().get(5).setPos(this.getCoordinates()[15][0], this.getCoordinates()[15][1]);
+                    this.getSystemList().get(6).setPos(this.getCoordinates()[16][0], this.getCoordinates()[16][1]);
+
                     break;
                 case 3:
+
+
+
                     break;
                 case 4:
+                    for ( int i = 0 ; i<23 ; i++){
+                        this.getSystemList().add(new MasarSystem(1, 1, 1, this));
+                        this.getSystemList().get(i).setPos(this.getCoordinates()[i][0], this.getCoordinates()[i][1]);
+
+                    }
+                    this.getSystemList().add(new MasarSystem(2, 1000000, 3, this));
+                    this.getSystemList().get(23).setPos(this.getCoordinates()[23][0], this.getCoordinates()[23][1]);
                     break;
                 case 5:
                     break;

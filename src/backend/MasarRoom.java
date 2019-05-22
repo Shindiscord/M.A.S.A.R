@@ -96,13 +96,15 @@ public class MasarRoom implements Renderable{
             int resa = this.gameData.getResA();
             int rese = this.gameData.getResE();
 
-            font.drawString(620, 0, ""+pope , Color.red);
-            font.drawString(830, 0, ""+rese , Color.red);
-
             if ( popa > 1000000 ) font.drawString(480 - font.getWidth(""+popa/1000000 + "M"), 0, ""+popa/1000000 + "M" , Color.cyan);
             else if ( popa > 1000 ) font.drawString(480 - font.getWidth(""+popa/1000 + "K"), 0, ""+popa/1000 + "K" , Color.cyan);
             else  font.drawString(480 - font.getWidth(""+popa), 0, ""+popa , Color.cyan);
             font.drawString(295 - font.getWidth(""+resa), 0, ""+resa , Color.cyan);
+
+            if ( pope > 1000000 ) font.drawString(620, 0, ""+pope/1000000 + "M" , Color.red);
+            else if ( pope > 1000 ) font.drawString(620, 0, ""+pope/1000 + "K" , Color.red);
+            else  font.drawString(620, 0, ""+pope , Color.red);
+            font.drawString(830, 0, ""+rese , Color.red);
 
             for(WindowSystem w: this.gameData.getWindowList()){
                 if(w.getMs().isShowWindow())

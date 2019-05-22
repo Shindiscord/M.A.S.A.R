@@ -4,6 +4,8 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 
+
+// classe permettant d'animer les objets du jeu à partir de spritesheets
 public class MasarSprite{
     SpriteSheet sheet;
     private int iteration;
