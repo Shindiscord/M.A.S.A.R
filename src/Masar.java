@@ -31,9 +31,8 @@ class MasarGame implements Game {
 
     public void init(GameContainer gc) throws SlickException{
 
-        Music background = new Music("./res/music/Kevin_MacLeod-8bit_Dungeon_Boss.ogg");
-        background.loop();
-        background.setVolume(0.2f);
+        gameData.getBackground().loop();
+        gameData.getBackground().setVolume(0.2f);
 
         this.gameData = new MasarData(gc);
 
