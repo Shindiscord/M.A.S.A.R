@@ -81,20 +81,10 @@ public class MasarRoom implements Renderable{
             TrueTypeFont font = this.gameData.getFont("UITopFont");
             font.drawString(536, 0, "VS" , Color.green);
 
-            int popa = 0;
-            int pope = 0;
-            int resa = 0;
-            int rese = 0;
-
-            for (MasarSystem s:this.gameData.getSystemList()){
-                if(s.getClan() == MasarSystem.ALLIED) {
-                    popa += s.getPop();
-                    resa += s.getRPS();
-                } else  if(s.getClan() == MasarSystem.ENNEMY) {
-                    pope += s.getPop();
-                    rese += s.getRPS();
-                }
-            }
+            int popa = this.gameData.getPopA();
+            int pope = this.gameData.getPopE();
+            int resa = this.gameData.getResA();
+            int rese = this.gameData.getResE();
 
             font.drawString(620, 0, ""+pope , Color.red);
             font.drawString(830, 0, ""+rese , Color.red);
