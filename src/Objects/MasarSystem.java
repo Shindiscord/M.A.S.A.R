@@ -263,6 +263,10 @@ public class MasarSystem implements Renderable{
         this.windowSys = new WindowSystem(this, this.gameData);
         this.gameData.getWindowList().add(this.getWindowSys());
 
+        if (this.getClan() == NEUTRAL){
+            this.level =  1 + (int) (Math.random() * 3);
+        }
+
         int system_variant = 1 + (int) (Math.random() * 3);
         this.system_variant = system_variant;
         //System.out.println(system_variant);
